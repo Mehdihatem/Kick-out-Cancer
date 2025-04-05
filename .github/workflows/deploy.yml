@@ -25,7 +25,7 @@ jobs:
           username: kickouh
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /
+          server-dir: /www/
           dangerous-clean-slate: false  # Ne pas supprimer les fichiers existants sur le serveur
           exclude: |
             **/.git*
