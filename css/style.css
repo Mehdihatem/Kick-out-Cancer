@@ -126,16 +126,22 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-content {
     max-width: 800px;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+.hero-logo {
+    margin-bottom: 30px;
+}
+
+.main-logo {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
 }
 
 .hero h2 {
@@ -585,10 +591,6 @@ footer {
         padding: 15px 0;
     }
 
-    .hero h1 {
-        font-size: 3rem;
-    }
-
     .hero h2 {
         font-size: 1.4rem;
     }
@@ -613,8 +615,8 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero h2 {
+        font-size: 1.4rem;
     }
 
     .section-title {
