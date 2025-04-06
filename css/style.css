@@ -48,7 +48,7 @@ ul {
 /* En-tête et navigation */
 header {
     height: 100vh;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
     color: #fff;
     display: flex;
     flex-direction: column;
