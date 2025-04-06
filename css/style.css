@@ -48,9 +48,7 @@ ul {
 /* En-tête et navigation */
 header {
     height: 100vh;
-    background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.9)), url('../IMAGES/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background: var(--primary-color);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -138,10 +136,10 @@ nav {
 }
 
 .main-logo {
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     margin-bottom: 20px;
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
 }
 
 .hero h2 {
