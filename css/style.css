@@ -129,9 +129,42 @@ nav {
     justify-content: center;
     text-align: center;
     color: white;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     padding: 0 20px;
 }
@@ -466,56 +499,144 @@ blockquote:before {
 }
 
 /* Section équipe */
-.team-description {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.team-section {
+    padding: 4rem 0;
 }
 
-.team-description p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--dark-color);
-    margin-bottom: 1.5rem;
+.team-categories {
+    margin-bottom: 4rem;
+}
+
+.team-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.category-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    padding: 0 1rem;
 }
 
-.team-member {
+.team-member, .honorary-member {
     position: relative;
-    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
 }
 
-.team-member:hover {
-    transform: translateY(-10px);
+.member-image, .honorary-image {
+    transition: transform 0.4s ease;
 }
 
-.placeholder {
+.team-member:hover .member-image,
+.honorary-member:hover .honorary-image {
+    transform: scale(1.05);
+}
+
+.member-info, .honorary-info {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.honorary-info {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.member-name, .honorary-name {
+    position: relative;
+    display: inline-block;
+}
+
+.member-name:after, .honorary-name:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.team-member:hover .member-name:after,
+.honorary-member:hover .honorary-name:after {
+    width: 100%;
+}
+
+.member-role, .honorary-role {
+    transform: translateY(5px);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .member-role,
+.honorary-member:hover .honorary-role {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.member-institution, .honorary-institution {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-institution,
+.honorary-member:hover .honorary-institution {
+    opacity: 1;
+}
+
+.honorary-members {
+    position: relative;
+    overflow: hidden;
+}
+
+.honorary-members:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    opacity: 0.95;
+    z-index: 1;
 }
 
-.placeholder:after {
-    content: '\f007';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 4rem;
-    color: rgba(255, 255, 255, 0.2);
+.honorary-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.honorary-grid {
+    position: relative;
+    z-index: 2;
 }
 
 /* Section inscription */
@@ -774,6 +895,18 @@ footer:before {
 
     .footer-content {
         flex-direction: column;
+    }
+
+    .team-grid, .honorary-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .member-image, .honorary-image {
+        height: 250px;
+    }
+    
+    .honorary-title {
+        font-size: 1.8rem;
     }
 }
 
