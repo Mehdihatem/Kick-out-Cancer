@@ -3,336 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kick Out Cancer - Le football au service de la lutte contre le cancer</title>
+    <title>Kick Out Cancer - Le sport au service de la recherche contre le cancer</title>
     <link rel="icon" href="IMAGES/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#"><span>KICK</span> OUT CANCER</a>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#mission" class="nav-link">Notre Mission</a></li>
-                <li><a href="#evenement" class="nav-link">L'Événement 2025</a></li>
-                <li><a href="#partenaire" class="nav-link">Partenaire</a></li>
-                <li><a href="#soutenir" class="nav-link">Nous Soutenir</a></li>
-                <li><a href="#equipe" class="nav-link">Qui Sommes-Nous</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <!-- Suppression du doublon : titre, sous-titre et boutons d'action -->
-            </div>
+    <header class="main-header">
+        <div class="container header-flex">
+            <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#mission">Notre mission</a></li>
+                    <li><a href="#evenements">Tournois</a></li>
+                    <li><a href="#partenaires">Devenir partenaire</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <section id="intro" class="section">
-        <div class="container">
-            <p class="intro-text">
-                Kick Out Cancer est une initiative innovante qui unit le sport et la recherche contre le cancer. Notre objectif est d'organiser un tournoi de football caritatif exceptionnel en septembre 2025, dont les bénéfices seront intégralement reversés à la recherche contre le cancer, en partenariat avec l'IHU PRISM.
-            </p>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Kick Out Cancer</h1>
+            <p class="hero-subtitle">Le sport au service de la recherche contre le cancer</p>
+            <a href="#evenements" class="btn btn-gradient">S'inscrire à un tournoi</a>
         </div>
     </section>
-
-    <section id="mission" class="section bg-blue">
-        <div class="container">
-            <h2 class="section-title">Notre Mission</h2>
-            <div class="mission-content">
-                <div class="mission-text">
-                    <p>Notre mission est double : sensibiliser le grand public à l'importance de la recherche contre le cancer et collecter des fonds pour soutenir des projets de recherche innovants. Nous croyons en la force du sport comme vecteur de solidarité et de changement.</p>
-                    <div class="slogan">
-                        <h3>"Ensemble, kickons le cancer hors du terrain !"</h3>
-                    </div>
-                </div>
+    <section id="mission" class="section-light">
+        <div class="container mission-flex">
+            <div class="mission-text">
+                <h2>Notre mission</h2>
+                <p>Kick Out Cancer est une association qui mobilise le monde du sport pour soutenir la recherche contre le cancer. Nous organisons des tournois de football caritatifs, fédérons les entreprises et sensibilisons le public à l'importance de l'engagement collectif.</p>
+                <ul class="mission-highlights">
+                    <li><span class="icon">🎯</span> <strong>100 000€</strong> collectés pour la recherche</li>
+                    <li><span class="icon">⚽</span> <strong>+10 événements</strong> organisés</li>
+                    <li><span class="icon">🤝</span> <strong>Des centaines de participants</strong></li>
+                </ul>
+            </div>
+            <div class="mission-img">
+                <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="max-width: 220px;">
             </div>
         </div>
     </section>
-
-    <section id="evenement" class="section">
+    <section id="evenements" class="section-gradient">
         <div class="container">
-            <h2 class="section-title">L'Événement 2025</h2>
-            <div class="event-details">
+            <h2>Prochains tournois</h2>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">13</span>
+                    <span class="event-month">Sept.</span>
+                    <span class="event-year">2025</span>
+                </div>
                 <div class="event-info">
-                    <div class="event-item">
-                        <i class="fas fa-calendar"></i>
-                        <h3>Date</h3>
-                        <p>Septembre 2025</p>
-                    </div>
-                    <div class="event-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Lieu</h3>
-                        <p>Le Five, Paris 18e</p>
-                    </div>
-                    <div class="event-item">
-                        <i class="fas fa-trophy"></i>
-                        <h3>Objectif</h3>
-                        <p>100 000€ pour la recherche</p>
-                    </div>
+                    <h3>Tournoi de Gala KOC x IHU PRISM</h3>
+                    <p>Le Five, Paris 18<sup>e</sup> — Foot en salle, équipes de 5 à 10 personnes</p>
+                    <a href="#inscription" class="btn btn-gradient">Inscrire son équipe</a>
                 </div>
-                <div class="event-format">
-                    <h3>Au Programme</h3>
-                    <ul>
-                        <li>Un grand tournoi de football inter-entreprises</li>
-                        <li>Des stands de sensibilisation avec des chercheurs de l'IHU PRISM</li>
-                        <li>Des animations et témoignages de patients et soignants</li>
-                        <li>Un village festif avec DJ, foodtrucks et activités</li>
-                        <li>Une tombola avec des lots exceptionnels</li>
-                    </ul>
+                <div class="event-qr">
+                    <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 90px;">
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="partenaire" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">IHU PRISM : Notre Partenaire Scientifique</h2>
-            <div class="partner-content">
-                <div class="partner-text">
-                    <p>L'IHU PRISM est un institut d'excellence dédié à la médecine de précision dans le traitement du cancer. Les fonds collectés lors de notre événement soutiendront directement leurs projets de recherche innovants.</p>
-                    <p>Leurs équipes de chercheurs seront présentes lors de l'événement pour expliquer leurs avancées et l'importance de la recherche dans la lutte contre le cancer.</p>
-                    <blockquote>
-                        "Chaque don compte dans notre combat contre le cancer. Ensemble, nous pouvons faire avancer la recherche et sauver des vies."
-                    </blockquote>
-                </div>
+    <section id="partenaires" class="section-light">
+        <div class="container partners-flex">
+            <div class="partners-text">
+                <h2>Devenir partenaire</h2>
+                <p>Associez votre entreprise à une cause solidaire et bénéficiez d'une visibilité lors d'événements sportifs majeurs. Engagez vos équipes, valorisez votre image et soutenez la recherche contre le cancer.</p>
+                <ul class="why-partner">
+                    <li>✔️ Valorisez votre image d'entreprise solidaire</li>
+                    <li>✔️ Impliquez vos équipes dans une cause fédératrice</li>
+                    <li>✔️ Bénéficiez d'une visibilité lors d'événements sportifs majeurs</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+                <a href="/dossier-partenaires.pdf" class="btn btn-outline" target="_blank">Télécharger le dossier partenaire</a>
+            </div>
+            <div class="partners-img">
+                <img src="IMAGES/prism-logo.png" alt="Logo IHU Prism" style="max-width: 180px;">
             </div>
         </div>
     </section>
-
-    <section id="soutenir" class="section bg-accent">
+    <section id="temoignages" class="section-gradient-light">
         <div class="container">
-            <h2 class="section-title">Comment Nous Soutenir ?</h2>
-            <div class="support-options">
-                <div class="support-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>Faire un don</h3>
-                    <p>Chaque euro compte ! Votre don est déductible des impôts à hauteur de 66%. Un don de 100€ ne vous coûte que 34€ après déduction fiscale.</p>
-                    <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-primary" target="_blank">Je fais un don</a>
+            <h2>Ils nous soutiennent</h2>
+            <div class="testimonials-flex">
+                <div class="testimonial-card">
+                    <p>"Un événement fédérateur et porteur de sens pour nos collaborateurs."</p>
+                    <span class="testimonial-author">— Entreprise partenaire</span>
                 </div>
-                <div class="support-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Inscrire une équipe</h3>
-                    <p>Participez au tournoi avec votre entreprise ou vos amis. Les frais d'inscription sont intégralement reversés à la recherche.</p>
-                    <a href="#inscription" class="btn btn-primary">Inscrire mon équipe</a>
+                <div class="testimonial-card">
+                    <p>"Grâce à Kick Out Cancer, nous avons pu allier sport, solidarité et engagement."</p>
+                    <span class="testimonial-author">— Participant</span>
                 </div>
-                <div class="support-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Devenir partenaire</h3>
-                    <p>Associez votre entreprise à une cause noble et bénéficiez d'une visibilité lors de l'événement.</p>
-                    <a href="#contact" class="btn btn-primary">Devenir partenaire</a>
-                </div>
+            </div>
+            <div class="partners-logos">
+                <img src="IMAGES/prism-logo.png" alt="Logo IHU Prism" style="height: 40px;">
+                <!-- Ajouter d'autres logos partenaires ici -->
             </div>
         </div>
     </section>
-
-    <section id="equipe" class="section">
-        <div class="container">
-            <h2 class="section-title">Notre Équipe</h2>
-            <div class="team-categories">
-                <div class="team-category">
-                    <h3 class="category-title">Fondateurs</h3>
-                    <div class="team-grid">
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Mehdi HIOUL" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Mehdi HIOUL</h4>
-                                <p class="member-role">Président</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/Benjamin-Verret.jpg" alt="Dr Benjamin Verret" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Dr Benjamin Verret</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Gustave Roussy</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Ibrahim Bouaaka" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Ibrahim Bouaaka</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Chercheur en oncologie - Gustave Roussy</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Loïc Poirraudeau" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Loïc Poirraudeau</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Chercheur en Oncologie - Gustave Roussy</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Marc-Antoine Benderra" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Dr Marc-Antoine Benderra</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Oncologue - APHP</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Matthieu Delaye" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Dr Matthieu Delaye</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Oncologue - Institut Curie</p>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Ronan Flippot" class="member-image">
-                            <div class="member-info">
-                                <h4 class="member-name">Dr Ronan Flippot</h4>
-                                <p class="member-role">Co-fondateur</p>
-                                <p class="member-institution">Oncologue - Gustave Roussy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="honorary-members">
-                    <h3 class="honorary-title">Présidents d'Honneur</h3>
-                    <div class="honorary-grid">
-                        <div class="honorary-member">
-                            <img src="IMAGES/team/Fabrice-Andre.webp" alt="Pr Fabrice André" class="honorary-image">
-                            <div class="honorary-info">
-                                <h4 class="honorary-name">Pr Fabrice André</h4>
-                                <p class="honorary-role">Président d'honneur</p>
-                                <p class="honorary-institution">Oncologue - Gustave Roussy</p>
-                            </div>
-                        </div>
-                        <div class="honorary-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Dr Inès Vaz Luis" class="honorary-image">
-                            <div class="honorary-info">
-                                <h4 class="honorary-name">Dr Inès Vaz Luis</h4>
-                                <p class="honorary-role">Présidente d'honneur</p>
-                                <p class="honorary-institution">Oncologue - Gustave Roussy</p>
-                            </div>
-                        </div>
-                        <div class="honorary-member">
-                            <img src="IMAGES/team/default-avatar.jpg" alt="Dr Suzette Delaloge" class="honorary-image">
-                            <div class="honorary-info">
-                                <h4 class="honorary-name">Dr Suzette Delaloge</h4>
-                                <p class="honorary-role">Présidente d'honneur</p>
-                                <p class="honorary-institution">Oncologue - Gustave Roussy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="inscription" class="section bg-blue">
-        <div class="container">
-            <h2 class="section-title">Participez au Tournoi</h2>
-            <div class="register-content">
-                <p>Inscrivez votre équipe au premier tournoi de football caritatif Kick Out Cancer et participez à une journée exceptionnelle alliant sport et solidarité.</p>
-                <p>Frais d'inscription par équipe : 500€ (intégralement reversés à la recherche)</p>
-                <p>8 joueurs par équipe (5 titulaires + 3 remplaçants)</p>
-                <a href="#contact" class="btn btn-large">Pré-inscrire mon équipe</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contactez-Nous</h2>
+    <section id="contact" class="section-light">
+        <div class="container contact-flex">
             <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nom complet*</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Sujet*</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Choisir un sujet</option>
-                            <option value="inscription">Pré-inscription équipe</option>
-                            <option value="partenariat">Devenir partenaire</option>
-                            <option value="don">Question sur les dons</option>
-                            <option value="benevole">Devenir bénévole</option>
-                            <option value="autre">Autre demande</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                <h2>Contact</h2>
+                <form>
+                    <input type="text" placeholder="Nom" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Votre message" required></textarea>
+                    <button type="submit" class="btn btn-gradient">Envoyer</button>
                 </form>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#">KICK OUT CANCER</a>
-                    <p>Ensemble, mettons le football au service de la recherche contre le cancer. Objectif 2025 : collecter 100 000€ pour soutenir les projets innovants de l'IHU PRISM.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#mission">Notre Mission</a></li>
-                            <li><a href="#evenement">L'Événement</a></li>
-                            <li><a href="#partenaire">Partenaire</a></li>
-                            <li><a href="#soutenir">Nous Soutenir</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Nous Soutenir</h4>
-                        <ul>
-                            <li><a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" target="_blank">Faire un don</a></li>
-                            <li><a href="#inscription">Inscrire une équipe</a></li>
-                            <li><a href="#contact">Devenir partenaire</a></li>
-                            <li><a href="#contact">Devenir bénévole</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li><a href="mailto:contact@kickoutcancer.org">contact@kickoutcancer.org</a></li>
-                            <li><a href="tel:+33100000000">+33 1 00 00 00 00</a></li>
-                            <li>Paris, France</li>
-                        </ul>
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+            <div class="contact-info">
+                <h3>Kick Out Cancer</h3>
+                <p>Email : <a href="mailto:contact@kickoutcancer.org">contact@kickoutcancer.org</a></p>
+                <p>Paris, France</p>
+                <div class="social-icons">
+                    <a href="#"><img src="IMAGES/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Kick Out Cancer. Association loi 1901. Tous droits réservés.</p>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="height: 40px;">
+                <span>© 2024 Kick Out Cancer. Tous droits réservés.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#mentions">Mentions légales</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html> 
