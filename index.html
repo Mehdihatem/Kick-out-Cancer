@@ -6,7 +6,7 @@
     <title>Kick Out Cancer - Le sport au service de la recherche contre le cancer</title>
     <link rel="icon" href="IMAGES/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -26,11 +26,41 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>Kick Out Cancer</h1>
-            <p class="hero-subtitle">Le sport au service de la recherche contre le cancer</p>
-            <a href="#evenements" class="btn btn-gradient">S'inscrire à un tournoi</a>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin-bottom: 24px;">
+                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" style="height: 90px; background: rgba(255,255,255,0.7); border-radius: 16px; padding: 8px;">
+                <img src="IMAGES/prism-logo.png" alt="Logo PRISM" style="height: 70px; background: rgba(255,255,255,0.7); border-radius: 16px; padding: 8px;">
+            </div>
+            <h1 style="font-family: var(--font-title); font-weight: 700; font-size: 2.7rem;">Ensemble, kickons le cancer hors du terrain !</h1>
+            <p class="hero-subtitle">Tournoi de Gala du 13 septembre 2025</p>
+            <div id="countdown" style="font-size: 1.3rem; font-weight: 600; margin: 18px 0; letter-spacing: 1px;"></div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 24px;">
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-cta" target="_blank">Inscrire son équipe</a>
+                <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 90px; background: #fff; border-radius: 12px; padding: 6px;">
+            </div>
+            <div style="margin-top: 18px;">
+                <span style="font-size: 1.1rem; font-weight: 500; background: rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 20px;">Objectif 100 000€ pour la recherche</span>
+            </div>
         </div>
     </section>
+    <script>
+    // Compteur à rebours jusqu'au 13 septembre 2025
+    function updateCountdown() {
+        const eventDate = new Date('2025-09-13T09:00:00');
+        const now = new Date();
+        const diff = eventDate - now;
+        if (diff <= 0) {
+            document.getElementById('countdown').textContent = "C'est le grand jour !";
+            return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        document.getElementById('countdown').textContent = `${days}j ${hours}h ${minutes}m ${seconds}s avant le coup d'envoi !`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
     <section id="mission" class="section-light">
         <div class="container mission-flex">
             <div class="mission-text">
