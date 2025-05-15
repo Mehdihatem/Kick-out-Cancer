@@ -6,7 +6,7 @@
     <title>Kick Out Cancer - Le sport au service de la recherche contre le cancer</title>
     <link rel="icon" href="IMAGES/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -26,141 +26,62 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin-bottom: 24px;">
-                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" style="height: 90px; background: rgba(255,255,255,0.7); border-radius: 16px; padding: 8px;">
-                <img src="IMAGES/prism-logo.png" alt="Logo PRISM" style="height: 70px; background: rgba(255,255,255,0.7); border-radius: 16px; padding: 8px;">
-            </div>
-            <h1 style="font-family: var(--font-title); font-weight: 700; font-size: 2.7rem;">Ensemble, kickons le cancer hors du terrain !</h1>
-            <p class="hero-subtitle">Tournoi de Gala du 13 septembre 2025</p>
-            <div id="countdown" style="font-size: 1.3rem; font-weight: 600; margin: 18px 0; letter-spacing: 1px;"></div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 24px;">
-                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-cta" target="_blank">Inscrire son équipe</a>
-                <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 90px; background: #fff; border-radius: 12px; padding: 6px;">
-            </div>
-            <div style="margin-top: 18px;">
-                <span style="font-size: 1.1rem; font-weight: 500; background: rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 20px;">Objectif 100 000€ pour la recherche</span>
-            </div>
+            <h1>Kick Out Cancer</h1>
+            <p class="hero-subtitle">Le sport au service de la recherche contre le cancer</p>
+            <a href="#evenements" class="btn btn-gradient">S'inscrire à un tournoi</a>
         </div>
     </section>
-    <script>
-    // Compteur à rebours jusqu'au 13 septembre 2025
-    function updateCountdown() {
-        const eventDate = new Date('2025-09-13T09:00:00');
-        const now = new Date();
-        const diff = eventDate - now;
-        if (diff <= 0) {
-            document.getElementById('countdown').textContent = "C'est le grand jour !";
-            return;
-        }
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        document.getElementById('countdown').textContent = `${days}j ${hours}h ${minutes}m ${seconds}s avant le coup d'envoi !`;
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-    </script>
     <section id="mission" class="section-light">
         <div class="container mission-flex">
             <div class="mission-text">
-                <h2 style="font-family: var(--font-title); font-weight: 700; font-size: 2.2rem; color: var(--color-primary-from);">Notre mission</h2>
-                <p style="font-family: var(--font-body); font-size: 1.15rem; margin-bottom: 18px;">Kick Out Cancer, c'est une aventure collective où le sport devient un moteur d'espoir et de transformation. Notre double mission : <b>sensibiliser</b> le plus grand nombre à la lutte contre le cancer et <b>collecter des fonds</b> pour accélérer la recherche.</p>
-                <blockquote style="border-left: 4px solid var(--color-accent); margin: 18px 0; padding-left: 16px; font-style: italic; color: var(--color-primary-to); font-size: 1.1rem;">« Ensemble, nous pouvons changer la donne et offrir de nouvelles victoires à la vie. »</blockquote>
+                <h2>Notre mission</h2>
+                <p>Kick Out Cancer est une association qui mobilise le monde du sport pour soutenir la recherche contre le cancer. Nous organisons des tournois de football caritatifs, fédérons les entreprises et sensibilisons le public à l'importance de l'engagement collectif.</p>
                 <ul class="mission-highlights">
-                    <li><span class="icon">💡</span> <strong>Sensibiliser</strong> : briser les tabous, informer, inspirer l'action</li>
-                    <li><span class="icon">💸</span> <strong>Collecter</strong> : chaque don compte, chaque euro finance la recherche</li>
+                    <li><span class="icon">🎯</span> <strong>100 000€</strong> collectés pour la recherche</li>
+                    <li><span class="icon">⚽</span> <strong>+10 événements</strong> organisés</li>
+                    <li><span class="icon">🤝</span> <strong>Des centaines de participants</strong></li>
                 </ul>
-                <div style="margin: 24px 0;">
-                    <img src="IMAGES/parcours-don-placeholder.svg" alt="Parcours du don vers la recherche" style="max-width: 320px; width: 100%; border-radius: 12px; box-shadow: var(--box-shadow); background: #fff; padding: 8px;">
-                    <div style="font-size: 0.95rem; color: var(--color-accent); margin-top: 8px;">Votre don → Kick Out Cancer → IHU PRISM → Recherche & patients</div>
-                </div>
-                <div style="background: rgba(78,203,177,0.08); border-left: 4px solid var(--color-accent); padding: 12px 18px; border-radius: 8px; margin-bottom: 10px;">
-                    <b>À venir :</b> Vidéo 1min30 sur l'impact du sport dans la lutte contre le cancer
-                </div>
             </div>
             <div class="mission-img">
-                <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="max-width: 220px; margin-bottom: 18px;">
-                <img src="IMAGES/prism-logo.png" alt="Logo PRISM" style="max-width: 180px;">
+                <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="max-width: 220px;">
             </div>
         </div>
     </section>
     <section id="evenements" class="section-gradient">
         <div class="container">
-            <h2 style="font-family: var(--font-title); font-weight: 700; font-size: 2.1rem; color: #fff; margin-bottom: 32px;">Tournoi de Gala 2025</h2>
-            <div class="event-card" style="align-items: center; gap: 32px;">
-                <div class="event-date" style="background: var(--color-accent); color: #fff; border-radius: 12px; padding: 18px 14px; min-width: 70px;">
-                    <span class="event-day" style="font-size: 2.2rem; font-weight: 700;">13</span>
-                    <span class="event-month" style="font-size: 1.1rem;">Sept.</span>
-                    <span class="event-year" style="font-size: 1.1rem;">2025</span>
+            <h2>Prochains tournois</h2>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">13</span>
+                    <span class="event-month">Sept.</span>
+                    <span class="event-year">2025</span>
                 </div>
-                <div class="event-info" style="flex:2;">
-                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
-                        <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="height: 38px; background: #fff; border-radius: 8px; padding: 3px;">
-                        <span style="font-size: 1.5rem; font-family: var(--font-title); font-weight: 700; color: var(--color-primary-from);">x</span>
-                        <img src="IMAGES/prism-logo.png" alt="Logo PRISM" style="height: 32px; background: #fff; border-radius: 8px; padding: 3px;">
-                    </div>
-                    <h3 style="font-family: var(--font-title); font-weight: 700; color: var(--color-primary-to); font-size: 1.3rem; margin-bottom: 6px;">Tournoi de Gala KOC x IHU PRISM</h3>
-                    <p style="font-family: var(--font-body); color: #333; margin-bottom: 8px;">Le Five, Paris 18<sup>e</sup> — Foot en salle, équipes de 5 à 10 personnes</p>
-                    <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-cta" target="_blank">Inscrire son équipe</a>
+                <div class="event-info">
+                    <h3>Tournoi de Gala KOC x IHU PRISM</h3>
+                    <p>Le Five, Paris 18<sup>e</sup> — Foot en salle, équipes de 5 à 10 personnes</p>
+                    <a href="#inscription" class="btn btn-gradient">Inscrire son équipe</a>
                 </div>
                 <div class="event-qr">
-                    <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 90px; background: #fff; border-radius: 12px; padding: 6px;">
-                </div>
-            </div>
-            <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
-                <div style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 18px 28px; min-width: 220px; text-align: center;">
-                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--color-cta);">Objectif 100 000€</div>
-                    <div style="font-size: 0.98rem; color: #fff;">pour la recherche contre le cancer</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 18px 28px; min-width: 220px; text-align: center;">
-                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--color-accent);">+10 éditions</div>
-                    <div style="font-size: 0.98rem; color: #fff;">déjà organisées</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 18px 28px; min-width: 220px; text-align: center;">
-                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--color-primary-to);">Des centaines</div>
-                    <div style="font-size: 0.98rem; color: #fff;">de participants solidaires</div>
+                    <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 90px;">
                 </div>
             </div>
         </div>
     </section>
     <section id="partenaires" class="section-light">
-        <div class="container partners-flex" style="align-items: flex-start;">
-            <div class="partners-text" style="flex:2;">
-                <h2 style="font-family: var(--font-title); font-weight: 700; color: var(--color-primary-from);">Notre partenaire scientifique : l'IHU PRISM</h2>
-                <p style="font-family: var(--font-body); font-size: 1.05rem; margin-bottom: 14px;">L'Institut Hospitalo-Universitaire (IHU) PRISM, basé à Gustave Roussy, est un centre d'excellence en médecine de précision dédié à l'oncologie, créé en partenariat avec Unicancer, l'Université Paris-Saclay et l'INSERM. Labellisé en 2023 dans le cadre du plan France 2030, PRISM vise à transformer la prise en charge des cancers grâce à des technologies innovantes comme l'intelligence artificielle et l'analyse de l'ADN circulant.<br><br>Son ambition : mieux comprendre la biologie des cancers pour identifier les formes les plus agressives dès le diagnostic, et proposer des traitements personnalisés, réduisant la mortalité et évitant les traitements inutiles.<br><br>Grâce à une recherche translationnelle intégrée et au Paris-Saclay Cancer Cluster, PRISM ambitionne de faire de la France un leader mondial en oncologie de précision.</p>
-                <h3 style="font-family: var(--font-title); color: var(--color-accent); margin-top: 32px;">Niveaux de partenariat</h3>
-                <div style="display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 18px;">
-                    <div style="background: #fff; border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 18px; min-width: 140px;">
-                        <b style="color: var(--color-accent);">Bronze</b><br><span style="font-size: 0.95rem;">Visibilité digitale</span>
-                    </div>
-                    <div style="background: #fff; border: 2px solid var(--color-primary-from); border-radius: 10px; padding: 14px 18px; min-width: 140px;">
-                        <b style="color: var(--color-primary-from);">Silver</b><br><span style="font-size: 0.95rem;">+ Logo sur affiches</span>
-                    </div>
-                    <div style="background: #fff; border: 2px solid var(--color-primary-to); border-radius: 10px; padding: 14px 18px; min-width: 140px;">
-                        <b style="color: var(--color-primary-to);">Gold</b><br><span style="font-size: 0.95rem;">+ Stand sur l'événement</span>
-                    </div>
-                    <div style="background: #fff; border: 2px solid var(--color-cta); border-radius: 10px; padding: 14px 18px; min-width: 140px;">
-                        <b style="color: var(--color-cta);">Grand Donateur</b><br><span style="font-size: 0.95rem;">+ Prise de parole</span>
-                    </div>
-                </div>
-                <h4 style="font-family: var(--font-title); color: var(--color-primary-to); margin-top: 18px;">Ils nous soutiennent déjà :</h4>
-                <div class="partners-logos" style="margin-top: 10px;">
-                    <img src="IMAGES/prism-logo.png" alt="Logo IHU Prism" style="height: 40px; margin-right: 18px;">
-                    <img src="IMAGES/koc-logo.png" alt="Logo KOC" style="height: 40px; margin-right: 18px;">
-                    <!-- Ajouter d'autres logos partenaires ici -->
-                </div>
+        <div class="container partners-flex">
+            <div class="partners-text">
+                <h2>Devenir partenaire</h2>
+                <p>Associez votre entreprise à une cause solidaire et bénéficiez d'une visibilité lors d'événements sportifs majeurs. Engagez vos équipes, valorisez votre image et soutenez la recherche contre le cancer.</p>
+                <ul class="why-partner">
+                    <li>✔️ Valorisez votre image d'entreprise solidaire</li>
+                    <li>✔️ Impliquez vos équipes dans une cause fédératrice</li>
+                    <li>✔️ Bénéficiez d'une visibilité lors d'événements sportifs majeurs</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+                <a href="/dossier-partenaires.pdf" class="btn btn-outline" target="_blank">Télécharger le dossier partenaire</a>
             </div>
-            <div class="partners-img" style="flex:1;">
-                <div style="background: #fff; border-radius: 12px; box-shadow: var(--box-shadow); padding: 24px;">
-                    <h3 style="font-family: var(--font-title); color: var(--color-primary-from); font-size: 1.1rem;">Vous êtes une entreprise ?</h3>
-                    <p style="font-family: var(--font-body); font-size: 0.98rem;">Contactez-nous pour devenir partenaire et recevoir notre dossier complet.</p>
-                    <form style="margin-top: 12px;">
-                        <input type="text" placeholder="Nom de l'entreprise" required style="width: 100%; padding: 8px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #ddd;">
-                        <input type="email" placeholder="Email" required style="width: 100%; padding: 8px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #ddd;">
-                        <button type="submit" class="btn btn-cta" style="width: 100%;">Être recontacté</button>
-                    </form>
-                </div>
+            <div class="partners-img">
+                <img src="IMAGES/prism-logo.png" alt="Logo IHU Prism" style="max-width: 180px;">
             </div>
         </div>
     </section>
@@ -203,37 +124,6 @@
                     <a href="#"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
                     <a href="#"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="equipe" class="section-light">
-        <div class="container">
-            <h2 style="font-family: var(--font-title); font-weight: 700; color: var(--color-primary-from); margin-bottom: 32px;">Notre équipe</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-bottom: 32px;">
-                <div style="background: #fff; border-radius: 12px; box-shadow: var(--box-shadow); padding: 18px; min-width: 220px; text-align: center;">
-                    <img src="IMAGES/fondateur1-placeholder.jpg" alt="Fondateur 1" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
-                    <div style="font-family: var(--font-title); font-weight: 700; color: var(--color-primary-from);">Prénom Nom</div>
-                    <div style="font-family: var(--font-body); font-size: 0.98rem; color: #444; margin-top: 6px;">Co-fondateur. "Convaincu que l'énergie du collectif peut tout changer."</div>
-                </div>
-                <div style="background: #fff; border-radius: 12px; box-shadow: var(--box-shadow); padding: 18px; min-width: 220px; text-align: center;">
-                    <img src="IMAGES/fondateur2-placeholder.jpg" alt="Fondateur 2" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
-                    <div style="font-family: var(--font-title); font-weight: 700; color: var(--color-primary-from);">Prénom Nom</div>
-                    <div style="font-family: var(--font-body); font-size: 0.98rem; color: #444; margin-top: 6px;">Co-fondatrice. "L'espoir se construit, un but après l'autre."</div>
-                </div>
-                <!-- Ajouter d'autres fondateurs ici -->
-            </div>
-            <h3 style="font-family: var(--font-title); color: var(--color-accent); margin-bottom: 18px;">Présidents d'honneur</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-bottom: 32px;">
-                <div style="background: #fff; border-radius: 12px; box-shadow: var(--box-shadow); padding: 16px; min-width: 180px; text-align: center;">
-                    <img src="IMAGES/president-honneur-placeholder.jpg" alt="Président d'honneur" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 8px;">
-                    <div style="font-family: var(--font-title); font-weight: 700; color: var(--color-accent);">Prénom Nom</div>
-                    <div style="font-family: var(--font-body); font-size: 0.95rem; color: #444; margin-top: 4px;">Président d'honneur</div>
-                </div>
-                <!-- Ajouter d'autres présidents d'honneur ici -->
-            </div>
-            <h4 style="font-family: var(--font-title); color: var(--color-primary-to); margin-bottom: 10px;">Organigramme</h4>
-            <div style="background: #fff; border-radius: 12px; box-shadow: var(--box-shadow); padding: 18px; text-align: center;">
-                <img src="IMAGES/organigramme-placeholder.svg" alt="Organigramme de l'association" style="max-width: 340px; width: 100%;">
             </div>
         </div>
     </section>
