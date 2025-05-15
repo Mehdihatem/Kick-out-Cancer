@@ -93,16 +93,11 @@ body {
     width: 100%;
 }
 
-/* HERO MODERNE */
+/* HERO CORRECTION */
 .hero-section {
-    position: relative;
-    min-height: 60vh;
-    max-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #10142a;
+    min-height: 32vh;
+    max-height: 45vh;
+    height: 45vh;
 }
 .hero-bg {
     position: absolute;
@@ -117,14 +112,14 @@ body {
     object-fit: cover;
     object-position: center;
     filter: brightness(0.7) blur(0.5px);
-    min-height: 300px;
-    max-height: 70vh;
+    min-height: 180px;
+    max-height: 45vh;
     display: block;
 }
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, rgba(16,20,42,0.85) 60%, rgba(227,72,125,0.55) 100%);
+    background: linear-gradient(120deg, rgba(16,20,42,0.92) 70%, rgba(227,72,125,0.55) 100%);
     z-index: 2;
 }
 .hero-content {
@@ -218,8 +213,8 @@ body {
 
 @media (max-width: 900px) {
     .hero-title { font-size: 2.2rem; }
-    .hero-section { max-height: 50vh; }
-    .hero-img-bg { max-height: 50vh; }
+    .hero-section { max-height: 30vh; height: 30vh; }
+    .hero-img-bg { max-height: 30vh; }
 }
 @media (max-width: 600px) {
     .hero-section { min-height: 40vh; max-height: 50vh; }
@@ -237,12 +232,14 @@ body {
 
 /* Sections modernes */
 .section {
-    padding: 120px 0;
+    padding: 64px 0 64px 0;
     position: relative;
 }
 
 .section-light {
-    background-color: var(--color-light);
+    background: #f8f9fb;
+    border-top: 1px solid #e3e6ee;
+    border-bottom: 1px solid #e3e6ee;
 }
 
 .section-gradient {
