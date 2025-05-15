@@ -3,149 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kick Out Cancer - Le sport au service de la recherche contre le cancer. Rejoignez-nous pour soutenir la recherche médicale à travers des événements sportifs caritatifs.">
-    <title>Kick Out Cancer - Le sport au service de la recherche contre le cancer</title>
+    <meta name="description" content="Kick Out Cancer – Le sport au service de la lutte contre le cancer. Tournoi caritatif, engagement, espoir, recherche médicale.">
+    <title>Kick Out Cancer – Le sport au service de la lutte contre le cancer</title>
     <link rel="icon" href="IMAGES/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode">
     <header class="main-header">
         <div class="container header-flex">
             <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#home">Accueil</a></li>
                     <li><a href="#mission">Notre mission</a></li>
-                    <li><a href="#evenement">L'événement</a></li>
-                    <li><a href="#equipe">Qui sommes-nous</a></li>
-                    <li><a href="#partenaires">Partenaires</a></li>
-                    <li><a href="#soutenir">Nous soutenir</a></li>
+                    <li><a href="#event">L'événement</a></li>
+                    <li><a href="#prism">IHU PRISM</a></li>
+                    <li><a href="#support">Nous soutenir</a></li>
+                    <li><a href="#team">Qui sommes-nous</a></li>
                 </ul>
             </nav>
+            <button id="mode-toggle" aria-label="Changer le mode" class="mode-toggle">🌙</button>
         </div>
     </header>
 
-    <section id="accueil" class="hero-section">
+    <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <img src="IMAGES/hero-bg.jpg" alt="Ambiance sportive collective" class="hero-img-bg">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="container hero-content">
-            <h1>Ensemble, donnons un coup de pied au cancer</h1>
-            <p class="hero-subtitle">Unis par le sport, engagés pour la recherche</p>
+            <h1 class="hero-title">Kick Out Cancer</h1>
+            <p class="hero-slogan">Le sport au service de la lutte contre le cancer</p>
             <div class="hero-cta">
-                <a href="#soutenir" class="btn btn-gradient">Faire un don</a>
-                <a href="#evenement" class="btn btn-outline">Participer à l'événement</a>
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-gradient cta-main" target="_blank">S'inscrire à l'événement</a>
+                <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-outline cta-donate" target="_blank">Faire un don</a>
             </div>
+            <div class="hero-intro fade-in">
+                <p>Nous sommes une association portée par des professionnels de santé, des chercheurs et des citoyens engagés.<br>Notre mission : fédérer autour du sport pour soutenir la recherche contre le cancer.</p>
+            </div>
+            <div class="save-date-banner">1er événement : 13 septembre 2025 – Five Paris 18</div>
         </div>
     </section>
 
     <section id="mission" class="section section-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Notre mission</h2>
-                <p class="section-subtitle">Mobiliser le monde du sport pour soutenir la recherche contre le cancer</p>
-            </div>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <div class="mission-icon">🎯</div>
-                    <h3>Collecter</h3>
-                    <p>Réunir des fonds pour financer des projets de recherche innovants</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon">⚽</div>
+            <h2 class="section-title">Notre mission</h2>
+            <p class="section-slogan">On se met en mouvement pour agir à notre niveau.</p>
+            <div class="mission-cards">
+                <div class="mission-card fade-in">
+                    <span class="mission-icon">🤝</span>
                     <h3>Fédérer</h3>
-                    <p>Rassembler la communauté sportive autour d'une cause commune</p>
+                    <p>Créer du lien et sensibiliser à la lutte contre le cancer par le sport.</p>
                 </div>
-                <div class="mission-card">
-                    <div class="mission-icon">💪</div>
+                <div class="mission-card fade-in">
+                    <span class="mission-icon">💡</span>
+                    <h3>Financer</h3>
+                    <p>100% des fonds collectés sont reversés à la recherche médicale.</p>
+                </div>
+                <div class="mission-card fade-in">
+                    <span class="mission-icon">⚽</span>
                     <h3>Agir</h3>
-                    <p>Organiser des événements sportifs caritatifs d'envergure</p>
+                    <p>Organiser des événements sportifs solidaires et inspirants.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="evenement" class="section section-gradient">
-        <div class="container">
-            <div class="event-banner">
-                <span class="save-date">Save the Date</span>
-                <h2>Tournoi de Gala KOC x IHU PRISM</h2>
-                <p class="event-date">13 Septembre 2025</p>
+    <section id="event" class="section section-gradient">
+        <div class="container event-flex">
+            <div class="event-info fade-in">
+                <h2 class="section-title">L'événement 2025</h2>
+                <ul class="event-details">
+                    <li><strong>Date :</strong> 13 septembre 2025</li>
+                    <li><strong>Lieu :</strong> FIVE PARIS 18, 217 rue Aubervilliers, 75018 Paris</li>
+                    <li><strong>Format :</strong> 32 équipes, 5 à 10 joueurs</li>
+                    <li><strong>Programme :</strong> accueil, matchs, animations, foodtrucks, DJ, ateliers, remise des prix</li>
+                    <li><strong>Inscription :</strong> <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank">Inscrire mon équipe</a></li>
+                    <li><strong>Utilisation des fonds :</strong> 100% reversés à l'IHU PRISM de Gustave Roussy</li>
+                </ul>
             </div>
-            <div class="event-details">
-                <div class="event-info">
-                    <h3>Le Five, Paris 18<sup>e</sup></h3>
-                    <p>Foot en salle, équipes de 5 à 10 personnes</p>
-                    <ul class="event-features">
-                        <li>🎯 Tournoi caritatif</li>
-                        <li>🏆 Trophées à gagner</li>
-                        <li>🎁 Lots pour tous les participants</li>
-                        <li>🍽️ Cocktail de clôture</li>
-                    </ul>
-                    <a href="#inscription" class="btn btn-gradient">Inscrire son équipe</a>
-                </div>
-                <div class="event-qr">
-                    <img src="IMAGES/qr-inscription.png" alt="QR code inscription" style="width: 120px;">
-                    <p>Scannez pour vous inscrire</p>
-                </div>
+            <div class="event-visual fade-in">
+                <div class="event-slider-placeholder">[Vidéo ou slider photo ici]</div>
             </div>
         </div>
     </section>
 
-    <section id="equipe" class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Qui sommes-nous ?</h2>
-                <p class="section-subtitle">Une équipe passionnée et engagée</p>
+    <section id="prism" class="section section-light">
+        <div class="container partner-flex">
+            <div class="partner-logo fade-in">
+                <img src="IMAGES/prism-logo.png" alt="Logo IHU PRISM">
             </div>
+            <div class="partner-info fade-in">
+                <h2 class="section-title">IHU PRISM : partenaire scientifique</h2>
+                <p>L'IHU PRISM est un institut de référence en médecine de précision, engagé pour comprendre la maladie et mieux la combattre. Des chercheurs seront présents lors de l'événement pour vulgariser la recherche et échanger avec le public.</p>
+                <blockquote>"Comprendre la maladie pour mieux la combattre – l'IHU PRISM s'engage aux côtés de Kick Out Cancer."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="section section-gradient">
+        <div class="container support-flex">
+            <div class="support-actions fade-in">
+                <h2 class="section-title">Nous soutenir</h2>
+                <div class="support-cta">
+                    <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-gradient" target="_blank">Faire un don</a>
+                    <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-outline" target="_blank">S'inscrire à l'événement</a>
+                    <a href="https://ddbmudqn.genspark.space/" class="btn btn-outline" target="_blank">Devenir partenaire</a>
+                </div>
+                <div class="support-socials">
+                    <a href="https://instagram.com/kickoutcancer" target="_blank" aria-label="Instagram"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
+                    <a href="https://linkedin.com/company/kickoutcancer" target="_blank" aria-label="LinkedIn"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="support-form fade-in">
+                <form class="contact-form">
+                    <h3>Contact partenaires</h3>
+                    <input type="text" name="name" placeholder="Nom" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <select name="type">
+                        <option value="">Type de demande</option>
+                        <option value="partenaire">Devenir partenaire</option>
+                        <option value="bénévole">Devenir bénévole</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                    <button type="submit" class="btn btn-gradient">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Qui sommes-nous ?</h2>
             <div class="team-grid">
-                <div class="team-member">
-                    <img src="IMAGES/team-1.jpg" alt="Photo du membre de l'équipe">
+                <div class="team-member fade-in">
+                    <img src="IMAGES/team-1.jpg" alt="Portrait membre fondateur">
+                    <h3>Dr. Prénom Nom</h3>
+                    <p class="role">Fondateur, Médecin</p>
+                </div>
+                <div class="team-member fade-in">
+                    <img src="IMAGES/team-2.jpg" alt="Portrait membre fondateur">
                     <h3>Prénom Nom</h3>
-                    <p class="role">Fondateur & Président</p>
-                    <p class="bio">Description du parcours et de l'engagement...</p>
+                    <p class="role">Chercheur</p>
                 </div>
-                <!-- Ajouter d'autres membres -->
-            </div>
-        </div>
-    </section>
-
-    <section id="partenaires" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nos partenaires</h2>
-                <p class="section-subtitle">Ensemble pour la recherche</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <img src="IMAGES/prism-logo.png" alt="Logo IHU PRISM">
-                    <h3>IHU PRISM</h3>
-                    <p>Institut Hospitalo-Universitaire de recherche en santé</p>
-                </div>
-                <!-- Ajouter d'autres partenaires -->
-            </div>
-        </div>
-    </section>
-
-    <section id="soutenir" class="section section-gradient">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nous soutenir</h2>
-                <p class="section-subtitle">Plusieurs façons de s'engager</p>
-            </div>
-            <div class="support-grid">
-                <div class="support-card">
-                    <h3>Devenir bénévole</h3>
-                    <p>Rejoignez notre équipe et participez à l'organisation des événements</p>
-                    <a href="#contact" class="btn btn-outline">En savoir plus</a>
-                </div>
-                <div class="support-card">
-                    <h3>Devenir partenaire</h3>
-                    <p>Associez votre entreprise à une cause solidaire</p>
-                    <a href="#contact" class="btn btn-outline">Nous contacter</a>
-                </div>
-                <div class="support-card">
-                    <h3>Faire un don</h3>
-                    <p>Soutenez directement la recherche contre le cancer</p>
-                    <a href="#don" class="btn btn-gradient">Faire un don</a>
+                <div class="team-member fade-in">
+                    <img src="IMAGES/team-3.jpg" alt="Portrait membre fondateur">
+                    <h3>Prénom Nom</h3>
+                    <p class="role">Citoyen engagé</p>
                 </div>
             </div>
         </div>
@@ -153,60 +159,32 @@
 
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-quote">"Un but contre le cancer, c'est une victoire pour tous."</div>
+            <div class="footer-flex">
                 <div class="footer-logo">
-                    <img src="IMAGES/koc-logo.png" alt="Logo KOC">
+                    <img src="IMAGES/koc-logo-mono.svg" alt="Logo KOC monochrome">
                 </div>
                 <div class="footer-links">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#mission">Notre mission</a></li>
-                        <li><a href="#evenement">L'événement</a></li>
-                        <li><a href="#equipe">Qui sommes-nous</a></li>
-                    </ul>
+                    <a href="#home">Accueil</a>
+                    <a href="#mission">Mission</a>
+                    <a href="#event">Événement</a>
+                    <a href="#prism">IHU PRISM</a>
+                    <a href="#support">Nous soutenir</a>
+                    <a href="#team">Équipe</a>
                 </div>
-                <div class="footer-links">
-                    <h3>Légal</h3>
-                    <ul>
-                        <li><a href="#mentions">Mentions légales</a></li>
-                        <li><a href="#confidentialite">Politique de confidentialité</a></li>
-                        <li><a href="#statuts">Statuts de l'association</a></li>
-                    </ul>
+                <div class="footer-legal">
+                    <a href="#mentions">Mentions légales</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="footer-links">
-                    <h3>Contact</h3>
-                    <p>Email : <a href="mailto:contact@kickoutcancer.org">contact@kickoutcancer.org</a></p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><img src="IMAGES/facebook.svg" alt="Facebook"></a>
-                        <a href="#" aria-label="Instagram"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
-                    </div>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/kickoutcancer" target="_blank" aria-label="Instagram"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
+                    <a href="https://linkedin.com/company/kickoutcancer" target="_blank" aria-label="LinkedIn"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2024 Kick Out Cancer. Tous droits réservés.</p>
-            </div>
+            <div class="footer-bottom">© 2024 Kick Out Cancer. Tous droits réservés.</div>
         </div>
     </footer>
 
-    <script>
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach((element) => {
-            observer.observe(element);
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html> 
