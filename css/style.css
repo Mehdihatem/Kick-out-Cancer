@@ -93,78 +93,147 @@ body {
     width: 100%;
 }
 
-/* Hero Section moderne */
+/* HERO MODERNE */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
+    max-height: 70vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('../IMAGES/hero-bg.jpg') center/cover;
-    color: white;
-    text-align: center;
-    padding: 120px 0;
+    justify-content: center;
+    overflow: hidden;
+    background: #10142a;
 }
-
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.hero-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7) blur(0.5px);
+    min-height: 300px;
+    max-height: 70vh;
+    display: block;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, rgba(16,20,42,0.85) 60%, rgba(227,72,125,0.55) 100%);
+    z-index: 2;
+}
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 800px;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 40px 16px 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1);
 }
-
-.hero-content h1 {
-    font-family: var(--font-title);
-    font-size: 4.5rem;
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
     font-weight: 800;
-    margin-bottom: 24px;
-    line-height: 1.2;
-    animation: fadeInUp 1s ease;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 24px rgba(16,20,42,0.25), 0 1px 0 #fff2;
 }
-
-.hero-subtitle {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-    animation: fadeInUp 1s ease 0.2s;
-    animation-fill-mode: both;
-}
-
-/* Boutons modernes */
-.btn {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 50px;
-    text-decoration: none;
+.hero-slogan {
+    font-size: 1.5rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 8px rgba(16,20,42,0.18);
 }
-
-.btn-gradient {
-    background: linear-gradient(135deg, var(--color-primary-from), var(--color-primary-to));
-    color: white;
+.hero-cta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn.cta-main {
+    background: linear-gradient(90deg, #3a4cb3 0%, #e3487d 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(58,76,179,0.12);
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 18px 36px;
+    backdrop-filter: blur(2px);
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.btn.cta-main:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(227,72,125,0.18);
+}
+.btn.cta-donate {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 2px solid #4ecbb1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 32px;
+    padding: 16px 32px;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    box-shadow: 0 2px 12px rgba(78,203,177,0.08);
+}
+.btn.cta-donate:hover {
+    background: #4ecbb1;
+    color: #10142a;
+    border: 2px solid #4ecbb1;
+}
+.save-date-banner {
+    background: linear-gradient(90deg, #3a4cb3 0%, #e3487d 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 24px;
+    padding: 10px 32px;
+    margin-top: 18px;
+    box-shadow: 0 2px 12px rgba(58,76,179,0.10);
+    display: inline-block;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.5s 0.2s both;
+}
+.hero-intro {
+    font-size: 1.1rem;
+    color: #f5f5f5;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 8px #10142a44;
 }
 
-.btn-gradient:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+@media (max-width: 900px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-section { max-height: 50vh; }
+    .hero-img-bg { max-height: 50vh; }
+}
+@media (max-width: 600px) {
+    .hero-section { min-height: 40vh; max-height: 50vh; }
+    .hero-content { padding: 24px 4vw; }
+    .hero-title { font-size: 1.4rem; }
+    .hero-slogan { font-size: 1.1rem; }
+    .btn.cta-main, .btn.cta-donate { padding: 12px 18px; font-size: 1rem; }
+    .save-date-banner { font-size: 0.95rem; padding: 8px 12px; }
 }
 
-.btn-outline {
-    border: 2px solid var(--color-accent);
-    color: var(--color-accent);
-    background: transparent;
-}
-
-.btn-outline:hover {
-    background: var(--color-accent);
-    color: white;
-}
+/* Suggestions pour d'autres sections :
+.section-gradient { background: linear-gradient(120deg, #10142a 60%, #e3487d 100%); color: #fff; }
+.section-light { background: #fff; color: #10142a; }
+*/
 
 /* Sections modernes */
 .section {
