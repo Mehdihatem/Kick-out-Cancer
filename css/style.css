@@ -72,6 +72,8 @@ body {
     background-color: var(--color-background);
     line-height: 1.6;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 img {
@@ -93,6 +95,8 @@ img {
 .section {
     padding: var(--spacing-xl) 0;
     position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -1715,4 +1719,64 @@ body.high-contrast .hero-title {
 .btn:focus, .btn-primary:focus, .btn-secondary:focus {
     outline: 3px solid var(--color-warning);
     outline-offset: 2px;
+}
+
+/* ===== Section Save the Date ===== */
+.section-save-the-date {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #e3487d 0%, #a259c6 100%);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.save-date-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.section-save-the-date .save-date-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+.section-save-the-date .save-date-date, .section-save-the-date .save-date-lieu {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+@media (max-width: 900px) {
+    .section-save-the-date {
+        min-height: 35vh;
+        padding: 2rem 0;
+    }
+    .save-date-center {
+        font-size: 1.05rem;
+    }
+    .section-save-the-date .save-date-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Scroll Snap ===== */
+html, body {
+    scroll-behavior: smooth;
+}
+.scroll-section {
+    scroll-snap-align: start;
+}
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.section, .section-hero, .section-save-the-date {
+    min-height: 100vh;
+    box-sizing: border-box;
 } 
