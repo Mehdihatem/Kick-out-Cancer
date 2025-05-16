@@ -74,7 +74,9 @@ body {
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    margin: 0;
     padding-top: 110px; /* espace pour la barre sticky */
+    background: #fff;
 }
 
 img {
@@ -94,7 +96,8 @@ img {
 }
 
 .section {
-    padding: var(--spacing-xl) 0;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
@@ -981,7 +984,7 @@ img {
     font-family: var(--font-primary);
     font-weight: 800;
     letter-spacing: -0.5px;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 2.5rem;
 }
 
 h1.hero-title {
@@ -1147,7 +1150,7 @@ body.high-contrast .hero-title {
     font-size: 2.1rem;
     font-weight: 800;
     color: var(--color-primary);
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.5rem;
     letter-spacing: -0.5px;
     text-align: left;
 }
@@ -1521,7 +1524,7 @@ body.high-contrast .hero-title {
     font-size: 2.1rem;
     font-weight: 800;
     color: var(--color-blue);
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.5rem;
     letter-spacing: -0.5px;
     text-align: left;
 }
@@ -1543,7 +1546,7 @@ body.high-contrast .hero-title {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     justify-content: center;
 }
 .inscription-card {
