@@ -35,72 +35,152 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', checkScrollPos);
 
-    // Validation du formulaire de contact
-    const contactForm = document.getElementById('contactForm');
-    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.main-header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            // Scroll Down
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            // Scroll Up
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+        lastScroll = currentScroll;
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Form validation
+    const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Récupération des valeurs du formulaire
+            // Basic form validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Validation simple (peut être étendue)
-            if (!name || !email || !subject || !message) {
+            if (!name || !email || !message) {
                 alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
             
-            // Validation de l'email avec une expression régulière simple
+            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Veuillez entrer une adresse email valide.');
                 return;
             }
             
-            // Ici, vous pouvez ajouter le code pour envoyer les données à un serveur
-            // Ou les stocker temporairement avant de rediriger l'utilisateur
-            alert('Merci pour votre message! Nous vous contacterons bientôt.');
+            // Here you would typically send the form data to your server
+            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
             contactForm.reset();
         });
     }
 
-    // Animation des éléments au défilement
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.section');
+    // Dark mode toggle
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.classList.add('dark-mode-toggle');
+    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    document.body.appendChild(darkModeToggle);
+
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = darkModeToggle.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+        }
+    });
+
+    // Stats counter animation
+    const stats = document.querySelectorAll('.stat-number');
+    const animateStats = () => {
+        stats.forEach(stat => {
+            const target = parseInt(stat.textContent);
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    stat.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
+            }, 40);
+        });
+    };
+
+    // Trigger stats animation when stats section is in view
+    const statsSection = document.querySelector('.mission-stats');
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
         
-        elements.forEach(element => {
-            const position = element.getBoundingClientRect();
-            
-            // Si l'élément est visible dans la fenêtre
-            if (position.top < window.innerHeight * 0.75 && position.bottom >= 0) {
-                element.classList.add('visible');
-            }
-        });
+        statsObserver.observe(statsSection);
     }
-    
-    // Initialiser les animations
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Smooth scroll pour les liens d'ancrage
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === "#") return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Ajustement pour la hauteur du menu
-                    behavior: 'smooth'
-                });
-            }
-        });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.createElement('button');
+    mobileMenuButton.classList.add('mobile-menu-toggle');
+    mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+    document.querySelector('.header-flex').appendChild(mobileMenuButton);
+
+    mobileMenuButton.addEventListener('click', () => {
+        document.querySelector('.main-nav').classList.toggle('active');
+        const icon = mobileMenuButton.querySelector('i');
+        if (document.querySelector('.main-nav').classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
     });
 }); 
