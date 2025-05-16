@@ -11,55 +11,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="light-mode">
+    <!-- Top bar avec logo et infos pratiques -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="top-logo">
+                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
+            </div>
+            <div class="top-infos">
+                <span class="top-info-item"><i class="fa fa-calendar"></i> 13 septembre 2025</span>
+                <span class="top-info-item"><i class="fa fa-map-marker-alt"></i> Five Paris 18, 217 rue Aubervilliers, Paris</span>
+            </div>
+        </div>
+    </div>
+    <!-- Header principal avec menu -->
     <header class="main-header">
         <div class="container header-flex">
-            <a href="/" class="logo">
-                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
-            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#mission">Notre mission</a></li>
-                    <li><a href="#event">L'événement</a></li>
-                    <li><a href="#prism">IHU PRISM</a></li>
-                    <li><a href="#partners">Partenaires & Sponsors</a></li>
-                    <li><a href="#support">Nous soutenir</a></li>
-                    <li><a href="#team">Qui sommes-nous</a></li>
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#programme" class="nav-link">Programme</a></li>
+                    <li><a href="#partners" class="nav-link">Partenaires</a></li>
+                    <li><a href="#infos" class="nav-link">Infos pratiques</a></li>
+                    <li><a href="#inscription" class="nav-link">Inscription</a></li>
                 </ul>
             </nav>
-            <div class="header-cta">
-                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-primary btn-header" target="_blank">S'inscrire</a>
-                <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-secondary btn-header" target="_blank">Faire un don</a>
-                <button id="contrast-toggle" aria-label="Activer le contraste élevé" class="contrast-toggle">🌓</button>
-            </div>
+            <a href="#contact" class="btn btn-header-contact">Contactez-nous</a>
         </div>
+        <hr class="header-separator">
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-bg">
-            <!-- SVG décoratif moderne, flou et dégradé -->
-            <svg width="100%" height="100%" viewBox="0 0 1440 320" style="position:absolute;top:0;left:0;z-index:1;filter:blur(8px);opacity:0.5;" aria-hidden="true">
-                <defs>
-                    <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#10142a"/>
-                        <stop offset="100%" stop-color="#e3487d"/>
-                    </linearGradient>
-                </defs>
-                <path fill="url(#heroGradient)" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-            </svg>
-            <div class="hero-overlay"></div>
+    <!-- Section hero -->
+    <section class="hero-section">
+        <div class="hero-bg-img">
+            <img src="IMAGES/hero-temp.jpg" alt="Visuel temporaire Kick Out Cancer" />
         </div>
-        <div class="container hero-content">
+        <div class="container hero-content-espoir">
             <h1 class="hero-title">Kick Out Cancer</h1>
-            <p class="hero-slogan">Le sport au service de la lutte contre le cancer</p>
-            <div class="hero-cta">
-                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-gradient cta-main" target="_blank">S'inscrire à l'événement</a>
-                <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-outline cta-donate" target="_blank">Faire un don</a>
+            <h2 class="hero-subtitle">Le sport au service de la lutte contre le cancer</h2>
+            <div class="hero-event-infos">
+                <span class="hero-date"><i class="fa fa-calendar"></i> 13 septembre 2025</span>
+                <span class="hero-lieu"><i class="fa fa-map-marker-alt"></i> Five Paris 18, Paris</span>
             </div>
-            <div class="hero-intro fade-in">
-                <p>Nous sommes une association portée par des professionnels de santé, des chercheurs et des citoyens engagés.<br>Notre mission : fédérer autour du sport pour soutenir la recherche contre le cancer.</p>
+            <div class="hero-cta-group">
+                <a href="#inscription" class="btn btn-primary">Inscription</a>
+                <a href="#programme" class="btn btn-secondary">Voir le programme</a>
             </div>
-            <div class="save-date-banner">1er événement : 13 septembre 2025 – Five Paris 18</div>
         </div>
     </section>
 
