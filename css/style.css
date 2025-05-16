@@ -7,6 +7,11 @@
     --color-secondary: #e3487d;
     --color-accent: #4ecbb1;
     --color-warning: #ffb300;
+    --color-blue-light: #eaf0fb;
+    --color-blue: #3a4cb3;
+    --color-blue-dark: #1a2250;
+    --color-white: #fff;
+    --color-grey: #f7f7fa;
     
     /* Couleurs neutres */
     --color-dark: #10142a;
@@ -1318,4 +1323,380 @@ body.high-contrast .hero-title {
     .section-light .container > *:not(:first-child) {
         padding: 1.2rem 0.7rem 1rem 0.7rem;
     }
+}
+
+/* ===== Palette de bleus ===== */
+:root {
+    --color-primary: #3a4cb3;
+    --color-secondary: #e3487d;
+    --color-accent: #4ecbb1;
+    --color-warning: #ffb300;
+    --color-blue-light: #eaf0fb;
+    --color-blue: #3a4cb3;
+    --color-blue-dark: #1a2250;
+    --color-white: #fff;
+    --color-grey: #f7f7fa;
+}
+
+/* ===== Sections différenciées ===== */
+.section-hero {
+    background: linear-gradient(120deg, #3a4cb3 0%, #4ecbb1 100%);
+    color: #fff;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 0 2.5rem 0;
+}
+.section-blue {
+    background: var(--color-blue);
+    color: #fff;
+}
+.section-blue-light {
+    background: var(--color-blue-light);
+    color: #222;
+}
+.section-white {
+    background: #fff;
+    color: #222;
+}
+
+/* ===== Hero ===== */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    min-height: 60vh;
+}
+.hero-left {
+    flex: 1 1 350px;
+    min-width: 280px;
+    z-index: 2;
+}
+.hero-logo {
+    height: 60px;
+    margin-bottom: 1.2rem;
+}
+.hero-title {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    color: #fff;
+    text-shadow: 0 2px 12px #0008;
+}
+.hero-slogan {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #eaf0fb;
+}
+.btn-hero {
+    font-size: 1.1rem;
+    padding: 0.8rem 2.2rem;
+    border-radius: 2rem;
+    background: #fff;
+    color: var(--color-blue);
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.btn-hero:hover, .btn-hero:focus {
+    background: var(--color-secondary);
+    color: #fff;
+}
+.hero-right {
+    flex: 1 1 350px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px #10142a22;
+}
+
+/* ===== Save the Date / Prochain événement ===== */
+.save-date-banner {
+    background: linear-gradient(90deg, #3a4cb3 60%, #4ecbb1 100%);
+    color: #fff;
+    border-radius: 1.2rem;
+    padding: 1.2rem 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    box-shadow: 0 2px 12px #10142a11;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+.save-date-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.save-date-date, .save-date-lieu {
+    font-size: 1.08rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.save-date-img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px #10142a22;
+}
+
+/* ===== Boutons ===== */
+.btn, .btn-primary, .btn-secondary {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #10142a11;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #3a4cb3, #4ecbb1);
+    color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: #e3487d;
+    color: #fff;
+}
+.btn-secondary {
+    background: #fff;
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+}
+.btn-secondary:hover, .btn-secondary:focus {
+    background: var(--color-blue);
+    color: #fff;
+}
+
+/* ===== Section titres et descriptions ===== */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--color-blue);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+.section-blue .section-title, .section-blue-light .section-title {
+    color: #fff;
+}
+.section-desc {
+    font-size: 1.18rem;
+    color: #444;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+.section-blue .section-desc, .section-blue-light .section-desc {
+    color: #eaf0fb;
+}
+
+/* ===== Inscription cards ===== */
+.inscription-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+.inscription-card {
+    background: #f8f9fb;
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 10px #10142a0a;
+    padding: 1.5rem 1.2rem;
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 340px;
+    text-align: center;
+}
+.inscription-card h3 {
+    color: var(--color-blue);
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+
+/* ===== Partenaires & sponsors ===== */
+.partners-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+.partners-left {
+    flex: 1 1 350px;
+    min-width: 280px;
+}
+.partners-logos {
+    display: flex;
+    gap: 1.2rem;
+    margin: 1.2rem 0;
+    flex-wrap: wrap;
+}
+.partner-logo {
+    height: 60px;
+    background: #fff;
+    border-radius: 0.7rem;
+    box-shadow: 0 1px 6px #10142a0a;
+    padding: 0.5rem 1rem;
+}
+.partners-trust {
+    font-size: 1.05rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* ===== Team ===== */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+.team-member {
+    background: #f8f9fb;
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 10px #10142a0a;
+    padding: 1.2rem 1rem;
+    min-width: 180px;
+    max-width: 220px;
+    flex: 1 1 180px;
+    text-align: center;
+}
+.team-member h3 {
+    color: var(--color-blue);
+    font-size: 1.08rem;
+    margin-bottom: 0.3rem;
+}
+.team-member p {
+    color: #444;
+    font-size: 0.98rem;
+}
+.team-honor {
+    margin-top: 1.2rem;
+    background: #eaf0fb;
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 1px 6px #10142a0a;
+}
+.team-honor h4 {
+    color: var(--color-secondary);
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+}
+.team-honor ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+}
+.team-honor li {
+    color: #222;
+    font-weight: 600;
+    font-size: 1.05rem;
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 1px 4px #10142a0a;
+}
+
+/* ===== Contact ===== */
+.contact-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+/* ===== Animations fade-in ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Footer moderne ===== */
+.main-footer {
+    background: var(--color-blue-dark);
+    color: #fff;
+    padding: 2.2rem 0 1.2rem 0;
+    text-align: center;
+}
+.footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+.footer-logo img {
+    height: 48px;
+}
+.footer-links a {
+    color: #eaf0fb;
+    margin: 0 0.7rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.footer-links a:hover, .footer-links a:focus {
+    color: var(--color-accent);
+}
+.footer-bottom {
+    color: #eaf0fb;
+    font-size: 0.98rem;
+    margin-top: 0.7rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .hero-flex, .event-flex, .partners-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
+    .inscription-cards, .team-grid, .partners-logos, .team-honor ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .section-hero {
+        min-height: 50vh;
+    }
+}
+
+/* ===== Accessibilité focus ===== */
+.btn:focus, .btn-primary:focus, .btn-secondary:focus {
+    outline: 3px solid var(--color-warning);
+    outline-offset: 2px;
 } 
