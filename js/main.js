@@ -183,4 +183,18 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.replace('fa-times', 'fa-bars');
         }
     });
+
+    // Contraste élevé
+    const contrastToggle = document.getElementById('contrast-toggle');
+    if (contrastToggle) {
+        // Appliquer la préférence au chargement
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.body.classList.add('high-contrast');
+        }
+        contrastToggle.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+            const isHigh = document.body.classList.contains('high-contrast');
+            localStorage.setItem('highContrast', isHigh);
+        });
+    }
 }); 
