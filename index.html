@@ -22,11 +22,16 @@
                     <li><a href="#mission">Notre mission</a></li>
                     <li><a href="#event">L'événement</a></li>
                     <li><a href="#prism">IHU PRISM</a></li>
+                    <li><a href="#partners">Partenaires & Sponsors</a></li>
                     <li><a href="#support">Nous soutenir</a></li>
                     <li><a href="#team">Qui sommes-nous</a></li>
                 </ul>
             </nav>
-            <button id="mode-toggle" aria-label="Changer le mode" class="mode-toggle">🌙</button>
+            <div class="header-cta">
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-primary btn-header" target="_blank">S'inscrire</a>
+                <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-secondary btn-header" target="_blank">Faire un don</a>
+                <button id="contrast-toggle" aria-label="Activer le contraste élevé" class="contrast-toggle">🌓</button>
+            </div>
         </div>
     </header>
 
@@ -148,6 +153,34 @@
         </div>
     </section>
 
+    <section id="partners" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Partenaires & Sponsors</h2>
+            <p class="section-slogan">Merci à nos partenaires pour leur soutien précieux. Découvrez les avantages à nous rejoindre !</p>
+            <div class="sponsor-levels">
+                <div class="level-card"><h3>Gold</h3><p>Visibilité maximale, logo sur tous les supports, stand dédié, remerciements officiels.</p></div>
+                <div class="level-card"><h3>Silver</h3><p>Logo sur site et affiches, mention lors de l'événement, kit de communication.</p></div>
+                <div class="level-card"><h3>Bronze</h3><p>Logo sur site, remerciements réseaux sociaux.</p></div>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <a href="https://www.exemple-sponsor1.com" target="_blank"><img src="IMAGES/sponsor1.png" alt="Logo Sponsor 1" class="partner-logo"></a>
+                    <div class="partner-name">Sponsor 1</div>
+                    <div class="partner-description">Soutien Gold – Entreprise engagée pour la recherche.</div>
+                </div>
+                <div class="partner-card">
+                    <a href="https://www.exemple-sponsor2.com" target="_blank"><img src="IMAGES/sponsor2.png" alt="Logo Sponsor 2" class="partner-logo"></a>
+                    <div class="partner-name">Sponsor 2</div>
+                    <div class="partner-description">Soutien Silver – Partenaire fidèle de l'événement.</div>
+                </div>
+                <!-- Ajouter d'autres sponsors ici -->
+            </div>
+            <div class="sponsor-testimonials">
+                <blockquote>"Être partenaire de Kick Out Cancer, c'est donner du sens à notre engagement solidaire." <span>– Sponsor Gold</span></blockquote>
+            </div>
+        </div>
+    </section>
+
     <section id="support" class="section section-gradient">
         <div class="container support-flex" style="display:flex;gap:48px;flex-wrap:wrap;align-items:center;">
             <div class="support-actions fade-in" style="flex:2;min-width:260px;">
@@ -214,31 +247,28 @@
     </section>
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-quote">"Un but contre le cancer, c'est une victoire pour tous."</div>
-            <div class="footer-flex">
-                <div class="footer-logo">
-                    <img src="IMAGES/koc-logo-mono.svg" alt="Logo KOC monochrome">
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Accueil</a>
-                    <a href="#mission">Mission</a>
-                    <a href="#event">Événement</a>
-                    <a href="#prism">IHU PRISM</a>
-                    <a href="#support">Nous soutenir</a>
-                    <a href="#team">Équipe</a>
-                </div>
-                <div class="footer-legal">
-                    <a href="#mentions">Mentions légales</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://instagram.com/kickoutcancer" target="_blank" aria-label="Instagram"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
-                    <a href="https://linkedin.com/company/kickoutcancer" target="_blank" aria-label="LinkedIn"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
-                </div>
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer footer">
             </div>
-            <div class="footer-bottom">© 2024 Kick Out Cancer. Tous droits réservés.</div>
+            <div class="footer-cta">
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-primary" target="_blank">S'inscrire</a>
+                <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" class="btn btn-secondary" target="_blank">Faire un don</a>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Accueil</a> | <a href="#mission">Mission</a> | <a href="#event">Événement</a> | <a href="#prism">IHU PRISM</a> | <a href="#partners">Partenaires</a> | <a href="#support">Soutenir</a> | <a href="#team">Équipe</a>
+            </div>
         </div>
+        <div class="footer-quote">"Un but contre le cancer, c'est une victoire pour tous."</div>
+        <div class="footer-legal">
+            <a href="#mentions">Mentions légales</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+            <a href="https://instagram.com/kickoutcancer" target="_blank" aria-label="Instagram"><img src="IMAGES/instagram.svg" alt="Instagram"></a>
+            <a href="https://linkedin.com/company/kickoutcancer" target="_blank" aria-label="LinkedIn"><img src="IMAGES/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-bottom">© 2024 Kick Out Cancer. Tous droits réservés.</div>
     </footer>
 
     <script src="js/main.js"></script>
