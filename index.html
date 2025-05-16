@@ -11,34 +11,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="light-mode">
-    <!-- Top bar avec logo et infos pratiques -->
-    <div class="top-bar">
-        <div class="container top-bar-flex">
-            <div class="top-logo">
-                <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
-            </div>
-            <div class="top-infos">
-                <span class="top-info-item"><i class="fa fa-calendar"></i> 13 septembre 2025</span>
-                <span class="top-info-item"><i class="fa fa-map-marker-alt"></i> Five Paris 18, 217 rue Aubervilliers, Paris</span>
-            </div>
-        </div>
-    </div>
-    <!-- Header principal avec menu -->
+    <!-- Barre sticky fusionnée (logo, infos pratiques, menu) -->
     <header class="main-header">
-        <div class="container header-flex">
+        <div class="container header-flex" style="flex-direction:column;align-items:stretch;gap:0;">
+            <div class="top-bar-flex" style="justify-content:space-between;padding-bottom:0.2rem;">
+                <div class="top-logo">
+                    <img src="IMAGES/koc-logo.png" alt="Logo Kick Out Cancer" class="logo-koc">
+                </div>
+                <div class="top-infos">
+                    <span class="top-info-item"><i class="fa fa-calendar"></i> 13 septembre 2025</span>
+                    <span class="top-info-item"><i class="fa fa-map-marker-alt"></i> Five Paris 18, 217 rue Aubervilliers, Paris</span>
+                </div>
+            </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#home" class="nav-link active">Accueil</a></li>
-                    <li><a href="#programme" class="nav-link">Programme</a></li>
-                    <li><a href="#partners" class="nav-link">Partenaires</a></li>
-                    <li><a href="#infos" class="nav-link">Infos pratiques</a></li>
-                    <li><a href="#inscription" class="nav-link">Inscription</a></li>
+                    <li><a href="#mission" class="nav-link">Notre mission</a></li>
+                    <li><a href="#evenement" class="nav-link">L'événement 2025</a></li>
+                    <li><a href="#prism" class="nav-link">IHU PRISM</a></li>
+                    <li><a href="#partners" class="nav-link">Partenaires & sponsors</a></li>
+                    <li><a href="#team" class="nav-link">Qui sommes-nous</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="btn btn-header-contact">Contactez-nous</a>
         </div>
         <hr class="header-separator">
     </header>
+    <!-- Fin de la barre sticky fusionnée -->
 
     <!-- HERO / ACCUEIL -->
     <section id="home" class="section section-hero fade-in">
@@ -73,14 +72,9 @@
                 <h2 class="section-title">L'événement 2025 – Tournoi de Gala</h2>
                 <img src="IMAGES/save-the-date-affiche.jpg" alt="Affiche Save the Date Kick Out Cancer" class="save-date-img">
                 <div class="event-info">
-                    <div class="save-date-banner">
-                        <span class="save-date-title">Save the Date</span>
-                        <span class="save-date-date"><i class="fa fa-calendar"></i> 13 septembre 2025</span>
-                        <span class="save-date-lieu"><i class="fa fa-map-marker-alt"></i> Five Paris 18, Paris</span>
-                    </div>
                     <div class="event-cta-group">
-                        <a href="#inscription" class="btn btn-primary">S'inscrire</a>
-                        <a href="https://frpwvjph.gensparkspace.com/" class="btn btn-secondary" target="_blank" rel="noopener">Infos pratiques</a>
+                        <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" class="btn btn-primary" target="_blank">S'inscrire</a>
+                        <a href="https://frpwvjph.gensparkspace.com/" class="btn btn-secondary" target="_blank" rel="noopener">En savoir plus</a>
                     </div>
                 </div>
             </div>

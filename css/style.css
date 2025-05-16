@@ -75,7 +75,7 @@ body {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     margin: 0;
-    padding-top: 110px; /* espace pour la barre sticky */
+    padding-top: 140px;
     background: #fff;
 }
 
@@ -115,7 +115,7 @@ img {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 24px #10142a22;
     z-index: 2000;
-    padding: var(--spacing-sm) 0;
+    padding: 0 0 0 0;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
@@ -126,8 +126,10 @@ img {
 
 .header-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 0 0.2rem 0;
 }
 
 .logo-koc {
@@ -314,7 +316,7 @@ img {
         padding: 0.2rem 0;
     }
     body {
-        padding-top: 80px;
+        padding-top: 110px;
     }
 }
 
@@ -1056,6 +1058,7 @@ body.high-contrast .section-light, body.high-contrast .section-gradient, body.hi
     font-weight: 600;
     color: #222;
     align-items: center;
+    font-size: 1rem;
 }
 .top-info-item i {
     margin-right: 0.5em;
@@ -1081,6 +1084,8 @@ body.high-contrast .section-light, body.high-contrast .section-gradient, body.hi
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 .main-nav ul {
     display: flex;
@@ -1121,6 +1126,8 @@ body.high-contrast .section-light, body.high-contrast .section-gradient, body.hi
     box-shadow: none;
     cursor: pointer;
     text-decoration: none;
+    align-self: flex-end;
+    margin-top: 0.2rem;
 }
 .btn-header-contact:hover, .btn-header-contact:focus {
     background: var(--color-primary);
@@ -1150,7 +1157,7 @@ body.high-contrast .hero-title {
     font-size: 2.1rem;
     font-weight: 800;
     color: var(--color-primary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.2rem;
     letter-spacing: -0.5px;
     text-align: left;
 }
@@ -1524,7 +1531,7 @@ body.high-contrast .hero-title {
     font-size: 2.1rem;
     font-weight: 800;
     color: var(--color-blue);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.2rem;
     letter-spacing: -0.5px;
     text-align: left;
 }
