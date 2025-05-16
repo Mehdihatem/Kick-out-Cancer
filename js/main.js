@@ -209,4 +209,14 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('highContrast', isHigh);
         });
     }
+
+    // Modern menu sticky: add .scrolled on scroll
+    const mainHeader = document.querySelector('.main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            mainHeader.classList.add('scrolled');
+        } else {
+            mainHeader.classList.remove('scrolled');
+        }
+    });
 }); 
