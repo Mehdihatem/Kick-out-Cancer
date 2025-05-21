@@ -1386,7 +1386,7 @@ body.high-contrast .hero-title {
     padding: 0 0 2.5rem 0;
 }
 .section-blue {
-    background: var(--color-blue);
+    background: #3a4cb3;
     color: #fff;
 }
 .section-blue-light {
@@ -1591,22 +1591,28 @@ body.high-contrast .hero-title {
     min-width: 280px;
 }
 .partners-logos {
+    gap: 3.5rem !important;
+    justify-content: center;
     display: flex;
-    gap: 1.2rem;
-    margin: 1.2rem 0;
     flex-wrap: wrap;
 }
-.partner-logo {
-    height: 60px;
+.partners-logos .partner-logo {
+    height: 90px !important;
+    max-width: 220px;
+    padding: 1.2rem;
     background: #fff;
-    border-radius: 0.7rem;
-    box-shadow: 0 1px 6px #10142a0a;
-    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px #10142a11;
+    margin-bottom: 0;
 }
-.partners-trust {
-    font-size: 1.05rem;
-    color: #666;
-    margin-top: 0.5rem;
+
+/* Logos IHU PRISM fondateurs */
+#prism img {
+    background: #fff;
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px #10142a11;
+    margin-bottom: 0;
 }
 
 /* ===== Team ===== */
@@ -1861,5 +1867,117 @@ body {
         gap: 0.7rem;
         width: 100%;
         align-items: stretch;
+    }
+}
+
+/* Menu mobile amélioré */
+@media (max-width: 900px) {
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        box-shadow: 0 8px 32px #10142a22;
+        z-index: 3000;
+        display: none;
+        padding: 1.2rem 0;
+    }
+    .main-nav.active {
+        display: block;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: flex-start;
+        padding: 0 2rem;
+    }
+    .main-nav a {
+        font-size: 1.15rem;
+        padding: 1rem 0.5rem;
+        width: 100%;
+        border-radius: 1.5rem;
+        background: none;
+        color: #222;
+        text-align: left;
+    }
+    .main-nav a.active, .main-nav a:focus, .main-nav a:hover {
+        background: #eaf0fb;
+        color: var(--color-primary);
+    }
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        font-size: 2.1rem;
+        color: #3a4cb3;
+        z-index: 4000;
+        cursor: pointer;
+    }
+}
+/* Cacher le bouton burger sur desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* CTA modernes et grands */
+.event-cta-group .btn, .btn.btn-primary, .btn.btn-secondary {
+    font-size: 1.18rem;
+    padding: 1.1rem 2.8rem;
+    border-radius: 2.5rem;
+    margin-bottom: 0;
+    box-shadow: 0 2px 12px #10142a11;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.event-cta-group .btn-primary {
+    background: linear-gradient(90deg, #3a4cb3, #4ecbb1);
+    color: #fff;
+    border: none;
+}
+.event-cta-group .btn-primary:hover {
+    background: #e3487d;
+    color: #fff;
+}
+.event-cta-group .btn-secondary {
+    background: #fff;
+    color: #3a4cb3;
+    border: 2px solid #3a4cb3;
+}
+.event-cta-group .btn-secondary:hover {
+    background: #3a4cb3;
+    color: #fff;
+}
+
+/* CTA "En savoir plus" allongé */
+.event-cta-group .btn-secondary:last-child {
+    min-width: 220px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.18rem;
+    font-weight: 700;
+}
+
+/* Responsive CTA et logos */
+@media (max-width: 900px) {
+    .event-cta-group {
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+        align-items: stretch !important;
+    }
+    .partners-logos {
+        gap: 1.2rem !important;
+    }
+    .partners-logos .partner-logo {
+        height: 60px !important;
+        max-width: 95vw;
+        padding: 0.7rem;
+    }
+    #prism img {
+        max-width: 90vw !important;
+        padding: 0.5rem;
     }
 } 
