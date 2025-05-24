@@ -1,14 +1,34 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
-// ⚡️ N'utilise JAMAIS React.ButtonHTMLAttributes ici ⚡️
-type ButtonProps = HTMLMotionProps<'button'> & {
+/* -------------------------------------------------
+   1)  Base HTML → on supprime les trois handlers drag React
+---------------------------------------------------*/
+type NativeButton = Omit<
+  React.ComponentPropsWithoutRef<'button'>,
+  'onDrag' | 'onDragStart' | 'onDragEnd'
+>
+
+/* -------------------------------------------------
+   2)  Motion → apporte ses propres handlers (2 params)
+---------------------------------------------------*/
+type MotionButton = HTMLMotionProps<'button'>
+
+/* -------------------------------------------------
+   3)  Fusion + tes props métier
+---------------------------------------------------*/
+type ButtonProps = {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'text'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
-}
+
+  // (facultatif) tes propres handlers, version Framer Motion
+  onDrag?:      (e: MouseEvent | TouchEvent | PointerEvent, info: any) => void
+  onDragStart?: (e: MouseEvent | TouchEvent | PointerEvent, info: any) => void
+  onDragEnd?:   (e: MouseEvent | TouchEvent | PointerEvent, info: any) => void
+} & Omit<HTMLMotionProps<'button'>, 'onDrag' | 'onDragStart' | 'onDragEnd'>
 
 export default function Button({
   children,
@@ -16,31 +36,34 @@ export default function Button({
   size = 'md',
   fullWidth = false,
   className = '',
-  ...props      // props sera STRICTEMENT du type HTMLMotionProps<'button'>
+  onDrag,
+  onDragStart,
+  onDragEnd,
+  ...rest
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
-  
+  const base =
+    'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
   const variants = {
-    primary: 'bg-primary text-white hover:bg-primary/90',
-    secondary: 'bg-coral text-white hover:bg-coral/90',
-    outline: 'border-2 border-primary text-primary hover:bg-primary/10',
+    primary:   'bg-primary text-white hover:bg-primary/90',
+    secondary: 'bg-coral  text-white hover:bg-coral/90',
+    outline:   'border-2 border-primary text-primary hover:bg-primary/10',
     text: 'text-primary hover:bg-primary/10'
   } as const
-
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
   } as const
 
-  const width = fullWidth ? 'w-full' : ''
-
   return (
     <motion.button
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
-      {...props} // plus aucun conflit possible
+      className={`${base} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
+      onDrag={onDrag as any}
+      onDragStart={onDragStart as any}
+      onDragEnd={onDragEnd as any}
+      {...rest}
     >
       {children}
     </motion.button>
