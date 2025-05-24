@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Button from '../components/Button'
+import TeamSection from '../components/TeamSection'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -45,14 +46,14 @@ export default function Home() {
           >
             <Button
               as="a"
-              href="https://www.helloasso.com/associations/kickoutcancer"
+              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
               target="_blank"
               rel="noopener noreferrer"
+              variant="secondary"
               size="lg"
-              variant="primary"
-              aria-label="Réserver ma place pour l'événement"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              Je réserve ma place
+              J'inscris mon équipe
             </Button>
           </motion.div>
         </div>
@@ -111,6 +112,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <TeamSection />
+
       {/* Prochain évènement Section */}
       <section id="prochain-evenement" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -127,14 +131,14 @@ export default function Home() {
           <div className="text-center">
             <Button
               as="a"
-              href="https://www.helloasso.com/associations/kickoutcancer"
+              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              variant="primary"
-              aria-label="Réserver ma place pour l'événement"
+              variant="secondary"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              Je réserve ma place
+              J'inscris mon équipe
             </Button>
           </div>
         </div>
@@ -216,14 +220,26 @@ export default function Home() {
                 storytelling d'engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
-              <Button
-                as="a"
-                href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
-                variant="secondary"
-                aria-label="Contacter l'équipe pour un partenariat"
-              >
-                Écrire à l'équipe
-              </Button>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  as="a"
+                  href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
+                  variant="secondary"
+                  aria-label="Contacter l'équipe pour un partenariat"
+                >
+                  Écrire à l'équipe
+                </Button>
+                <Button
+                  as="a"
+                  href="/documents/dossier-partenariat.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  aria-label="Télécharger le dossier de partenariat"
+                >
+                  Dossier partenariat
+                </Button>
+              </div>
             </div>
 
             <div className="relative h-56">
@@ -238,22 +254,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Don Section */}
-      <section id="don" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Je soutiens la recherche</h2>
-          <div className="max-w-3xl mx-auto">
-            <iframe
-              src="https://www.helloasso.com/associations/kickoutcancer/formulaires/1/widget"
-              width="100%"
-              height="600"
-              style={{ border: 'none', borderRadius: '8px' }}
-              title="Formulaire de don HelloAsso - Soutenez la recherche contre le cancer"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Supporters Section */}
       <section id="ils-nous-soutiennent" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -263,6 +263,65 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Don Section */}
+      <section id="don" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold">
+            Je soutiens la recherche
+          </h2>
+          <div className="mx-auto max-w-3xl">
+            <iframe
+              title="Formulaire de don KickOutCancer"
+              src="https://www.helloasso.com/associations/kickoutcancer/formulaires/1"
+              width="100%"
+              height="850"
+              style={{ border: 'none' }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-12 text-gray-300">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
+          <div>
+            <div className="relative h-12 w-48 mb-4">
+              <Image
+                src="/images/logo-footer.svg"
+                alt="Kick Out Cancer"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <p className="text-sm leading-relaxed">
+              Sport • Science • Solidarité<br />
+              Association loi 1901 – Paris, France
+            </p>
+          </div>
+
+          <nav>
+            <h4 className="mb-4 font-semibold text-white">Navigation</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#about" className="hover:text-white">L'association</a></li>
+              <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
+              <li><a href="#prochain-evenement" className="hover:text-white">Prochain évènement</a></li>
+              <li><a href="#partenaires" className="hover:text-white">Partenaires</a></li>
+              <li><a href="#ils-nous-soutiennent" className="hover:text-white">Ils nous soutiennent</a></li>
+              <li><a href="#don" className="hover:text-white">Je soutiens la recherche</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <h4 className="mb-4 font-semibold text-white">Contact</h4>
+            <p className="text-sm">contact@kickoutcancer.org</p>
+            <p className="text-sm">LinkedIn • Instagram • X</p>
+          </div>
+        </div>
+        <p className="mt-12 text-center text-xs text-gray-500">
+          © 2025 Kick Out Cancer — Tous droits réservés
+        </p>
+      </footer>
     </main>
   )
 } 
