@@ -17,175 +17,148 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen">
-        <Image
-          src="/images/save-the-date-affiche.jpg"
-          alt="Kick Out Cancer - Save the Date"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <section id="hero" className="relative h-screen flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-bg.jpg"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative z-10 text-center text-white">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-bold mb-6"
+          >
+            Kick Out Cancer
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl md:text-2xl mb-8"
+          >
+            Ensemble, nous pouvons faire la différence
+          </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center text-white px-4"
+            transition={{ delay: 0.4 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Kick Out Cancer
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Ensemble, marquons des buts contre le cancer
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Link href="/inscription">
-                <Button size="lg" variant="primary">
-                  S'inscrire
-                </Button>
-              </Link>
-              <Link href="/don">
-                <Button size="lg" variant="outline">
-                  Faire un don
-                </Button>
-              </Link>
-            </div>
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="primary"
+            >
+              Je m'inscris
+            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Countdown Section */}
-      <section className="py-20 bg-gray-50 dark:bg-dark">
+      {/* Prochain évènement Section */}
+      <section id="prochain-evenement" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            {...fadeIn}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Prochain Tournoi
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              13 septembre 2025 - Stade de CentraleSupélec
-            </p>
-          </motion.div>
-          <Countdown />
+          <h2 className="text-4xl font-bold text-center mb-12">Prochain évènement</h2>
+          <div className="relative w-full h-[600px] mb-8">
+            <Image
+              src="/images/save-the-date.jpg"
+              alt="Save the date - Prochain évènement Kick Out Cancer"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <div className="text-center">
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="primary"
+            >
+              Je m'inscris
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-20">
+      {/* Don Section */}
+      <section id="don" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            {...fadeIn}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Notre Impact
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              Chaque don compte dans la lutte contre le cancer
-            </p>
-          </motion.div>
-          <ImpactCalc />
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-20 bg-gray-50 dark:bg-dark">
-        <div className="container mx-auto px-4">
-          <motion.div
-            {...fadeIn}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nos Partenaires
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <PartnerLogo
-              src="/images/centralesupelec-logo.png"
-              alt="CentraleSupélec"
-              tier="headline"
-            />
-            <PartnerLogo
-              src="/images/inserm-logo.png"
-              alt="INSERM"
-              tier="gold"
-            />
-            <PartnerLogo
-              src="/images/unicancer-logo.png"
-              alt="Unicancer"
-              tier="gold"
-            />
-            <PartnerLogo
-              src="/images/prism_logo.png"
-              alt="PRISM"
-              tier="headline"
+          <h2 className="text-4xl font-bold text-center mb-12">Faire un don</h2>
+          <div className="max-w-3xl mx-auto">
+            <iframe
+              src="https://www.helloasso.com/associations/kickoutcancer/formulaires/1/widget"
+              width="100%"
+              height="600"
+              style={{ border: 'none', borderRadius: '8px' }}
+              title="Formulaire de don HelloAsso"
             />
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20">
+      {/* Partenaires Section */}
+      <section id="partenaires" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            {...fadeIn}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ils nous soutiennent
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TestimonialCard
-              quote="Un événement qui allie sport et solidarité pour une cause qui nous tient à cœur."
-              author="Dr. Marie Dupont"
-              role="Directrice de l'IHU PRISM"
-              image="/images/testimonials/marie-dupont.jpg"
-            />
-            <TestimonialCard
-              quote="Une belle initiative qui montre que le sport peut être un vecteur de changement."
-              author="Jean Martin"
-              role="Président de CentraleSupélec"
-              image="/images/testimonials/jean-martin.jpg"
-            />
-            <TestimonialCard
-              quote="Chaque édition est plus belle que la précédente, merci à tous les participants !"
-              author="Sophie Bernard"
-              role="Bénévole"
-              image="/images/testimonials/sophie-bernard.jpg"
-            />
+          <h2 className="text-4xl font-bold text-center mb-12">Nos Partenaires</h2>
+          
+          {/* IHU PRISM Spotlight */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-gray-50 rounded-lg p-8">
+              <div className="flex items-center mb-6">
+                <div className="w-24 h-24 relative mr-6">
+                  <Image
+                    src="/images/ihu-prism-logo.png"
+                    alt="IHU PRISM"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">IHU PRISM</h3>
+                  <p className="text-gray-600">
+                    L'Institut Hospitalo-Universitaire PRISM est un centre d'excellence en recherche médicale.
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6">
+                L'IHU PRISM est un partenaire majeur de Kick Out Cancer, apportant son expertise
+                et son soutien dans la lutte contre le cancer. Ensemble, nous travaillons pour
+                faire avancer la recherche et améliorer les soins des patients.
+              </p>
+              <Button
+                as="a"
+                href="mailto:contact@kickoutcancer.fr"
+                variant="outline"
+              >
+                Devenir partenaire
+              </Button>
+            </div>
+          </div>
+
+          {/* Autres partenaires */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Ajoutez ici les logos des autres partenaires */}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            {...fadeIn}
-            className="max-w-2xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Rejoignez la lutte
-            </h2>
-            <p className="text-lg mb-8">
-              Chaque but rapproche la science PRISM de la guérison
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Link href="/inscription">
-                <Button size="lg" variant="secondary">
-                  S'inscrire au tournoi
-                </Button>
-              </Link>
-              <Link href="/don">
-                <Button size="lg" variant="outline">
-                  Soutenir la cause
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+      {/* Supporters Section */}
+      <section id="ils-nous-soutiennent" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Ils nous soutiennent</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Ajoutez ici les logos des supporters */}
+          </div>
         </div>
       </section>
     </main>

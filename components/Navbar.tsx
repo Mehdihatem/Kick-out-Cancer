@@ -8,7 +8,11 @@ export default function Navbar() {
     { href: '#partners', label: 'Partenaires' },
     { href: '#supporters', label: 'Ils nous soutiennent' },
     { href: '#don', label: 'Faire un don' },
-    { href: '#inscription', label: 'Inscription' },
+    { 
+      href: 'https://www.helloasso.com/associations/kickoutcancer',
+      label: 'Inscription',
+      external: true
+    },
   ]
 
   return (
@@ -24,6 +28,10 @@ export default function Navbar() {
               <a 
                 href={item.href} 
                 className="text-gray-600 hover:text-primary transition-colors"
+                {...(item.external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                })}
               >
                 {item.label}
               </a>

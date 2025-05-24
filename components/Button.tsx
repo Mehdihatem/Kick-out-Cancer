@@ -1,5 +1,5 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
-import { ReactNode } from 'react'
+import { ReactNode, ElementType, AnchorHTMLAttributes } from 'react'
 
 // ⚡️ N'utilise JAMAIS React.ButtonHTMLAttributes ici ⚡️
 type NativeButton = Omit<React.ComponentPropsWithoutRef<'button'>, 'onDrag' | 'onDragStart' | 'onDragEnd'>
@@ -19,6 +19,7 @@ type ButtonOwnProps = {
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
+  as?: ElementType
 }
 
 /* 👉 on retire la version React des handlers */
@@ -30,7 +31,14 @@ type CleanButtonHTML = Omit<
 /* 👉 on enlève explicitement onDrag* pour être sûr */
 type CleanMotion = Omit<MotionOnly, 'onDrag' | 'onDragStart' | 'onDragEnd'>
 
-type ButtonProps = ButtonOwnProps & CleanButtonHTML & CleanMotion
+type ButtonProps = CleanMotion & {
+  children: ReactNode
+  variant?: 'primary' | 'secondary' | 'outline' | 'text'
+  size?: 'sm' | 'md' | 'lg'
+  fullWidth?: boolean
+  className?: string
+  as?: ElementType
+} & Partial<AnchorHTMLAttributes<HTMLAnchorElement>>
 
 export default function Button({
   children,
@@ -38,7 +46,8 @@ export default function Button({
   size = 'md',
   fullWidth = false,
   className = '',
-  ...rest            // 🍀 CONTIENT ZÉRO onDrag React
+  as: Component = motion.button,
+  ...rest
 }: ButtonProps) {
   const base =
     'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
@@ -55,13 +64,13 @@ export default function Button({
   } as const
 
   return (
-    <motion.button
+    <Component
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`${base} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
       {...rest}
     >
       {children}
-    </motion.button>
+    </Component>
   )
 } 
