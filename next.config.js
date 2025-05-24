@@ -11,7 +11,6 @@ const nextConfig = {
   poweredByHeader: false,
   swcMinify: true,
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'leaflet'],
   },
   async headers() {

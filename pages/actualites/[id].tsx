@@ -12,8 +12,19 @@ const fadeIn = {
 }
 
 // Simuler une base de données d'articles
-const articles = {
-  1: {
+const articles: Record<string, {
+  id: number
+  title: string
+  content: string
+  image: string
+  date: string
+  category: string
+  author: string
+  authorImage: string
+  readTime: string
+  tags: string[]
+}> = {
+  '1': {
     id: 1,
     title: 'Lancement du Tournoi de Gala 2025',
     content: `
@@ -74,7 +85,13 @@ const similarArticles = [
 export default function Article() {
   const router = useRouter()
   const { id } = router.query
-  const article = articles[id as keyof typeof articles]
+  
+  // Attendre que l'ID soit disponible
+  if (!id || Array.isArray(id)) {
+    return null
+  }
+
+  const article = articles[id]
 
   if (!article) {
     return (

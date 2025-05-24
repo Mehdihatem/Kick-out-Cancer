@@ -1,17 +1,15 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
-type MotionButtonProps = HTMLMotionProps<"button">
-
-interface ButtonProps {
+type ButtonProps = Omit<HTMLMotionProps<"button">, "onDrag" | "onDragStart" | "onDragEnd"> & {
   children: ReactNode
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline' | 'text'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
-  onClick?: () => void
-  type?: 'button' | 'submit' | 'reset'
-  disabled?: boolean
+  onDrag?: (event: MouseEvent | TouchEvent | PointerEvent, info: { point: { x: number, y: number } }) => void
+  onDragStart?: (event: MouseEvent | TouchEvent | PointerEvent, info: { point: { x: number, y: number } }) => void
+  onDragEnd?: (event: MouseEvent | TouchEvent | PointerEvent, info: { point: { x: number, y: number } }) => void
 }
 
 const Button = ({
@@ -20,17 +18,15 @@ const Button = ({
   size = 'md',
   fullWidth = false,
   className = '',
-  onClick,
-  type = 'button',
-  disabled = false,
   ...props
-}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps | 'onDrag' | 'onDragStart' | 'onDragEnd'>) => {
+}: ButtonProps) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
   
   const variants = {
     primary: 'bg-primary text-white hover:bg-primary/90',
     secondary: 'bg-coral text-white hover:bg-coral/90',
     outline: 'border-2 border-primary text-primary hover:bg-primary/10',
+    text: 'text-primary hover:bg-primary/10'
   }
 
   const sizes = {
@@ -41,18 +37,13 @@ const Button = ({
 
   const width = fullWidth ? 'w-full' : ''
 
-  const motionProps: Omit<MotionButtonProps, 'onDrag' | 'onDragStart' | 'onDragEnd'> = {
-    type,
-    disabled,
-    onClick,
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    className: `${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`,
-    ...props
-  }
-
   return (
-    <motion.button {...motionProps}>
+    <motion.button
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
+      {...props}
+    >
       {children}
     </motion.button>
   )
