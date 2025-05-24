@@ -1,12 +1,14 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
+// IMPORTANT : Pas de fusion avec React.ButtonHTMLAttributes
 type ButtonProps = HTMLMotionProps<'button'> & {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'text'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
+  // Ne redéclare PAS onDrag, onDragStart ou onDragEnd ici
 }
 
 export default function Button({
@@ -15,13 +17,10 @@ export default function Button({
   size = 'md',
   fullWidth = false,
   className = '',
-  onDrag,
-  onDragStart,
-  onDragEnd,
-  ...safeProps
+  ...props
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
-
+  
   const variants = {
     primary: 'bg-primary text-white hover:bg-primary/90',
     secondary: 'bg-coral text-white hover:bg-coral/90',
@@ -42,7 +41,7 @@ export default function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
-      {...safeProps}
+      {...props}
     >
       {children}
     </motion.button>
