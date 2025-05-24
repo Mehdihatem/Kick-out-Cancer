@@ -1,42 +1,85 @@
-# Kick Out Cancer
+# Kick Out Cancer - Site Web
 
-Site web de l'association Kick Out Cancer, qui organise des événements sportifs pour soutenir la recherche contre le cancer.
+Site web officiel de Kick Out Cancer, construit avec Next.js 14 et Tailwind CSS.
 
-## Description
+## 🚀 Installation
 
-"Kick Out Cancer" est une association portée par des professionnels de santé, des chercheurs et des citoyens engagés. Sa mission est de fédérer autour du sport pour soutenir la recherche contre le cancer.
+1. Clonez le dépôt :
+```bash
+git clone https://github.com/kickoutcancer/website.git
+cd website
+```
 
-Le site présente l'association, son premier événement prévu en septembre 2025, et permet aux visiteurs de s'inscrire à l'événement et de faire des dons.
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-## Fonctionnalités
+3. Créez un fichier `.env.local` à la racine du projet avec les variables suivantes :
+```env
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_HUBSPOT_KEY=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+NEXT_PUBLIC_CALENDLY_LINK=https://calendly.com/kickoutcancer/20min
+NEXT_PUBLIC_HELLOASSO_INSCRIPTION=https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-
+NEXT_PUBLIC_HELLOASSO_DON=https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer
+```
 
-- Présentation de l'association et de sa mission
-- Détails sur l'événement 2025
-- Information sur le partenariat avec l'IHU PRISM
-- Formulaire de contact pour les partenaires potentiels
-- Interface responsive (mobile, tablette, desktop)
+4. Lancez le serveur de développement :
+```bash
+npm run dev
+```
 
-## Technologies utilisées
+Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
 
-- HTML5
-- CSS3 (avec variables CSS pour la cohérence visuelle)
-- JavaScript (vanilla)
-- FontAwesome pour les icônes
-- Google Fonts (Montserrat)
+## 🛠️ Technologies
 
-## Installation
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Google Analytics 4
+- HubSpot
+- HelloAsso
+- Calendly
 
-1. Clonez ce dépôt : `git clone https://github.com/Mehdihatem/Kick-out-Cancer.git`
-2. Ouvrez `index.html` dans votre navigateur
+## 📁 Structure du Projet
 
-## Hébergement
+```
+├── components/     # Composants réutilisables
+├── pages/         # Pages de l'application
+├── public/        # Fichiers statiques
+│   └── images/    # Images du site
+├── styles/        # Styles globaux
+└── content/       # Contenu Markdown
+```
 
-Le site est accessible à l'adresse [kickoutcancer.org](https://kickoutcancer.org).
+## 🎨 Design System
 
-## Contribuer
+- Couleurs :
+  - Bleu : #0066FF
+  - Corail : #FF5A5F
+  - Menthe : #1BC47D
+  - Gris : #121212
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+- Typographie :
+  - Poppins (titres)
+  - Inter (texte)
+  - Space Mono (code)
 
-## Licence
+## 🧪 Tests
 
-Tous droits réservés © 2024 Kick Out Cancer 
+```bash
+# Tests E2E
+npm run test:e2e
+
+# Tests d'accessibilité
+npm run test:accessibility
+```
+
+## 🚀 Déploiement
+
+Le site est déployé automatiquement sur Vercel à chaque push sur la branche `main`.
+
+## 📝 Licence
+
+MIT 
