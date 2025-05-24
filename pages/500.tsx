@@ -31,4 +31,7 @@ export default function ServerError() {
             </Button>
           </Link>
         </motion.div>
- 
+      </div>
+    </main>
+  )
+} 

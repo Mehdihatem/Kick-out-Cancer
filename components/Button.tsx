@@ -3,12 +3,15 @@ import { ReactNode } from 'react'
 
 type MotionButtonProps = HTMLMotionProps<"button">
 
-interface ButtonProps extends Omit<MotionButtonProps, "children"> {
+interface ButtonProps {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
+  onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 const Button = ({
@@ -17,8 +20,11 @@ const Button = ({
   size = 'md',
   fullWidth = false,
   className = '',
+  onClick,
+  type = 'button',
+  disabled = false,
   ...props
-}: ButtonProps) => {
+}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps>) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
   
   const variants = {
@@ -35,15 +41,16 @@ const Button = ({
 
   const width = fullWidth ? 'w-full' : ''
 
-  const motionProps: MotionButtonProps = {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    className: `${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`,
-    ...props
-  }
-
   return (
-    <motion.button {...motionProps}>
+    <motion.button
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
+      {...props}
+    >
       {children}
     </motion.button>
   )
