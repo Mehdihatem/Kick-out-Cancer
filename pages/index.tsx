@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Button from '../components/Button'
+import FadeSection from '../components/FadeSection'
 import TeamSection from '../components/TeamSection'
 
 const fadeIn = {
@@ -60,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24">
+      <FadeSection id="about">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,13 +111,15 @@ export default function Home() {
             />
           </motion.div>
         </div>
-      </section>
+      </FadeSection>
 
       {/* Team Section */}
-      <TeamSection />
+      <FadeSection id="team">
+        <TeamSection />
+      </FadeSection>
 
       {/* Prochain évènement Section */}
-      <section id="prochain-evenement" className="py-20 bg-white">
+      <FadeSection id="event">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Prochain évènement</h2>
           <div className="relative w-full h-[600px] mb-8">
@@ -142,10 +145,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       {/* Partenaires Section */}
-      <section id="partenaires" className="py-20 bg-gray-100">
+      <FadeSection id="partners">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
           
@@ -252,20 +255,20 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </FadeSection>
 
       {/* Supporters Section */}
-      <section id="ils-nous-soutiennent" className="py-20 bg-white">
+      <FadeSection id="supporters">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Ils nous soutiennent</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Ajoutez ici les logos des supporters */}
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       {/* Don Section */}
-      <section id="don" className="py-16 bg-gray-50">
+      <FadeSection id="don">
         <div className="container mx-auto px-4">
           <h2 className="mb-8 text-center text-3xl font-bold">
             Je soutiens la recherche
@@ -280,10 +283,15 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </FadeSection>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 text-gray-300">
+      <motion.footer
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="bg-gray-900 py-12 text-gray-300"
+      >
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
           <div>
             <div className="relative h-12 w-48 mb-4">
@@ -305,9 +313,9 @@ export default function Home() {
             <ul className="space-y-2 text-sm">
               <li><a href="#about" className="hover:text-white">L'association</a></li>
               <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
-              <li><a href="#prochain-evenement" className="hover:text-white">Prochain évènement</a></li>
-              <li><a href="#partenaires" className="hover:text-white">Partenaires</a></li>
-              <li><a href="#ils-nous-soutiennent" className="hover:text-white">Ils nous soutiennent</a></li>
+              <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
+              <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
+              <li><a href="#supporters" className="hover:text-white">Ils nous soutiennent</a></li>
               <li><a href="#don" className="hover:text-white">Je soutiens la recherche</a></li>
             </ul>
           </nav>
@@ -321,7 +329,7 @@ export default function Home() {
         <p className="mt-12 text-center text-xs text-gray-500">
           © 2025 Kick Out Cancer — Tous droits réservés
         </p>
-      </footer>
+      </motion.footer>
     </main>
   )
 } 
