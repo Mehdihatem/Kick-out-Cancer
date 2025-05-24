@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Button from '../components/Button'
 import FadeSection from '../components/FadeSection'
 import TeamSection from '../components/TeamSection'
+import SupportersSection from '../components/SupportersSection'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -111,11 +112,6 @@ export default function Home() {
             />
           </motion.div>
         </div>
-      </FadeSection>
-
-      {/* Team Section */}
-      <FadeSection id="team">
-        <TeamSection />
       </FadeSection>
 
       {/* Prochain évènement Section */}
@@ -259,20 +255,13 @@ export default function Home() {
 
       {/* Supporters Section */}
       <FadeSection id="supporters">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Ils nous soutiennent</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {/* Ajoutez ici les logos des supporters */}
-          </div>
-        </div>
+        <SupportersSection />
       </FadeSection>
 
-      {/* Don Section */}
+      {/* JE SOUTIENS LA RECHERCHE */}
       <FadeSection id="don">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-center text-3xl font-bold">
-            Je soutiens la recherche
-          </h2>
+        <div className="container mx-auto py-16">
+          <h2 className="mb-8 text-center text-3xl font-bold">Je soutiens la recherche</h2>
           <div className="mx-auto max-w-3xl">
             <iframe
               title="Formulaire de don KickOutCancer"
@@ -285,51 +274,53 @@ export default function Home() {
         </div>
       </FadeSection>
 
-      {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        className="bg-gray-900 py-12 text-gray-300"
-      >
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
-          <div>
-            <div className="relative h-12 w-48 mb-4">
-              <Image
-                src="/images/logo-footer.svg"
-                alt="Kick Out Cancer"
-                fill
-                className="object-contain"
-              />
+      {/* QUI SOMMES-NOUS ? */}
+      <FadeSection id="team">
+        <TeamSection />
+      </FadeSection>
+
+      {/* FOOTER */}
+      <FadeSection id="footer">
+        <footer className="bg-gray-900 py-12 text-gray-300">
+          <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
+            <div>
+              <div className="relative h-12 w-48 mb-4">
+                <Image
+                  src="/images/logo-footer.svg"
+                  alt="Kick Out Cancer"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-sm leading-relaxed">
+                Sport • Science • Solidarité<br />
+                Association loi 1901 – Paris, France
+              </p>
             </div>
-            <p className="text-sm leading-relaxed">
-              Sport • Science • Solidarité<br />
-              Association loi 1901 – Paris, France
-            </p>
-          </div>
 
-          <nav>
-            <h4 className="mb-4 font-semibold text-white">Navigation</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="hover:text-white">L'association</a></li>
-              <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
-              <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
-              <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
-              <li><a href="#supporters" className="hover:text-white">Ils nous soutiennent</a></li>
-              <li><a href="#don" className="hover:text-white">Je soutiens la recherche</a></li>
-            </ul>
-          </nav>
+            <nav>
+              <h4 className="mb-4 font-semibold text-white">Navigation</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#about" className="hover:text-white">L'association</a></li>
+                <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
+                <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
+                <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
+                <li><a href="#supporters" className="hover:text-white">Ils nous soutiennent</a></li>
+                <li><a href="#don" className="hover:text-white">Je soutiens la recherche</a></li>
+              </ul>
+            </nav>
 
-          <div>
-            <h4 className="mb-4 font-semibold text-white">Contact</h4>
-            <p className="text-sm">contact@kickoutcancer.org</p>
-            <p className="text-sm">LinkedIn • Instagram • X</p>
+            <div>
+              <h4 className="mb-4 font-semibold text-white">Contact</h4>
+              <p className="text-sm">contact@kickoutcancer.org</p>
+              <p className="text-sm">LinkedIn • Instagram • X</p>
+            </div>
           </div>
-        </div>
-        <p className="mt-12 text-center text-xs text-gray-500">
-          © 2025 Kick Out Cancer — Tous droits réservés
-        </p>
-      </motion.footer>
+          <p className="mt-12 text-center text-xs text-gray-500">
+            © 2025 Kick Out Cancer — Tous droits réservés
+          </p>
+        </footer>
+      </FadeSection>
     </main>
   )
 } 

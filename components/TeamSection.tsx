@@ -59,12 +59,11 @@ const honorary = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-24">
+    <section id="team" className="py-24 scroll-mt-28">
       <h2 className="mb-6 text-center text-4xl font-extrabold">Qui sommes-nous ?</h2>
 
       <p className="mx-auto mb-16 max-w-4xl text-center text-lg leading-relaxed">
-        Kick Out Cancer fédère soignants, chercheurs et sportifs pour transformer le
-        mouvement en accélérateur de recherche et de prévention contre le cancer.
+        Kick Out Cancer est une association loi 1901 créée par des chercheurs, oncologues et pharmaciens — tous sportifs — pour transformer le mouvement en accélérateur de recherche et de prévention contre le cancer.
       </p>
 
       {/* Fondateurs */}
