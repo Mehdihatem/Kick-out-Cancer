@@ -1,7 +1,9 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
-interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
+type MotionButtonProps = HTMLMotionProps<"button">
+
+interface ButtonProps extends Omit<MotionButtonProps, "children"> {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
@@ -33,13 +35,15 @@ const Button = ({
 
   const width = fullWidth ? 'w-full' : ''
 
+  const motionProps: MotionButtonProps = {
+    whileHover: { scale: 1.02 },
+    whileTap: { scale: 0.98 },
+    className: `${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`,
+    ...props
+  }
+
   return (
-    <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
-      {...props}
-    >
+    <motion.button {...motionProps}>
       {children}
     </motion.button>
   )
