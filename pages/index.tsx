@@ -1,11 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '../components/Button'
-import Countdown from '../components/Countdown'
-import ImpactCalc from '../components/ImpactCalc'
-import PartnerLogo from '../components/PartnerLogo'
-import TestimonialCard from '../components/TestimonialCard'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -55,9 +50,63 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="primary"
+              aria-label="Réserver ma place pour l'événement"
             >
-              Je m'inscris
+              Je réserve ma place
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="mb-6 text-4xl font-extrabold leading-tight">
+              Kick&nbsp;Out&nbsp;Cancer  
+            </h2>
+            <p className="mb-4 text-lg leading-relaxed">
+              Kick Out Cancer, c'est le premier tournoi de sports de combat
+              mixant professionnels de la santé, sportifs et grand public autour
+              d'une même ambition : mettre KO le cancer par le mouvement,
+              l'innovation et la solidarité.
+            </p>
+            <p className="mb-4 text-lg leading-relaxed">
+              Nous finançons la recherche, sensibilisons aux pratiques sportives
+              préventives et créons un écosystème bienveillant où se rencontrent
+              patients, soignants, chercheurs et entreprises engagées.
+            </p>
+            <p className="mb-8 text-lg leading-relaxed font-semibold text-primary">
+              Notre objectif : 0 recul, 100 % d'impact !
+            </p>
+            <Button
+              as="a"
+              href="#inscription"
+              variant="primary"
+              aria-label="Rejoindre le mouvement Kick Out Cancer"
+            >
+              Rejoindre le mouvement
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative h-80"
+          >
+            <Image
+              src="/images/team-koc.jpg"
+              alt="Équipe Kick Out Cancer"
+              fill
+              className="rounded-lg object-cover shadow-lg"
+            />
           </motion.div>
         </div>
       </section>
@@ -83,77 +132,130 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="primary"
+              aria-label="Réserver ma place pour l'événement"
             >
-              Je m'inscris
+              Je réserve ma place
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Partenaires Section */}
+      <section id="partenaires" className="py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
+          
+          {/* IHU PRISM – Partenaire scientifique */}
+          <div className="mx-auto mb-20 max-w-4xl text-center px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="relative w-44 h-44 mx-auto mb-6">
+                <Image
+                  src="/images/ihu-prism-logo.svg"
+                  alt="IHU PRISM"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="mb-4 text-2xl font-semibold text-primary">
+                Partenaire scientifique officiel
+              </h3>
+              <p className="mb-4 text-lg leading-relaxed">
+                IHU&nbsp;PRISM est un institut de recherche translationnelle et médicale
+                dédié à la&nbsp;médecine de&nbsp;précision en oncologie.
+                Sa&nbsp;mission&nbsp;: mieux comprendre la biologie de chaque cancer pour
+                réduire la mortalité en identifiant les formes agressives
+                dès&nbsp;le&nbsp;diagnostic et en&nbsp;proposant le traitement le plus
+                adapté à chaque patient.
+              </p>
+              <p className="mb-4 text-lg leading-relaxed">
+                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et&nbsp;Inserm autour d'une
+                approche intégrative et innovante&nbsp;:&nbsp;intelligence&nbsp;artificielle,
+                analyse&nbsp;de&nbsp;l'ADN circulant, épigénétique,
+                hétérogénéité clonale, biologie spatiale…
+              </p>
+              <p className="mb-8 text-lg leading-relaxed">
+                Objectif&nbsp;: créer une cartographie digitale de chaque
+                patient, identifier de nouveaux biomarqueurs et accélérer
+                l'accès aux&nbsp;thérapies ciblées et&nbsp;aux
+                essais&nbsp;précoces.
+              </p>
+              <Button
+                as="a"
+                href="https://prism.center/about-prism/"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                aria-label="En savoir plus sur IHU PRISM"
+              >
+                En savoir plus
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Devenir partenaire */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto grid max-w-5xl items-center gap-12 rounded-lg bg-white p-10 shadow-md md:grid-cols-2"
+          >
+            <div>
+              <h3 className="mb-4 text-2xl font-bold text-primary">
+                Devenez partenaire
+              </h3>
+              <p className="mb-6 text-lg leading-relaxed">
+                Associez votre marque à un événement sportif et solidaire à fort
+                impact médiatique : visibilité réseaux sociaux, présence presse,
+                storytelling d'engagement, activation terrain… Ensemble, faisons
+                bouger les lignes contre le cancer !
+              </p>
+              <Button
+                as="a"
+                href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
+                variant="secondary"
+                aria-label="Contacter l'équipe pour un partenariat"
+              >
+                Écrire à l'équipe
+              </Button>
+            </div>
+
+            <div className="relative h-56">
+              <Image
+                src="/images/partnership-illustration.svg"
+                alt="Illustration partenariat"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Don Section */}
       <section id="don" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Faire un don</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Je soutiens la recherche</h2>
           <div className="max-w-3xl mx-auto">
             <iframe
               src="https://www.helloasso.com/associations/kickoutcancer/formulaires/1/widget"
               width="100%"
               height="600"
               style={{ border: 'none', borderRadius: '8px' }}
-              title="Formulaire de don HelloAsso"
+              title="Formulaire de don HelloAsso - Soutenez la recherche contre le cancer"
             />
           </div>
         </div>
       </section>
 
-      {/* Partenaires Section */}
-      <section id="partenaires" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nos Partenaires</h2>
-          
-          {/* IHU PRISM Spotlight */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gray-50 rounded-lg p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-24 h-24 relative mr-6">
-                  <Image
-                    src="/images/ihu-prism-logo.png"
-                    alt="IHU PRISM"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">IHU PRISM</h3>
-                  <p className="text-gray-600">
-                    L'Institut Hospitalo-Universitaire PRISM est un centre d'excellence en recherche médicale.
-                  </p>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-6">
-                L'IHU PRISM est un partenaire majeur de Kick Out Cancer, apportant son expertise
-                et son soutien dans la lutte contre le cancer. Ensemble, nous travaillons pour
-                faire avancer la recherche et améliorer les soins des patients.
-              </p>
-              <Button
-                as="a"
-                href="mailto:contact@kickoutcancer.fr"
-                variant="outline"
-              >
-                Devenir partenaire
-              </Button>
-            </div>
-          </div>
-
-          {/* Autres partenaires */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {/* Ajoutez ici les logos des autres partenaires */}
-          </div>
-        </div>
-      </section>
-
       {/* Supporters Section */}
-      <section id="ils-nous-soutiennent" className="py-20 bg-gray-50">
+      <section id="ils-nous-soutiennent" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Ils nous soutiennent</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
