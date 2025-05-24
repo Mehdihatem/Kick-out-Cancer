@@ -1,4 +1,4 @@
-import { motion, HTMLMotionProps, PanInfo } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
 type MotionButtonProps = HTMLMotionProps<"button">
@@ -12,9 +12,6 @@ interface ButtonProps {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
-  onDrag?: (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => void
-  onDragStart?: (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => void
-  onDragEnd?: (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => void
 }
 
 const Button = ({
@@ -26,11 +23,8 @@ const Button = ({
   onClick,
   type = 'button',
   disabled = false,
-  onDrag,
-  onDragStart,
-  onDragEnd,
   ...props
-}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps | 'onDrag' | 'onDragStart' | 'onDragEnd'>) => {
+}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps>) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
   
   const variants = {
@@ -48,22 +42,15 @@ const Button = ({
 
   const width = fullWidth ? 'w-full' : ''
 
-  const motionProps: Omit<MotionButtonProps, 'onDrag' | 'onDragStart' | 'onDragEnd'> = {
-    type,
-    disabled,
-    onClick,
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    className: `${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`,
-    ...props
-  }
-
   return (
     <motion.button
-      {...motionProps}
-      onDrag={onDrag}
-      onDragStart={onDragStart}
-      onDragEnd={onDragEnd}
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
+      {...props}
     >
       {children}
     </motion.button>
