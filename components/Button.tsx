@@ -1,7 +1,10 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
-type ButtonProps = HTMLMotionProps<'button'> & {
+type ButtonProps = Omit<
+  HTMLMotionProps<'button'>,
+  'onDrag' | 'onDragStart' | 'onDragEnd'
+> & {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'text'
   size?: 'sm' | 'md' | 'lg'
