@@ -63,54 +63,27 @@ export default function Home() {
 
       {/* About Section */}
       <FadeSection id="about">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="mb-6 text-4xl font-extrabold leading-tight">
-              Kick&nbsp;Out&nbsp;Cancer  
-            </h2>
-            <p className="mb-4 text-lg leading-relaxed">
-              Kick Out Cancer, c'est le premier tournoi de sports de combat
-              mixant professionnels de la santé, sportifs et grand public autour
-              d'une même ambition : mettre KO le cancer par le mouvement,
-              l'innovation et la solidarité.
-            </p>
-            <p className="mb-4 text-lg leading-relaxed">
-              Nous finançons la recherche, sensibilisons aux pratiques sportives
-              préventives et créons un écosystème bienveillant où se rencontrent
-              patients, soignants, chercheurs et entreprises engagées.
-            </p>
-            <p className="mb-8 text-lg leading-relaxed font-semibold text-primary">
-              Notre objectif : 0 recul, 100 % d'impact !
-            </p>
+        <div className="container mx-auto py-16">
+          <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
+          <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
+            Kick Out Cancer, c'est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité.
+          </p>
+          <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
               as="a"
-              href="#inscription"
+              href="#don"
               variant="primary"
               aria-label="Rejoindre le mouvement Kick Out Cancer"
             >
               Rejoindre le mouvement
             </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative h-80"
-          >
-            <Image
-              src="/images/team-koc.jpg"
-              alt="Équipe Kick Out Cancer"
-              fill
-              className="rounded-lg object-cover shadow-lg"
-            />
-          </motion.div>
+            <a
+              href="#team"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
+            >
+              Découvrir l'équipe
+            </a>
+          </div>
         </div>
       </FadeSection>
 
