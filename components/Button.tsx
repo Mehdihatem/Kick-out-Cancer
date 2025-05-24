@@ -1,12 +1,17 @@
-import { motion, HTMLMotionProps, PanInfo } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
 // ⚡️ N'utilise JAMAIS React.ButtonHTMLAttributes ici ⚡️
 type NativeButton = Omit<React.ComponentPropsWithoutRef<'button'>, 'onDrag' | 'onDragStart' | 'onDragEnd'>
 
-type MotionButton = HTMLMotionProps<'button'>
-
+// ⚡️ N'utilise JAMAIS React.TouchEvent ici ⚡️
 type NativeEvt = MouseEvent | TouchEvent | PointerEvent
+
+// ⚡️ N'utilise JAMAIS React.MouseEvent ici ⚡️
+type MotionOnly = HTMLMotionProps<'button'>
+
+// ⚡️ N'utilise JAMAIS React.TouchEvent ici ⚡️
+type MotionEvt = MouseEvent | TouchEvent | PointerEvent
 
 type ButtonOwnProps = {
   children: ReactNode
@@ -14,11 +19,6 @@ type ButtonOwnProps = {
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   className?: string
-
-  /* 👉 version Framer Motion (2 paramètres) */
-  onDrag?: (e: NativeEvt, info: PanInfo) => void
-  onDragStart?: (e: NativeEvt, info: PanInfo) => void
-  onDragEnd?: (e: NativeEvt, info: PanInfo) => void
 }
 
 /* 👉 on retire la version React des handlers */
@@ -27,7 +27,10 @@ type CleanButtonHTML = Omit<
   'onDrag' | 'onDragStart' | 'onDragEnd'
 >
 
-type ButtonProps = ButtonOwnProps & CleanButtonHTML & HTMLMotionProps<'button'>
+/* 👉 on enlève explicitement onDrag* pour être sûr */
+type CleanMotion = Omit<MotionOnly, 'onDrag' | 'onDragStart' | 'onDragEnd'>
+
+type ButtonProps = ButtonOwnProps & CleanButtonHTML & CleanMotion
 
 export default function Button({
   children,
@@ -35,10 +38,7 @@ export default function Button({
   size = 'md',
   fullWidth = false,
   className = '',
-  onDrag,
-  onDragStart,
-  onDragEnd,
-  ...rest /* ← garanti SANS onDrag React */
+  ...rest            // 🍀 CONTIENT ZÉRO onDrag React
 }: ButtonProps) {
   const base =
     'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
@@ -59,11 +59,7 @@ export default function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`${base} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
-      /* on repasse – volontairement – la version 2 paramètres */
-      onDrag={onDrag}
-      onDragStart={onDragStart}
-      onDragEnd={onDragEnd}
-      {...rest} /* ✅ plus aucune signature parasite */
+      {...rest}
     >
       {children}
     </motion.button>
