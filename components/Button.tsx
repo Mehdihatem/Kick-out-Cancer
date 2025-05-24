@@ -24,7 +24,7 @@ const Button = ({
   type = 'button',
   disabled = false,
   ...props
-}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps>) => {
+}: ButtonProps & Omit<MotionButtonProps, keyof ButtonProps | 'onDrag' | 'onDragStart' | 'onDragEnd'>) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
   
   const variants = {
@@ -41,16 +41,18 @@ const Button = ({
 
   const width = fullWidth ? 'w-full' : ''
 
+  const motionProps: Omit<MotionButtonProps, 'onDrag' | 'onDragStart' | 'onDragEnd'> = {
+    type,
+    disabled,
+    onClick,
+    whileHover: { scale: 1.02 },
+    whileTap: { scale: 0.98 },
+    className: `${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`,
+    ...props
+  }
+
   return (
-    <motion.button
-      type={type}
-      disabled={disabled}
-      onClick={onClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
-      {...props}
-    >
+    <motion.button {...motionProps}>
       {children}
     </motion.button>
   )
