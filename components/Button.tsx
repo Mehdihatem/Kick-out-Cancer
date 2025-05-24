@@ -1,10 +1,7 @@
 import { motion, HTMLMotionProps } from 'framer-motion'
 import { ReactNode } from 'react'
 
-type ButtonProps = Omit<
-  HTMLMotionProps<'button'>,
-  'onDrag' | 'onDragStart' | 'onDragEnd'
-> & {
+type ButtonProps = HTMLMotionProps<'button'> & {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'text'
   size?: 'sm' | 'md' | 'lg'
@@ -12,14 +9,17 @@ type ButtonProps = Omit<
   className?: string
 }
 
-const Button = ({
+export default function Button({
   children,
   variant = 'primary',
   size = 'md',
   fullWidth = false,
   className = '',
-  ...props
-}: ButtonProps) => {
+  onDrag,
+  onDragStart,
+  onDragEnd,
+  ...safeProps
+}: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors'
 
   const variants = {
@@ -42,11 +42,9 @@ const Button = ({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${width} ${className}`}
-      {...props}
+      {...safeProps}
     >
       {children}
     </motion.button>
   )
-}
-
-export default Button 
+} 
