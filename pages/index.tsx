@@ -2,7 +2,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../components/Button'
+import Countdown from '../components/Countdown'
 import ImpactCalc from '../components/ImpactCalc'
+import PartnerLogo from '../components/PartnerLogo'
+import TestimonialCard from '../components/TestimonialCard'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -36,19 +39,41 @@ export default function Home() {
               Ensemble, marquons des buts contre le cancer
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" variant="primary">
-                S'inscrire
-              </Button>
-              <Button size="lg" variant="outline">
-                Faire un don
-              </Button>
+              <Link href="/inscription">
+                <Button size="lg" variant="primary">
+                  S'inscrire
+                </Button>
+              </Link>
+              <Link href="/don">
+                <Button size="lg" variant="outline">
+                  Faire un don
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Impact Section */}
+      {/* Countdown Section */}
       <section className="py-20 bg-gray-50 dark:bg-dark">
+        <div className="container mx-auto px-4">
+          <motion.div
+            {...fadeIn}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Prochain Tournoi
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              13 septembre 2025 - Stade de CentraleSupélec
+            </p>
+          </motion.div>
+          <Countdown />
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             {...fadeIn}
@@ -66,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 dark:bg-dark">
         <div className="container mx-auto px-4">
           <motion.div
             {...fadeIn}
@@ -77,33 +102,59 @@ export default function Home() {
             </h2>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <Image
+            <PartnerLogo
               src="/images/centralesupelec-logo.png"
               alt="CentraleSupélec"
-              width={200}
-              height={100}
-              className="object-contain"
+              tier="headline"
             />
-            <Image
+            <PartnerLogo
               src="/images/inserm-logo.png"
               alt="INSERM"
-              width={200}
-              height={100}
-              className="object-contain"
+              tier="gold"
             />
-            <Image
+            <PartnerLogo
               src="/images/unicancer-logo.png"
               alt="Unicancer"
-              width={200}
-              height={100}
-              className="object-contain"
+              tier="gold"
             />
-            <Image
+            <PartnerLogo
               src="/images/prism_logo.png"
               alt="PRISM"
-              width={200}
-              height={100}
-              className="object-contain"
+              tier="headline"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            {...fadeIn}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ils nous soutiennent
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <TestimonialCard
+              quote="Un événement qui allie sport et solidarité pour une cause qui nous tient à cœur."
+              author="Dr. Marie Dupont"
+              role="Directrice de l'IHU PRISM"
+              image="/images/testimonials/marie-dupont.jpg"
+            />
+            <TestimonialCard
+              quote="Une belle initiative qui montre que le sport peut être un vecteur de changement."
+              author="Jean Martin"
+              role="Président de CentraleSupélec"
+              image="/images/testimonials/jean-martin.jpg"
+            />
+            <TestimonialCard
+              quote="Chaque édition est plus belle que la précédente, merci à tous les participants !"
+              author="Sophie Bernard"
+              role="Bénévole"
+              image="/images/testimonials/sophie-bernard.jpg"
             />
           </div>
         </div>
@@ -123,12 +174,16 @@ export default function Home() {
               Chaque but rapproche la science PRISM de la guérison
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                S'inscrire au tournoi
-              </Button>
-              <Button size="lg" variant="outline">
-                Soutenir la cause
-              </Button>
+              <Link href="/inscription">
+                <Button size="lg" variant="secondary">
+                  S'inscrire au tournoi
+                </Button>
+              </Link>
+              <Link href="/don">
+                <Button size="lg" variant="outline">
+                  Soutenir la cause
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
