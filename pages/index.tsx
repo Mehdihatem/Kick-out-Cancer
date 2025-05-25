@@ -160,7 +160,7 @@ export default function Home() {
               <p className="mb-8 text-lg leading-relaxed">
                 Objectif&nbsp;: créer une cartographie digitale de chaque
                 patient, identifier de nouveaux biomarqueurs et accélérer
-                l'accès aux&nbsp;thérapies ciblées et&nbsp;aux
+                l&#39;accès aux&nbsp;thérapies ciblées et&nbsp;aux
                 essais&nbsp;précoces.
               </p>
               <Button

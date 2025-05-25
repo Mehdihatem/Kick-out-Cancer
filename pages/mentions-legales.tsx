@@ -44,7 +44,7 @@ export default function LegalNotice() {
               </h2>
               <p>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                Association loi 1901 déclarée à la préfecture de l'Essonne<br />
+                Association loi 1901 déclarée à la préfecture de l&#39;Essonne<br />
                 Numéro SIRET : XXX XXX XXX XXXXX<br />
                 Numéro RNA : W91XXXXX
               </p>
@@ -76,7 +76,7 @@ export default function LegalNotice() {
                 Crédits
               </h2>
               <p>
-                Design et développement : [Nom de l'agence/développeur]<br />
+                Design et développement : [Nom de l&#39;agence/développeur]<br />
                 Images : [Sources des images]<br />
                 Icônes : [Sources des icônes]
               </p>
