@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 name: 'Kick Out Cancer',
                 url: 'https://kickoutcancer.org'
               },
-              description: 'Tournoi de football caritatif pour soutenir la recherche contre le cancer à l\'IHU PRISM.',
+              description: 'Tournoi de football caritatif pour soutenir la recherche contre le cancer à l&#39;IHU PRISM.',
               image: 'https://kickoutcancer.org/images/save-the-date-affiche.jpg'
             })
           }}

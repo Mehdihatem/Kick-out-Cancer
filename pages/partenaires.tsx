@@ -23,7 +23,7 @@ const partners = {
     {
       name: 'CentraleSupélec',
       logo: '/images/partners/centralesupelec.png',
-      description: 'Grande école d\'ingénieurs'
+      description: 'Grande école d&#39;ingénieurs'
     },
     {
       name: 'Université Paris-Saclay',

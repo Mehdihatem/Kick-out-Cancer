@@ -190,7 +190,7 @@ export default function Article() {
             >
               {/* Share Section */}
               <Card>
-                <h3 className="text-xl font-bold mb-4">Partager l'article</h3>
+                <h3 className="text-xl font-bold mb-4">Partager l&apos;article</h3>
                 <div className="flex gap-4">
                   <Button variant="secondary" size="sm">
                     Twitter
@@ -261,9 +261,8 @@ export default function Article() {
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent"
                 required
               />
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <Button type="submit" variant="primary">
-                S'inscrire
+                S&apos;inscrire
               </Button>
             </form>
           </motion.div>
@@ -276,15 +275,12 @@ export default function Article() {
             {...fadeIn}
             className="max-w-3xl mx-auto text-center"
           >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h2 className="text-3xl font-bold mb-6">
-              Inscrivez-vous à l'événement
+              Inscrivez-vous à l&apos;événement
             </h2>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Inscrivez votre équipe à l'événement
+              Inscrivez votre équipe à l&apos;événement
             </p>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <Button
               as="a"
               href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
@@ -292,9 +288,9 @@ export default function Article() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              aria-label="Inscrire mon équipe à l'événement"
+              aria-label="Inscrire mon équipe à l&apos;événement"
             >
-              J'inscris mon équipe
+              J&apos;inscris mon équipe
             </Button>
           </motion.div>
         </div>
