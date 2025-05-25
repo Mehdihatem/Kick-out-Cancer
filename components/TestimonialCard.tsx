@@ -33,7 +33,7 @@ const TestimonialCard = ({ quote, author, role, image }: TestimonialCardProps) =
         </div>
       </div>
       <blockquote className="text-gray-700 dark:text-gray-300 italic">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </blockquote>
     </motion.div>
   )
