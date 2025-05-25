@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "npx serve out",
+    "build": "node scripts/generate-sitemap.js && next build",
+    "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:e2e": "playwright test",
     "test:accessibility": "jest tests/accessibility.spec.ts",
-    "export": "next build",
+    "export": "next build && next export",
     "optimize-images": "node scripts/optimize-images.js"
   },
   "keywords": [],

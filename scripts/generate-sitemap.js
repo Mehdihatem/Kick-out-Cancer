@@ -1,4 +1,5 @@
-import { GetStaticProps } from 'next'
+const fs = require('fs')
+const path = require('path')
 
 const EXTERNAL_DATA_URL = 'https://kickoutcancer.org'
 
@@ -14,7 +15,7 @@ function generateSiteMap() {
      <url>
        <loc>${EXTERNAL_DATA_URL}/qui-sommes-nous</loc>
        <lastmod>${new Date().toISOString()}</lastmod>
-       <changefreq>monthly</changefreq>
+       <changefreq>weekly</changefreq>
        <priority>0.8</priority>
      </url>
      <url>
@@ -51,24 +52,12 @@ function generateSiteMap() {
  `
 }
 
-function SiteMap() {
-  return null
+// Ensure the public directory exists
+const publicDir = path.join(process.cwd(), 'public')
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir)
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const sitemap = generateSiteMap()
-
-  return {
-    props: {
-      sitemap,
-    },
-  }
-}
-
-export default function SitemapXML({ sitemap }: { sitemap: string }) {
-  return (
-    <div style={{ display: 'none' }}>
-      {sitemap}
-    </div>
-  )
-} 
+// Write the sitemap to a file
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), generateSiteMap())
+console.log('✅ Sitemap generated successfully!') 
