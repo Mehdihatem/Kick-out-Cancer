@@ -28,29 +28,29 @@ const articles: Record<string, {
     id: 1,
     title: 'Lancement du Tournoi de Gala 2025',
     content: `
-      <p>Nous sommes ravis d'annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025, qui se tiendra le 13 septembre 2025 au Stade de CentraleSupélec.</p>
+      <p>Nous sommes ravis d&apos;annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025, qui se tiendra le 13 septembre 2025 au Stade de CentraleSupélec.</p>
       
       <h2>Un événement majeur pour la recherche</h2>
-      <p>Cette édition 2025 s'annonce comme la plus importante de notre histoire, avec un objectif de collecte ambitieux de 50 000€ pour soutenir la recherche contre le cancer.</p>
+      <p>Cette édition 2025 s&apos;annonce comme la plus importante de notre histoire, avec un objectif de collecte ambitieux de 50 000€ pour soutenir la recherche contre le cancer.</p>
       
       <h2>Un programme riche</h2>
       <p>Le tournoi comprendra :</p>
       <ul>
         <li>Des matchs de football à 5</li>
-        <li>Une cérémonie d'ouverture</li>
+        <li>Une cérémonie d&apos;ouverture</li>
         <li>Des animations et stands</li>
         <li>Une remise de prix</li>
       </ul>
       
       <h2>Comment participer ?</h2>
-      <p>Les inscriptions sont ouvertes pour les équipes étudiantes, entreprises et associations. Les frais d'inscription varient selon la catégorie :</p>
+      <p>Les inscriptions sont ouvertes pour les équipes étudiantes, entreprises et associations. Les frais d&apos;inscription varient selon la catégorie :</p>
       <ul>
         <li>Étudiants : 150€ par équipe</li>
         <li>Entreprises : 500€ par équipe</li>
         <li>Associations : 250€ par équipe</li>
       </ul>
       
-      <p>Pour plus d'informations et pour vous inscrire, rendez-vous sur notre page d'inscription.</p>
+      <p>Pour plus d&apos;informations et pour vous inscrire, rendez-vous sur notre page d&apos;inscription.</p>
     `,
     image: '/images/news/tournament-launch.jpg',
     date: '2024-03-15',
@@ -261,10 +261,41 @@ export default function Article() {
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent"
                 required
               />
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <Button type="submit" variant="primary">
                 S'inscrire
               </Button>
             </form>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50 dark:bg-dark">
+        <div className="container mx-auto px-4">
+          <motion.div
+            {...fadeIn}
+            className="max-w-3xl mx-auto text-center"
+          >
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <h2 className="text-3xl font-bold mb-6">
+              Inscrivez-vous à l'événement
+            </h2>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+              Inscrivez votre équipe à l'événement
+            </p>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              size="lg"
+              aria-label="Inscrire mon équipe à l'événement"
+            >
+              J'inscris mon équipe
+            </Button>
           </motion.div>
         </div>
       </section>

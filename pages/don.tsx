@@ -135,13 +135,13 @@ export default function Donation() {
                 </p>
               </Card>
               <Card>
-                <h3 className="text-xl font-bold mb-4">Puis-je bénéficier d'une réduction fiscale ?</h3>
+                <h3 className="text-xl font-bold mb-4">Puis-je bénéficier d&apos;une réduction fiscale ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Oui, les dons à notre association ouvrent droit à une réduction fiscale de 66% du montant du don, dans la limite de 20% du revenu imposable.
                 </p>
               </Card>
               <Card>
-                <h3 className="text-xl font-bold mb-4">Comment puis-je suivre l'impact de mon don ?</h3>
+                <h3 className="text-xl font-bold mb-4">Comment puis-je suivre l&apos;impact de mon don ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Nous publions régulièrement des rapports sur l&apos;utilisation des fonds et les avancées des projets de recherche soutenus.
                 </p>

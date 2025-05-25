@@ -43,7 +43,8 @@ export default function LegalNotice() {
                 Statut juridique
               </h2>
               <p>
-                Association loi 1901 déclarée à la préfecture de l&apos;Essonne<br />
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                Association loi 1901 déclarée à la préfecture de l'Essonne<br />
                 Numéro SIRET : XXX XXX XXX XXXXX<br />
                 Numéro RNA : W91XXXXX
               </p>

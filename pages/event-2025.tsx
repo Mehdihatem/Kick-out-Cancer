@@ -197,7 +197,7 @@ export default function Event() {
               </Link>
               <Link href="/contact">
                 <Button size="lg" variant="outline">
-                  Plus d'informations
+                  Plus d&apos;informations
                 </Button>
               </Link>
             </div>
