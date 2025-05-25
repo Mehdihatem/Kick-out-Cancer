@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/ZbTr41NAfZbfyUBFvgFwM/_buildManifest.js",
-    "static/ZbTr41NAfZbfyUBFvgFwM/_ssgManifest.js"
+    "static/uOB1XVGKFCvFrG8TaJCwA/_buildManifest.js",
+    "static/uOB1XVGKFCvFrG8TaJCwA/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -15,7 +15,7 @@
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-5271c84138b136f5.js",
       "static/chunks/675-aa3f319ed3862baa.js",
-      "static/chunks/pages/index-33a2fc2fc1763afd.js"
+      "static/chunks/pages/index-3cb452ca54475812.js"
     ],
     "/404": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -35,7 +35,7 @@
       "static/chunks/webpack-ee7e63bc15b31913.js",
       "static/chunks/framework-64ad27b21261a9ce.js",
       "static/chunks/main-5271c84138b136f5.js",
-      "static/css/00461b1fb7d5f1ff.css",
+      "static/css/06bec9863a82a03e.css",
       "static/chunks/pages/_app-50922bffef275906.js"
     ],
     "/_error": [
@@ -80,7 +80,7 @@
       "static/chunks/main-5271c84138b136f5.js",
       "static/chunks/664-d254d21a6fe56bff.js",
       "static/chunks/675-aa3f319ed3862baa.js",
-      "static/chunks/pages/event-2025-3bf8fafceeb30766.js"
+      "static/chunks/pages/event-2025-075baf6c026ddb65.js"
     ],
     "/inscription": [
       "static/chunks/webpack-ee7e63bc15b31913.js",
@@ -109,19 +109,7 @@
       "static/chunks/main-5271c84138b136f5.js",
       "static/chunks/664-d254d21a6fe56bff.js",
       "static/chunks/675-aa3f319ed3862baa.js",
-      "static/chunks/pages/qui-sommes-nous-f12a6d5060a82938.js"
-    ],
-    "/robots.txt": [
-      "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-64ad27b21261a9ce.js",
-      "static/chunks/main-5271c84138b136f5.js",
-      "static/chunks/pages/robots.txt-efc40dba24a57d86.js"
-    ],
-    "/sitemap.xml": [
-      "static/chunks/webpack-ee7e63bc15b31913.js",
-      "static/chunks/framework-64ad27b21261a9ce.js",
-      "static/chunks/main-5271c84138b136f5.js",
-      "static/chunks/pages/sitemap.xml-df6b9d16da9b0070.js"
+      "static/chunks/pages/qui-sommes-nous-8ca233fd7b53058f.js"
     ]
   },
   "ampFirstPages": []
