@@ -1,23 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
+    domains: ['kickoutcancer.org'],
+    formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  poweredByHeader: false,
+  compress: true,
+  swcMinify: true,
   experimental: {
-    optimizeFonts: true,
+    optimizeCss: true,
+    optimizePackageImports: ['framer-motion', 'react-icons'],
     scrollRestoration: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  poweredByHeader: false,
-  compress: true,
 }
 
 module.exports = nextConfig 

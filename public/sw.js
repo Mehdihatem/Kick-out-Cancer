@@ -6,13 +6,21 @@ const urlsToCache = [
   '/images/save-the-date.jpg',
   '/images/logo-footer.svg',
   '/images/ihu-prism-logo.svg',
-  '/images/partnership-illustration.svg'
+  '/images/partnership-illustration.svg',
+  '/favicon.ico',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
+      .then((cache) => {
+        return cache.addAll(urlsToCache);
+      })
+      .catch((error) => {
+        console.error('Cache installation failed:', error);
+      })
   );
 });
 
@@ -32,8 +40,15 @@ self.addEventListener('fetch', (event) => {
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
+              })
+              .catch((error) => {
+                console.error('Cache update failed:', error);
               });
             return response;
+          })
+          .catch((error) => {
+            console.error('Fetch failed:', error);
+            return new Response('Network error', { status: 503 });
           });
       })
   );
