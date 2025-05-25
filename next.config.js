@@ -1,27 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
-    domains: ['kickoutcancer.org'],
-    formats: ['image/webp'],
+    formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  poweredByHeader: false,
-  compress: true,
-  reactStrictMode: true,
-  swcMinify: true,
+  experimental: {
+    optimizeFonts: true,
+    scrollRestoration: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['framer-motion', 'react-icons'],
-    scrollRestoration: true,
-  },
-  // Suppression des headers car ils ne sont pas supportés en mode export
-  // Les headers seront gérés au niveau du serveur web (nginx, apache, etc.)
+  poweredByHeader: false,
+  compress: true,
 }
 
 module.exports = nextConfig 
