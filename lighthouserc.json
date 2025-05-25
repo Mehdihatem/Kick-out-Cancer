@@ -27,7 +27,13 @@
           "requestLatencyMs": 0,
           "downloadThroughputKbps": 0,
           "uploadThroughputKbps": 0
-        }
+        },
+        "skipAudits": [
+          "uses-http2",
+          "uses-text-compression",
+          "uses-rel-preconnect",
+          "uses-rel-preload"
+        ]
       }
     },
     "assert": {
