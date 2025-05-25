@@ -7,7 +7,7 @@ const ImpactCalc = () => {
 
   return (
     <div className="w-full max-w-md mx-auto p-6 bg-white dark:bg-dark rounded-xl shadow-soft">
-      <h3 className="text-2xl font-bold mb-4 text-center">Calculateur d'Impact</h3>
+      <h3 className="text-2xl font-bold mb-4 text-center">Calculateur d&apos;Impact</h3>
       
       <div className="mb-6">
         <label htmlFor="amount" className="block text-sm font-medium mb-2">
@@ -34,7 +34,7 @@ const ImpactCalc = () => {
           {impact} minutes
         </p>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          de séquençage financées à l'IHU PRISM
+          de séquençage financées à l&apos;IHU PRISM
         </p>
       </motion.div>
     </div>

@@ -53,9 +53,9 @@ export default function Home() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              aria-label="Inscrire mon équipe à l'événement"
+              aria-label="Inscrire mon équipe à l&apos;événement"
             >
-              J'inscris mon équipe
+              J&apos;inscris mon équipe
             </Button>
           </motion.div>
         </div>
@@ -108,9 +108,9 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="secondary"
-              aria-label="Inscrire mon équipe à l'événement"
+              aria-label="Inscrire mon équipe à l&apos;événement"
             >
-              J'inscris mon équipe
+              J&apos;inscris mon équipe
             </Button>
           </div>
         </div>
@@ -149,8 +149,8 @@ export default function Home() {
                 adapté à chaque patient.
               </p>
               <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et&nbsp;Inserm autour d'une
+                PRISM réunit l&apos;excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et&nbsp;Inserm autour d&apos;une
                 approche intégrative et innovante&nbsp;:&nbsp;intelligence&nbsp;artificielle,
                 analyse&nbsp;de&nbsp;l'ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
@@ -189,7 +189,7 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed">
                 Associez votre marque à un événement sportif et solidaire à fort
                 impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d'engagement, activation terrain… Ensemble, faisons
+                storytelling d&apos;engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
               <div className="flex flex-wrap gap-4">
@@ -274,7 +274,7 @@ export default function Home() {
             <nav>
               <h4 className="mb-4 font-semibold text-white">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L'association</a></li>
+                <li><a href="#about" className="hover:text-white">L&apos;association</a></li>
                 <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
                 <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
                 <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
