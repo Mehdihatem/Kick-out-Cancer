@@ -26,7 +26,7 @@ export default function Inscription() {
               
               <div>
                 <label htmlFor="teamName" className="block text-sm font-medium mb-2">
-                  Nom de l&apos;équipe
+                  Nom de l&#39;équipe
                 </label>
                 <input
                   type="text"
@@ -96,7 +96,7 @@ export default function Inscription() {
 
             <div className="pt-4">
               <Button type="submit" variant="primary" fullWidth>
-                S&apos;inscrire
+                S&#39;inscrire
               </Button>
             </div>
           </form>

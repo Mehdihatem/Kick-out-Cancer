@@ -22,9 +22,7 @@ const logos = [
 export default function SupportersSection() {
   return (
     <section id="supporters" className="py-20">
-      <h2 className="mb-12 text-center text-4xl font-bold">
-        Ils nous soutiennent
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-12">Nos Partenaires</h2>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

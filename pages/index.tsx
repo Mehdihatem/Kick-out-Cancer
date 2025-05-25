@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container mx-auto py-16">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-            Kick Out Cancer, c&#39;est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d&#39;une même ambition : mettre KO le cancer par le mouvement, l&#39;innovation et la solidarité.
+            Kick Out Cancer, c'est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité.
           </p>
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
@@ -82,7 +82,7 @@ export default function Home() {
               href="#team"
               className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
             >
-              Découvrir l&#39;équipe
+              Découvrir l'équipe
             </a>
           </div>
         </div>
@@ -110,9 +110,9 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="secondary"
-              aria-label="Inscrire mon équipe à l&#39;événement"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              J&#39;inscris mon équipe
+              J'inscris mon équipe
             </Button>
           </div>
         </div>
@@ -143,25 +143,25 @@ export default function Home() {
                 Partenaire scientifique officiel
               </h3>
               <p className="mb-4 text-lg leading-relaxed">
-                IHU&nbsp;PRISM est un institut de recherche translationnelle et médicale
-                dédié à la&nbsp;médecine de&nbsp;précision en oncologie.
-                Sa&nbsp;mission&nbsp;: mieux comprendre la biologie de chaque cancer pour
+                IHU PRISM est un institut de recherche translationnelle et médicale
+                dédié à la médecine de précision en oncologie.
+                Sa mission : mieux comprendre la biologie de chaque cancer pour
                 réduire la mortalité en identifiant les formes agressives
-                dès&nbsp;le&nbsp;diagnostic et en&nbsp;proposant le traitement le plus
+                dès le diagnostic et en proposant le traitement le plus
                 adapté à chaque patient.
               </p>
               <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l&apos;excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et&nbsp;Inserm autour d&apos;une
-                approche intégrative et innovante&nbsp;:&nbsp;intelligence&nbsp;artificielle,
-                analyse&nbsp;de&nbsp;l&apos;ADN circulant, épigénétique,
+                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et Inserm autour d'une
+                approche intégrative et innovante : intelligence artificielle,
+                analyse de l'ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
               </p>
               <p className="mb-8 text-lg leading-relaxed">
-                Objectif&nbsp;: créer une cartographie digitale de chaque
+                Objectif : créer une cartographie digitale de chaque
                 patient, identifier de nouveaux biomarqueurs et accélérer
-                l&#39;accès aux&nbsp;thérapies ciblées et&nbsp;aux
-                essais&nbsp;précoces.
+                l'accès aux thérapies ciblées et aux
+                essais précoces.
               </p>
               <Button
                 as="a"
@@ -191,7 +191,7 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed">
                 Associez votre marque à un événement sportif et solidaire à fort
                 impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d&apos;engagement, activation terrain… Ensemble, faisons
+                storytelling d'engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
               <div className="flex flex-wrap gap-4">
@@ -199,9 +199,9 @@ export default function Home() {
                   as="a"
                   href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
                   variant="secondary"
-                  aria-label="Contacter l&#39;équipe pour un partenariat"
+                  aria-label="Contacter l'équipe pour un partenariat"
                 >
-                  Écrire à l&#39;équipe
+                  Écrire à l'équipe
                 </Button>
                 <Button
                   as="a"
@@ -276,7 +276,7 @@ export default function Home() {
             <nav>
               <h4 className="mb-4 font-semibold text-white">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L&#39;association</a></li>
+                <li><a href="#about" className="hover:text-white">L'association</a></li>
                 <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
                 <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
                 <li><a href="#partners" className="hover:text-white">Partenaires</a></li>

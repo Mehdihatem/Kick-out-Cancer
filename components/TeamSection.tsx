@@ -93,8 +93,8 @@ export default function TeamSection() {
         ))}
       </div>
 
-      {/* Présidents d&apos;honneur */}
-      <h3 className="mb-10 text-center text-2xl font-bold text-primary">Présidents d&apos;honneur</h3>
+      {/* Présidents d&#39;honneur */}
+      <h3 className="mb-10 text-center text-2xl font-bold text-primary">Présidents d&#39;honneur</h3>
       <div className="mx-auto grid max-w-4xl gap-10 md:grid-cols-2 lg:grid-cols-3">
         {honorary.map((p) => (
           <motion.article

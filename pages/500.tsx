@@ -23,11 +23,11 @@ export default function ServerError() {
             Erreur serveur
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">
-            Désolé, une erreur est survenue sur nos serveurs. Notre équipe technique a été notifiée et travaille à résoudre le problème.
+            Désolé, une erreur s&#39;est produite sur le serveur. Notre équipe technique a été notifiée et travaille à résoudre le problème.
           </p>
           <Link href="/">
             <Button variant="primary">
-              Retour à l&apos;accueil
+              Retour à l&#39;accueil
             </Button>
           </Link>
         </motion.div>

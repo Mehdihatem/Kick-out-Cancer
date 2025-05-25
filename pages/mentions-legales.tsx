@@ -21,90 +21,40 @@ export default function LegalNotice() {
           </h1>
 
           <div className="prose dark:prose-invert max-w-none">
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Éditeur du site
-              </h2>
-              <p>
-                Association Kick Out Cancer<br />
-                CentraleSupélec<br />
-                3 rue Joliot-Curie<br />
-                91190 Gif-sur-Yvette<br />
-                France
-              </p>
-              <p>
-                Email : contact@kickoutcancer.fr<br />
-                Téléphone : +33 1 XX XX XX XX
-              </p>
-            </section>
+            <h2>1. Informations légales</h2>
+            <p>
+              L&#39;association Kick Out Cancer est une association loi 1901, dont le siège social est situé à CentraleSupélec, 3 rue Joliot Curie, 91190 Gif-sur-Yvette.
+            </p>
+            <p>
+              Directeur de la publication : Thomas Martin, Président de l&#39;association
+            </p>
+            <p>
+              Contact : contact@kickoutcancer.org
+            </p>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Statut juridique
-              </h2>
-              <p>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                Association loi 1901 déclarée à la préfecture de l&#39;Essonne<br />
-                Numéro SIRET : XXX XXX XXX XXXXX<br />
-                Numéro RNA : W91XXXXX
-              </p>
-            </section>
+            <h2>2. Hébergement</h2>
+            <p>
+              Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.
+            </p>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Hébergement
-              </h2>
-              <p>
-                Vercel Inc.<br />
-                340 S Lemon Ave #4133<br />
-                Walnut, CA 91789<br />
-                États-Unis
-              </p>
-            </section>
+            <h2>3. Propriété intellectuelle</h2>
+            <p>
+              L&#39;ensemble de ce site relève de la législation française et internationale sur le droit d&#39;auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+            </p>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Propriété intellectuelle
-              </h2>
-              <p>
-                L&apos;ensemble de ce site relève de la législation française et internationale sur le droit d&apos;auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
-              </p>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Crédits
-              </h2>
-              <p>
-                Design et développement : [Nom de l&#39;agence/développeur]<br />
-                Images : [Sources des images]<br />
-                Icônes : [Sources des icônes]
-              </p>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4">
-                Liens utiles
-              </h2>
-              <ul>
-                <li>
-                  <Link href="/politique-de-confidentialite" className="text-primary hover:underline">
-                    Politique de confidentialité
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/conditions-d-utilisation" className="text-primary hover:underline">
-                    Conditions d&apos;utilisation
-                  </Link>
-                </li>
-              </ul>
-            </section>
+            <h2>4. Protection des données personnelles</h2>
+            <p>
+              Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée, et au Règlement Général sur la Protection des Données (RGPD), vous disposez d&#39;un droit d&#39;accès, de rectification et de suppression des données vous concernant.
+            </p>
+            <p>
+              Pour exercer ce droit, vous pouvez nous contacter à l&#39;adresse suivante : contact@kickoutcancer.org
+            </p>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-8">
             <Link href="/">
               <Button variant="primary">
-                Retour à l&apos;accueil
+                Retour à l&#39;accueil
               </Button>
             </Link>
           </div>
