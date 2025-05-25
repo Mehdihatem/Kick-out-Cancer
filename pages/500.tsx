@@ -27,7 +27,7 @@ export default function ServerError() {
           </p>
           <Link href="/">
             <Button variant="primary">
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </Button>
           </Link>
         </motion.div>

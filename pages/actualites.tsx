@@ -14,7 +14,7 @@ const articles = [
   {
     id: 1,
     title: 'Lancement du Tournoi de Gala 2025',
-    excerpt: 'Nous sommes ravis d\'annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025...',
+    excerpt: 'Nous sommes ravis d&apos;annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025...',
     image: '/images/news/tournament-launch.jpg',
     date: '2024-03-15',
     category: 'Événements',
@@ -23,7 +23,7 @@ const articles = [
   },
   {
     id: 2,
-    title: 'Partenariat avec l\'IHU PRISM',
+    title: 'Partenariat avec l&apos;IHU PRISM',
     excerpt: 'Une collaboration prometteuse pour faire avancer la recherche contre le cancer...',
     image: '/images/news/partnership.jpg',
     date: '2024-03-10',
@@ -44,7 +44,7 @@ const articles = [
   {
     id: 4,
     title: 'Nouveaux partenaires',
-    excerpt: 'Nous sommes fiers d\'accueillir de nouveaux partenaires dans notre réseau...',
+    excerpt: 'Nous sommes fiers d&apos;accueillir de nouveaux partenaires dans notre réseau...',
     image: '/images/news/new-partners.jpg',
     date: '2024-03-01',
     category: 'Partenariats',
@@ -174,7 +174,7 @@ export default function News() {
                 required
               />
               <Button type="submit" variant="primary">
-                S'inscrire
+                S&apos;inscrire
               </Button>
             </form>
           </motion.div>

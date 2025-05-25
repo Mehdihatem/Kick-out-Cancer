@@ -19,7 +19,7 @@ const schedule = [
   },
   {
     time: '10:00',
-    title: 'Cérémonie d\'ouverture',
+    title: 'Cérémonie d&apos;ouverture',
     description: 'Discours et présentation des équipes'
   },
   {
@@ -91,13 +91,13 @@ export default function Event() {
             </h2>
             <div className="prose dark:prose-invert max-w-none">
               <p>
-                Le Tournoi de Gala Kick Out Cancer est l'événement phare de notre association. Cette année, nous attendons plus de 20 équipes venues de toute la France pour un tournoi de football caritatif d'envergure.
+                Le Tournoi de Gala Kick Out Cancer est l&apos;événement phare de notre association. Cette année, nous attendons plus de 20 équipes venues de toute la France pour un tournoi de football caritatif d&apos;envergure.
               </p>
               <p>
-                Au-delà de la compétition sportive, cet événement est l'occasion de rassembler la communauté étudiante, les entreprises et les associations autour d'une cause commune : la lutte contre le cancer.
+                Au-delà de la compétition sportive, cet événement est l&apos;occasion de rassembler la communauté étudiante, les entreprises et les associations autour d&apos;une cause commune : la lutte contre le cancer.
               </p>
               <p>
-                Les fonds collectés seront intégralement reversés à l'IHU PRISM pour financer des projets de recherche innovants.
+                Les fonds collectés seront intégralement reversés à l&apos;IHU PRISM pour financer des projets de recherche innovants.
               </p>
             </div>
           </motion.div>
@@ -192,7 +192,7 @@ export default function Event() {
             <div className="flex gap-4 justify-center">
               <Link href="/inscription">
                 <Button size="lg" variant="secondary">
-                  S'inscrire maintenant
+                  S&apos;inscrire maintenant
                 </Button>
               </Link>
               <Link href="/contact">

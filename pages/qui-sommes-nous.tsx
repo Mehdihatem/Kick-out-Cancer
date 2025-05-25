@@ -21,19 +21,19 @@ const teamMembers = [
     name: 'Emma Dubois',
     role: 'Vice-Présidente',
     image: '/images/team/emma-dubois.jpg',
-    bio: 'Étudiante en médecine, elle coordonne les actions avec l\'IHU PRISM.'
+    bio: 'Étudiante en médecine, elle coordonne les actions avec l&apos;IHU PRISM.'
   },
   {
     name: 'Lucas Petit',
     role: 'Trésorier',
     image: '/images/team/lucas-petit.jpg',
-    bio: 'Expert-comptable, il gère les finances de l\'association avec rigueur.'
+    bio: 'Expert-comptable, il gère les finances de l&apos;association avec rigueur.'
   },
   {
     name: 'Julie Moreau',
     role: 'Responsable Communication',
     image: '/images/team/julie-moreau.jpg',
-    bio: 'Spécialiste en communication, elle développe la visibilité de l\'association.'
+    bio: 'Spécialiste en communication, elle développe la visibilité de l&apos;association.'
   }
 ]
 
@@ -78,13 +78,13 @@ export default function About() {
             </h2>
             <div className="prose dark:prose-invert max-w-none">
               <p>
-                Fondée en 2020 par des étudiants de CentraleSupélec, Kick Out Cancer est née d'une volonté commune de contribuer à la lutte contre le cancer tout en partageant notre passion pour le football.
+                Fondée en 2020 par des étudiants de CentraleSupélec, Kick Out Cancer est née d&apos;une volonté commune de contribuer à la lutte contre le cancer tout en partageant notre passion pour le football.
               </p>
               <p>
-                Notre premier tournoi a réuni 16 équipes et permis de collecter plus de 15 000€ pour la recherche. Depuis, nous organisons chaque année un tournoi de gala qui rassemble étudiants, entreprises et associations autour d'une cause commune.
+                Notre premier tournoi a réuni 16 équipes et permis de collecter plus de 15 000€ pour la recherche. Depuis, nous organisons chaque année un tournoi de gala qui rassemble étudiants, entreprises et associations autour d&apos;une cause commune.
               </p>
               <p>
-                En 2023, nous avons franchi une étape importante en signant un partenariat avec l'IHU PRISM, un centre de recherche de pointe dans la lutte contre le cancer. Cette collaboration nous permet de soutenir directement des projets de recherche innovants.
+                En 2023, nous avons franchi une étape importante en signant un partenariat avec l&apos;IHU PRISM, un centre de recherche de pointe dans la lutte contre le cancer. Cette collaboration nous permet de soutenir directement des projets de recherche innovants.
               </p>
             </div>
           </motion.div>
@@ -117,7 +117,7 @@ export default function About() {
               <Card>
                 <h3 className="text-xl font-bold mb-4">Soutenir</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Financer des projets de recherche innovants à l'IHU PRISM.
+                  Financer des projets de recherche innovants à l&apos;IHU PRISM.
                 </p>
               </Card>
             </div>
@@ -182,7 +182,7 @@ export default function About() {
             <div className="flex gap-4 justify-center">
               <Link href="/inscription">
                 <Button size="lg" variant="secondary">
-                  S'inscrire au tournoi
+                  S&apos;inscrire au tournoi
                 </Button>
               </Link>
               <Link href="/contact">

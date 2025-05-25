@@ -33,7 +33,7 @@ export default function Contact() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl">
-              Une question ? Une suggestion ? N'hésitez pas à nous contacter
+              Une question ? Une suggestion ? N&apos;hésitez pas à nous contacter
             </p>
           </motion.div>
         </div>
@@ -154,7 +154,7 @@ export default function Contact() {
               </Card>
 
               <Card>
-                <h3 className="text-xl font-bold mb-4">Horaires d'ouverture</h3>
+                <h3 className="text-xl font-bold mb-4">Horaires d&apos;ouverture</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Lundi - Vendredi : 9h - 18h<br />
                   Samedi - Dimanche : Fermé

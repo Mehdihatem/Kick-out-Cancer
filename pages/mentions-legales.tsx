@@ -93,7 +93,7 @@ export default function LegalNotice() {
                 </li>
                 <li>
                   <Link href="/conditions-d-utilisation" className="text-primary hover:underline">
-                    Conditions d'utilisation
+                    Conditions d&apos;utilisation
                   </Link>
                 </li>
               </ul>

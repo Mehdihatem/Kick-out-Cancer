@@ -56,7 +56,7 @@ export default function Donation() {
               Notre objectif : 50 000€
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Les fonds collectés seront intégralement reversés à l'IHU PRISM pour financer des projets de recherche innovants.
+              Les fonds collectés seront intégralement reversés à l&apos;IHU PRISM pour financer des projets de recherche innovants.
             </p>
             <ImpactMeter
               currentAmount={25000}
@@ -78,7 +78,7 @@ export default function Donation() {
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-4">Recherche</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Financer des projets de recherche innovants à l'IHU PRISM pour faire avancer la science.
+                  Financer des projets de recherche innovants à l&apos;IHU PRISM pour faire avancer la science.
                 </p>
               </div>
             </Card>
@@ -86,7 +86,7 @@ export default function Donation() {
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-4">Impact</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Contribuer à l'amélioration des traitements et à la qualité de vie des patients.
+                  Contribuer à l&apos;amélioration des traitements et à la qualité de vie des patients.
                 </p>
               </div>
             </Card>
@@ -131,7 +131,7 @@ export default function Donation() {
               <Card>
                 <h3 className="text-xl font-bold mb-4">Comment mon don sera-t-il utilisé ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Les dons sont intégralement reversés à l'IHU PRISM pour financer des projets de recherche innovants dans la lutte contre le cancer.
+                  Les dons sont intégralement reversés à l&apos;IHU PRISM pour financer des projets de recherche innovants dans la lutte contre le cancer.
                 </p>
               </Card>
               <Card>
@@ -143,7 +143,7 @@ export default function Donation() {
               <Card>
                 <h3 className="text-xl font-bold mb-4">Comment puis-je suivre l'impact de mon don ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Nous publions régulièrement des rapports sur l'utilisation des fonds et les avancées des projets de recherche soutenus.
+                  Nous publions régulièrement des rapports sur l&apos;utilisation des fonds et les avancées des projets de recherche soutenus.
                 </p>
               </Card>
             </div>

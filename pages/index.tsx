@@ -152,7 +152,7 @@ export default function Home() {
                 PRISM réunit l&apos;excellence de Gustave Roussy, CentraleSupélec,
                 Université Paris-Saclay, Unicancer et&nbsp;Inserm autour d&apos;une
                 approche intégrative et innovante&nbsp;:&nbsp;intelligence&nbsp;artificielle,
-                analyse&nbsp;de&nbsp;l'ADN circulant, épigénétique,
+                analyse&nbsp;de&nbsp;l&apos;ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
               </p>
               <p className="mb-8 text-lg leading-relaxed">

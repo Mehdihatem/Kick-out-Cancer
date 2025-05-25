@@ -23,11 +23,11 @@ export default function NotFound() {
             Page non trouvée
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">
-            Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+            Désolé, la page que vous recherchez n&apos;existe pas ou a été déplacée.
           </p>
           <Link href="/">
             <Button variant="primary">
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </Button>
           </Link>
         </motion.div>
