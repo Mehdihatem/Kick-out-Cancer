@@ -10,7 +10,7 @@
     "test": "jest",
     "test:e2e": "playwright test",
     "test:accessibility": "jest tests/accessibility.spec.ts",
-    "export": "next build && next export",
+    "export": "next build",
     "optimize-images": "node scripts/optimize-images.js"
   },
   "keywords": [],
