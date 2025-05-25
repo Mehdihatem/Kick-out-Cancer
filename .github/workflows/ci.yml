@@ -37,7 +37,7 @@ jobs:
         uploadArtifacts: true
         temporaryPublicStorage: true
         configPath: './lighthouserc.json'
-        artifactName: 'lighthouse_results'
+        artifactName: 'lighthouseci'
 
   deploy:
     needs: build
