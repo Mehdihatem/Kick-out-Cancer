@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import SEO from '../components/SEO'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -40,11 +41,16 @@ const teamMembers = [
 export default function About() {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Qui sommes-nous - Kick Out Cancer"
+        description="Découvrez l'équipe de Kick Out Cancer, une association dédiée à la lutte contre le cancer à travers le sport et la solidarité."
+        image="/images/team-koc.jpg"
+      />
       {/* Hero Section */}
       <section className="relative h-[60vh]">
         <Image
           src="/images/about-hero.jpg"
-          alt="L'équipe de Kick Out Cancer"
+          alt="L'équipe de Kick Out Cancer lors d'un événement"
           fill
           priority
           className="object-cover"
@@ -145,8 +151,9 @@ export default function About() {
                 <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={`Photo de ${member.name}, ${member.role} chez Kick Out Cancer`}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="128px"
                   />

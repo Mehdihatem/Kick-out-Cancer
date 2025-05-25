@@ -1,47 +1,46 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 interface SEOProps {
-  title?: string
-  description?: string
+  title: string
+  description: string
   image?: string
-  url?: string
-  type?: string
+  noindex?: boolean
 }
 
-export default function SEO({
-  title = 'Kick Out Cancer - Ensemble, nous pouvons faire la différence',
-  description = 'Kick Out Cancer est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d\'une même ambition : mettre KO le cancer par le mouvement, l\'innovation et la solidarité.',
-  image = 'https://kickoutcancer.org/images/save-the-date.jpg',
-  url = 'https://kickoutcancer.org',
-  type = 'website'
-}: SEOProps) {
-  const siteTitle = title.includes('Kick Out Cancer') ? title : `${title} | Kick Out Cancer`
+export default function SEO({ title, description, image = '/images/og-default.jpg', noindex = false }: SEOProps) {
+  const router = useRouter()
+  const canonicalUrl = `https://kickoutcancer.org${router.asPath}`
+  const siteName = 'Kick Out Cancer'
 
   return (
     <Head>
-      <title>{siteTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/images/favicon.svg" />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}
-      <meta property="og:title" content={siteTitle} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property="og:image" content={`https://kickoutcancer.org${image}`} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content={siteName} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={`https://kickoutcancer.org${image}`} />
 
-      {/* Additional SEO tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="French" />
-      <meta name="author" content="Kick Out Cancer" />
-      <link rel="canonical" href={url} />
+      {/* Robots */}
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+
+      {/* Additional Meta Tags */}
+      <meta name="author" content={siteName} />
+      <meta name="language" content="fr" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="generator" content="Next.js" />
     </Head>
   )
 } 

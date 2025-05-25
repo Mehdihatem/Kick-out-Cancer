@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Countdown from '../components/Countdown'
+import SEO from '../components/SEO'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -52,11 +53,16 @@ const schedule = [
 export default function Event() {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Event 2025 - Kick Out Cancer"
+        description="Participez au prochain tournoi de gala Kick Out Cancer 2025, un événement sportif et solidaire pour soutenir la recherche contre le cancer."
+        image="/images/save-the-date.jpg"
+      />
       {/* Hero Section */}
       <section className="relative h-[60vh]">
         <Image
           src="/images/event-hero.jpg"
-          alt="Tournoi de Gala Kick Out Cancer 2025"
+          alt="Tournoi de Gala Kick Out Cancer 2025 - Vue du stade et des participants"
           fill
           priority
           className="object-cover"

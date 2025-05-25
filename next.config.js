@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
     domains: ['kickoutcancer.org'],
+    formats: ['image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   poweredByHeader: false,
   compress: true,
@@ -15,6 +18,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'react-icons'],
+    scrollRestoration: true,
   },
   headers: async () => [
     {
@@ -43,6 +47,10 @@ const nextConfig = {
         {
           key: 'Referrer-Policy',
           value: 'strict-origin-when-cross-origin'
+        },
+        {
+          key: 'Permissions-Policy',
+          value: 'camera=(), microphone=(), geolocation=()'
         }
       ]
     }
