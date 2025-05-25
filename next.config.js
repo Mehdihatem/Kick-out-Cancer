@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',
   reactStrictMode: true,
   images: {
     domains: [],
@@ -33,6 +33,8 @@ const nextConfig = {
       },
     ]
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/kick-out-cancer' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/kick-out-cancer/' : '',
 }
 
 module.exports = nextConfig 

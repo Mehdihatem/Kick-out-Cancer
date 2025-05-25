@@ -1,34 +1,37 @@
-name: Deploy to OVH
+name: Deploy Website
 
 on:
   push:
-    branches:
-      - main  # Le déploiement se déclenchera à chaque push sur la branche main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
-      
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          server: ftp.cluster100.hosting.ovh.net
-          username: kickouh
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /www/
-          dangerous-clean-slate: false  # Ne pas supprimer les fichiers existants sur le serveur
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            README.md 
+          folder: .next
+          branch: gh-pages
+          clean: true 
