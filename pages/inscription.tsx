@@ -22,7 +22,7 @@ export default function Inscription() {
           <form className="space-y-6">
             {/* Informations de l'équipe */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Informations de l'équipe</h2>
+              <h2 className="text-2xl font-semibold">Informations de l&#39;équipe</h2>
               
               <div>
                 <label htmlFor="teamName" className="block text-sm font-medium mb-2">

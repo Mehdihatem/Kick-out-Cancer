@@ -54,9 +54,9 @@ export default function Home() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              aria-label="Inscrire mon équipe à l'événement"
+              aria-label="Inscrire mon équipe à l&#39;événement"
             >
-              J'inscris mon équipe
+              J&#39;inscris mon équipe
             </Button>
           </motion.div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container mx-auto py-16">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-            Kick Out Cancer, c'est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité.
+            Kick Out Cancer, c&#39;est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d&#39;une même ambition : mettre KO le cancer par le mouvement, l&#39;innovation et la solidarité.
           </p>
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
@@ -82,7 +82,7 @@ export default function Home() {
               href="#team"
               className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
             >
-              Découvrir l'équipe
+              Découvrir l&#39;équipe
             </a>
           </div>
         </div>
@@ -110,9 +110,9 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="secondary"
-              aria-label="Inscrire mon équipe à l'événement"
+              aria-label="Inscrire mon équipe à l&#39;événement"
             >
-              J'inscris mon équipe
+              J&#39;inscris mon équipe
             </Button>
           </div>
         </div>
@@ -151,16 +151,16 @@ export default function Home() {
                 adapté à chaque patient.
               </p>
               <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et Inserm autour d'une
+                PRISM réunit l&#39;excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et Inserm autour d&#39;une
                 approche intégrative et innovante : intelligence artificielle,
-                analyse de l'ADN circulant, épigénétique,
+                analyse de l&#39;ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
               </p>
               <p className="mb-8 text-lg leading-relaxed">
                 Objectif : créer une cartographie digitale de chaque
                 patient, identifier de nouveaux biomarqueurs et accélérer
-                l'accès aux thérapies ciblées et aux
+                l&#39;accès aux thérapies ciblées et aux
                 essais précoces.
               </p>
               <Button
@@ -191,7 +191,7 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed">
                 Associez votre marque à un événement sportif et solidaire à fort
                 impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d'engagement, activation terrain… Ensemble, faisons
+                storytelling d&#39;engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
               <div className="flex flex-wrap gap-4">
@@ -199,9 +199,9 @@ export default function Home() {
                   as="a"
                   href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
                   variant="secondary"
-                  aria-label="Contacter l'équipe pour un partenariat"
+                  aria-label="Contacter l&#39;équipe pour un partenariat"
                 >
-                  Écrire à l'équipe
+                  Écrire à l&#39;équipe
                 </Button>
                 <Button
                   as="a"
@@ -276,7 +276,7 @@ export default function Home() {
             <nav>
               <h4 className="mb-4 font-semibold text-white">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L'association</a></li>
+                <li><a href="#about" className="hover:text-white">L&#39;association</a></li>
                 <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
                 <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
                 <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
