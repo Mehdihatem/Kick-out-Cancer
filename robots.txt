@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://kickoutcancer.org/sitemap.xml 
