@@ -1,1 +1,6 @@
-{"/actualites":"pages/actualites.html","/_error":"pages/_error.js","/_app":"pages/_app.js","/404":"pages/404.html","/actualites/[id]":"pages/actualites/[id].html","/contact":"pages/contact.html","/don":"pages/don.html","/":"pages/index.html","/inscription":"pages/inscription.html","/event-2025":"pages/event-2025.html","/mentions-legales":"pages/mentions-legales.html","/partenaires":"pages/partenaires.html","/qui-sommes-nous":"pages/qui-sommes-nous.html","/500":"pages/500.html","/robots.txt":"pages/robots.txt.js","/sitemap.xml":"pages/sitemap.xml.js","/_document":"pages/_document.js"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
+}
