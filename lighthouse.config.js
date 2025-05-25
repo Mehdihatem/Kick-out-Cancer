@@ -9,7 +9,14 @@ module.exports = {
       ],
       numberOfRuns: 3,
     },
-    assert: false,
+    assert: {
+      assertions: {
+        'categories:best-practices': ['off'],
+        'categories:performance': ['warn', {minScore: 0.5}],
+        'categories:seo': ['warn', {minScore: 0.8}],
+        'categories:accessibility': ['warn', {minScore: 0.8}]
+      }
+    },
     upload: {
       target: 'temporary-public-storage',
     },
