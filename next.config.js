@@ -35,18 +35,6 @@ const nextConfig = {
   },
   basePath: process.env.NODE_ENV === 'production' ? '/kick-out-cancer' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/kick-out-cancer/' : '',
-  async generateStaticParams() {
-    return {
-      '/robots.txt': {
-        page: '/robots.txt',
-        query: {},
-      },
-      '/sitemap.xml': {
-        page: '/sitemap.xml',
-        query: {},
-      },
-    }
-  },
 }
 
 module.exports = nextConfig 
