@@ -43,7 +43,7 @@ export default function LegalNotice() {
                 Statut juridique
               </h2>
               <p>
-                Association loi 1901 déclarée à la préfecture de l'Essonne<br />
+                Association loi 1901 déclarée à la préfecture de l&apos;Essonne<br />
                 Numéro SIRET : XXX XXX XXX XXXXX<br />
                 Numéro RNA : W91XXXXX
               </p>
@@ -66,7 +66,7 @@ export default function LegalNotice() {
                 Propriété intellectuelle
               </h2>
               <p>
-                L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+                L&apos;ensemble de ce site relève de la législation française et internationale sur le droit d&apos;auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
               </p>
             </section>
 
@@ -103,7 +103,7 @@ export default function LegalNotice() {
           <div className="mt-12 text-center">
             <Link href="/">
               <Button variant="primary">
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Button>
             </Link>
           </div>

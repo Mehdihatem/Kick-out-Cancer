@@ -66,7 +66,7 @@ export default function Home() {
         <div className="container mx-auto py-16">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-            Kick Out Cancer, c'est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité.
+            Kick Out Cancer, c&apos;est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d&apos;une même ambition : mettre KO le cancer par le mouvement, l&apos;innovation et la solidarité.
           </p>
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
@@ -81,7 +81,7 @@ export default function Home() {
               href="#team"
               className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
             >
-              Découvrir l'équipe
+              Découvrir l&apos;équipe
             </a>
           </div>
         </div>
@@ -197,9 +197,9 @@ export default function Home() {
                   as="a"
                   href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
                   variant="secondary"
-                  aria-label="Contacter l'équipe pour un partenariat"
+                  aria-label="Contacter l&apos;équipe pour un partenariat"
                 >
-                  Écrire à l'équipe
+                  Écrire à l&apos;équipe
                 </Button>
                 <Button
                   as="a"

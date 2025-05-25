@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const logos = [
   {
@@ -39,9 +40,11 @@ export default function SupportersSection() {
             rel="noopener noreferrer"
             className="mx-auto flex items-center justify-center"
           >
-            <img
+            <Image
               src={logo.src}
               alt={logo.alt}
+              width={200}
+              height={96}
               className="h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
             />
           </a>
