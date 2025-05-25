@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import FadeSection from '../components/FadeSection'
 import TeamSection from '../components/TeamSection'
 import SupportersSection from '../components/SupportersSection'
+import SEO from '../components/SEO'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -14,6 +15,11 @@ const fadeIn = {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Kick Out Cancer - Ensemble, nous pouvons faire la différence"
+        description="Kick Out Cancer est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité."
+        image="/images/save-the-date.jpg"
+      />
       {/* Hero Section */}
       <section id="hero" className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
