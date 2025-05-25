@@ -3,7 +3,7 @@
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-        `}),i.jsx(c.Z,{}),i.jsx(e,{...t})]})}c=(u.then?(await u)():u)[0],a()}catch(e){a(e)}})},6783:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>s,getServerSideProps:()=>i});let a="https://kickoutcancer.org",i=async({res:e})=>{let t=`<?xml version="1.0" encoding="UTF-8"?>
+        `}),i.jsx(c.Z,{}),i.jsx(e,{...t})]})}c=(u.then?(await u)():u)[0],a()}catch(e){a(e)}})},6783:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>s,getStaticProps:()=>i});let a="https://kickoutcancer.org",i=async()=>({props:{sitemap:`<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
        <loc>${a}</loc>
@@ -48,4 +48,4 @@
        <priority>0.7</priority>
      </url>
    </urlset>
- `;return e.setHeader("Content-Type","text/xml"),e.write(t),e.end(),{props:{}}},s=function(){return null}},6764:()=>{},5244:(e,t)=>{"use strict";var r;Object.defineProperty(t,"x",{enumerable:!0,get:function(){return r}}),function(e){e.PAGES="PAGES",e.PAGES_API="PAGES_API",e.APP_PAGE="APP_PAGE",e.APP_ROUTE="APP_ROUTE"}(r||(r={}))},2785:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},968:e=>{"use strict";e.exports=require("next/head")},6689:e=>{"use strict";e.exports=require("react")},6405:e=>{"use strict";e.exports=require("react-dom")},997:e=>{"use strict";e.exports=require("react/jsx-runtime")},5315:e=>{"use strict";e.exports=require("path")},6197:e=>{"use strict";e.exports=import("framer-motion")}};var t=require("../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),a=t.X(0,[899,298],()=>r(7094));module.exports=a})();
+ `}}),s=function(){return null}},6764:()=>{},5244:(e,t)=>{"use strict";var r;Object.defineProperty(t,"x",{enumerable:!0,get:function(){return r}}),function(e){e.PAGES="PAGES",e.PAGES_API="PAGES_API",e.APP_PAGE="APP_PAGE",e.APP_ROUTE="APP_ROUTE"}(r||(r={}))},2785:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},968:e=>{"use strict";e.exports=require("next/head")},6689:e=>{"use strict";e.exports=require("react")},6405:e=>{"use strict";e.exports=require("react-dom")},997:e=>{"use strict";e.exports=require("react/jsx-runtime")},5315:e=>{"use strict";e.exports=require("path")},6197:e=>{"use strict";e.exports=import("framer-motion")}};var t=require("../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),a=t.X(0,[899,298],()=>r(7094));module.exports=a})();

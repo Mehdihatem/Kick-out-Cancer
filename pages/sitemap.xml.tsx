@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 
 const EXTERNAL_DATA_URL = 'https://kickoutcancer.org'
 
@@ -52,19 +52,16 @@ function generateSiteMap() {
 }
 
 function SiteMap() {
-  // getServerSideProps will handle the XML generation
   return null
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const sitemap = generateSiteMap()
 
-  res.setHeader('Content-Type', 'text/xml')
-  res.write(sitemap)
-  res.end()
-
   return {
-    props: {},
+    props: {
+      sitemap,
+    },
   }
 }
 

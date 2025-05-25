@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 
 function generateRobotsTxt() {
   return `# https://www.robotstxt.org/robotstxt.html
@@ -10,19 +10,16 @@ Sitemap: https://kickoutcancer.org/sitemap.xml`
 }
 
 function RobotsTxt() {
-  // getServerSideProps will handle the TXT generation
   return null
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const robotsTxt = generateRobotsTxt()
 
-  res.setHeader('Content-Type', 'text/plain')
-  res.write(robotsTxt)
-  res.end()
-
   return {
-    props: {},
+    props: {
+      robotsTxt,
+    },
   }
 }
 
