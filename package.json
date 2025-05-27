@@ -11,7 +11,8 @@
     "test:e2e": "playwright test",
     "test:accessibility": "jest tests/accessibility.spec.ts",
     "export": "next build",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "serve:out": "npx serve -s out -l 3000"
   },
   "keywords": [],
   "author": "",

@@ -34,7 +34,8 @@
           "uses-rel-preconnect",
           "uses-rel-preload"
         ]
-      }
+      },
+      "chromeFlags": "--no-sandbox --headless"
     },
     "assert": {
       "assertions": {

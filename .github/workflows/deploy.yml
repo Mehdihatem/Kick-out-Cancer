@@ -1,15 +1,8 @@
-name: Deploy Website
+name: Deploy to OVH
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -22,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install Dependencies
@@ -33,10 +26,16 @@ jobs:
         env:
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/main'
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to OVH
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          folder: out
-          branch: gh-pages
-          clean: true 
+          username: ${{ secrets.OVH_USERNAME }}
+          server: ${{ secrets.OVH_HOST }}
+          ssh_private_key: ${{ secrets.OVH_SSH_KEY }}
+          local_path: './out/*'
+          remote_path: ${{ secrets.OVH_REMOTE_PATH }}
+          exclude: |
+            **/.git*
+            **/.git*/*
+            **/node_modules/**
+            **/.DS_Store 
