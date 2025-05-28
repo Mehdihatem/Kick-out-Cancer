@@ -34,7 +34,7 @@ export default function LegalNotice() {
 
             <h2>2. Hébergement</h2>
             <p>
-              Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.
+              Ce site est hébergé par OVH SAS, 2 rue Kellermann, 59100 Roubaix, France.
             </p>
 
             <h2>3. Propriété intellectuelle</h2>
