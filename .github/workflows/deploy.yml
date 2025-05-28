@@ -48,12 +48,5 @@ jobs:
           server: ftp.cluster100.hosting.ovh.net
           username: kickouh
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/
-          server-dir: /www/public/
-          dangerous-clean-slate: false
-          exclude: |
-            **/node_modules/**
-            **/.git/**
-            **/.github/**
-            **/.next/cache/**
-            **/.DS_Store 
+          local-dir: ./out/
+          server-dir: /www/ 
