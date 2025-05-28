@@ -78,7 +78,7 @@ npm run test:accessibility
 
 ## 🚀 Déploiement
 
-Le site est déployé automatiquement sur Vercel à chaque push sur la branche `main`.
+Le site est déployé automatiquement sur OVH (kickoutcancer.org) à chaque push sur la branche `main`.
 
 ## 📝 Licence
 
