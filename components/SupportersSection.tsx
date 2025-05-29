@@ -3,17 +3,17 @@ import Image from 'next/image'
 
 const logos = [
   {
-    src: '/images/supporters/digilityx.svg',
+    src: '/images/supporters/digilityx.png',
     alt: 'Digilityx',
     href: 'https://digilityx.com',
   },
   {
-    src: '/images/supporters/elwood.svg',
+    src: '/images/supporters/elwood.png',
     alt: 'Elwood',
     href: 'https://elwood.fr',
   },
   {
-    src: '/images/supporters/stetoo.svg',
+    src: '/images/supporters/stetoo.png',
     alt: 'Stetoo',
     href: 'https://stetoo.com',
   },

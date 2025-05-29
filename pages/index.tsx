@@ -26,19 +26,11 @@ export default function Home() {
         twitterCard="summary_large_image"
         keywords={['cancer', 'sport', 'solidarité', 'événement', 'santé', 'combat', 'tournoi']}
       />
-      {/* Compte à rebours dynamique en haut de page */}
-      <section className="bg-white py-8">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
-            Fin des inscriptions pour le prochain tournoi dans…
-          </h2>
-          <Countdown />
-        </div>
-      </section>
-      {/* Hero Section */}
+
+      {/* 1. Hero Section */}
       <section 
         id="hero" 
-        className="relative h-screen flex items-center justify-center"
+        className="relative h-screen flex items-center justify-center bg-gradient-to-b from-primary/10 to-white"
         aria-label="Section principale"
       >
         <div className="absolute inset-0 z-0">
@@ -98,12 +90,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ajout d'un espace supplémentaire entre Hero et Ambition */}
-      <div className="py-12" />
-
-      {/* About Section (Ambition) */}
-      <FadeSection id="about">
-        <div className="container mx-auto py-16">
+      {/* 2. Notre ambition Section */}
+      <FadeSection id="about" className="bg-white py-16">
+        <div className="container mx-auto">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/images/kick-out-cancer-logo.png"
+              alt="Logo Kick Out Cancer"
+              width={120}
+              height={120}
+              className="mx-auto"
+            />
+          </div>
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
             Kick Out Cancer, c&apos;est bien plus qu&apos;un simple tournoi : c&apos;est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d&apos;un objectif unique : mettre KO le cancer par le mouvement, l&apos;innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l&apos;espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
@@ -127,45 +125,8 @@ export default function Home() {
         </div>
       </FadeSection>
 
-      {/* Pourquoi participer Section (nouvelle section à ajouter ici) */}
-      <FadeSection id="pourquoi-participer">
-        <div className="container mx-auto py-16">
-          <h2 className="mb-6 text-center text-4xl font-extrabold text-primary">Pourquoi participer ?</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-10">
-            <div className="flex flex-col items-center text-center">
-              <span className="text-5xl mb-4" role="img" aria-label="Pour qui">👥</span>
-              <h3 className="text-xl font-bold mb-2">Pour qui ?</h3>
-              <p>Ouvert à toutes les équipes : entreprises, amis, familles, clubs de sport…</p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <span className="text-5xl mb-4" role="img" aria-label="Combien">💶</span>
-              <h3 className="text-xl font-bold mb-2">Combien ?</h3>
-              <p>400€ par équipe (5 à 10 joueurs).<br />Tous les bénéfices sont reversés à la recherche contre le cancer.</p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <span className="text-5xl mb-4" role="img" aria-label="Pourquoi">🤝</span>
-              <h3 className="text-xl font-bold mb-2">Pourquoi ?</h3>
-              <p>Pour allier sport, solidarité et engagement en faveur de la recherche.</p>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <Button
-              as="a"
-              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              variant="primary"
-              aria-label="Je veux inscrire mon équipe"
-            >
-              Je veux inscrire mon équipe
-            </Button>
-          </div>
-        </div>
-      </FadeSection>
-
-      {/* Prochain évènement Section (Save the date) */}
-      <FadeSection id="event">
+      {/* 3. Prochain évènement Section */}
+      <FadeSection id="event" className="bg-[#f7f7f7] py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Prochain évènement</h2>
           <div className="relative w-full h-[600px] mb-8">
@@ -193,11 +154,32 @@ export default function Home() {
         </div>
       </FadeSection>
 
-      {/* Partenaires Section */}
-      <FadeSection id="partners">
+      {/* 4. Je soutiens la recherche Section */}
+      <FadeSection id="don" className="bg-white py-16">
+        <div className="container mx-auto">
+          <h2 className="mb-6 text-center text-4xl font-extrabold">Je soutiens la recherche</h2>
+          <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed mb-8">
+            Votre don fait la différence. Chaque contribution, même modeste, participe à l'avancée de la recherche contre le cancer. Ensemble, nous pouvons accélérer les découvertes et améliorer les traitements.
+          </p>
+          <div className="flex justify-center">
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer/formulaires/1"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="primary"
+              aria-label="Faire un don"
+            >
+              Faire un don
+            </Button>
+          </div>
+        </div>
+      </FadeSection>
+
+      {/* 5. IHU PRISM Section */}
+      <FadeSection id="ihu-prism" className="bg-[#eaf6fb] py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
-          {/* Partenaire Principal */}
           <div className="mx-auto mb-8 max-w-4xl text-center px-6">
             <div className="mb-2">
               <span className="inline-block bg-primary text-white text-lg font-bold px-6 py-2 rounded-full shadow">Partenaire Principal : IHU PRISM</span>
@@ -210,7 +192,7 @@ export default function Home() {
             >
               <div className="relative w-44 h-44 mx-auto mb-6">
                 <Image
-                  src="/images/ihu-prism-logo.svg"
+                  src="/images/ihu-prism-logo.png"
                   alt="IHU PRISM"
                   fill
                   className="object-contain"
@@ -248,132 +230,70 @@ export default function Home() {
                 variant="primary"
                 aria-label="En savoir plus sur IHU PRISM"
               >
-                En savoir plus
+                En savoir plus sur IHU PRISM
               </Button>
             </motion.div>
           </div>
-          {/* En savoir plus / Partenariats (remontée juste après IHU PRISM) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto grid max-w-5xl items-center gap-12 rounded-lg bg-white p-10 shadow-md md:grid-cols-2 mb-16"
-          >
-            <div>
-              <h3 className="mb-4 text-2xl font-bold text-primary">
-                Devenez partenaire
-              </h3>
-              <p className="mb-6 text-lg leading-relaxed">
-                Associez votre marque à un événement sportif et solidaire à fort
-                impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d&apos;engagement, activation terrain… Ensemble, faisons
-                bouger les lignes contre le cancer !
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  as="a"
-                  href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
-                  variant="secondary"
-                  aria-label="Contacter l&apos;équipe pour un partenariat"
-                >
-                  Écrire à l&apos;équipe
-                </Button>
-                <Button
-                  as="a"
-                  href="/documents/dossier-partenariat.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="outline"
-                  aria-label="Télécharger le dossier de partenariat"
-                >
-                  Dossier partenariat
-                </Button>
-              </div>
-            </div>
-            <div className="relative h-56">
-              <Image
-                src="/images/partnership-illustration.svg"
-                alt="Illustration partenariat"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </motion.div>
         </div>
       </FadeSection>
 
-      {/* Supporters Section */}
-      <FadeSection id="supporters">
-        <SupportersSection />
-      </FadeSection>
-
-      {/* JE SOUTIENS LA RECHERCHE */}
-      <FadeSection id="don">
-        <div className="container mx-auto py-16">
-          <h2 className="mb-8 text-center text-3xl font-bold">Je soutiens la recherche</h2>
-          <div className="mx-auto max-w-3xl">
-            <iframe
-              title="Formulaire de don KickOutCancer"
-              src="https://www.helloasso.com/associations/kickoutcancer/formulaires/1"
-              width="100%"
-              height="850"
-              style={{ border: 'none' }}
-            />
+      {/* 6. Nos partenaires Section */}
+      <FadeSection id="partners" className="bg-[#f7f7f7] py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
+          <SupportersSection />
+          <div className="text-center mt-12">
+            <Button
+              as="a"
+              href="/devenir-partenaire"
+              variant="primary"
+              size="lg"
+              aria-label="Devenir partenaire"
+            >
+              Devenir partenaire
+            </Button>
           </div>
         </div>
       </FadeSection>
 
-      {/* FAQ dynamique */}
-      <FAQ />
-
-      {/* QUI SOMMES-NOUS ? */}
-      <FadeSection id="team">
+      {/* 7. Qui sommes-nous Section */}
+      <FadeSection id="team" className="bg-white py-16">
         <TeamSection />
       </FadeSection>
 
-      {/* FOOTER */}
-      <FadeSection id="footer">
-        <footer className="bg-gray-900 py-12 text-gray-300">
-          <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
+      {/* 8. Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="relative h-20 w-56 mb-4">
-                <Image
-                  src="/images/kick-out-cancer-logo.png"
-                  alt="Kick Out Cancer"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <p className="text-sm leading-relaxed">
-                Sport • Science • Solidarité<br />
-                Association loi 1901 – Paris, France
-              </p>
-            </div>
-
-            <nav>
-              <h4 className="mb-4 font-semibold text-white">Navigation</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L&apos;association</a></li>
-                <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
-                <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
-                <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
-                <li><a href="#supporters" className="hover:text-white">Ils nous soutiennent</a></li>
-                <li><a href="#don" className="hover:text-white">Je soutiens la recherche</a></li>
+              <h3 className="text-xl font-bold mb-4">Navigation</h3>
+              <ul className="space-y-2">
+                <li><a href="#about" className="hover:text-primary">Notre ambition</a></li>
+                <li><a href="#event" className="hover:text-primary">Prochain événement</a></li>
+                <li><a href="#don" className="hover:text-primary">Je soutiens</a></li>
+                <li><a href="#team" className="hover:text-primary">Qui sommes-nous</a></li>
               </ul>
-            </nav>
-
+            </div>
             <div>
-              <h4 className="mb-4 font-semibold text-white">Contact</h4>
-              <p className="text-sm">contact@kickoutcancer.org</p>
-              <p className="text-sm">LinkedIn • Instagram • X</p>
+              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <ul className="space-y-2">
+                <li>Email: contact@kickoutcancer.org</li>
+                <li>Téléphone: +33 1 23 45 67 89</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Mentions légales</h3>
+              <ul className="space-y-2">
+                <li><a href="/mentions-legales" className="hover:text-primary">Mentions légales</a></li>
+                <li><a href="/politique-confidentialite" className="hover:text-primary">Politique de confidentialité</a></li>
+              </ul>
             </div>
           </div>
-          <p className="mt-12 text-center text-xs text-gray-500">
-            © 2025 Kick Out Cancer — Tous droits réservés
-          </p>
-        </footer>
-      </FadeSection>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+            <p>&copy; {new Date().getFullYear()} Kick Out Cancer. Tous droits réservés.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 } 
