@@ -27,6 +27,25 @@ jobs:
         env:
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
+      - name: Copier les assets conditionnellement
+        run: |
+          if [ -d "out/_next/static/media" ]; then
+            mkdir -p www/_next/static/media
+            cp -r out/_next/static/media/* www/_next/static/media/
+          fi
+          if [ -d "out/images" ]; then
+            mkdir -p www/images
+            cp -r out/images/* www/images/
+          fi
+          if [ -d "out/css" ]; then
+            mkdir -p www/css
+            cp -r out/css/* www/css/
+          fi
+          if [ -d "out/_next/static/css" ]; then
+            mkdir -p www/_next/static/css
+            cp -r out/_next/static/css/* www/_next/static/css/
+          fi
+
       - name: Deploy to OVH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
