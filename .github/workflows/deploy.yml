@@ -26,20 +26,18 @@ jobs:
         env:
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
-      - name: Deploy Next.js build
+      - name: Deploy to OVH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.cluster100.hosting.ovh.net
           username: kickouh
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./.next/
-          server-dir: /www/.next/
-          dangerous-clean-slate: false
+          local-dir: ./out/
+          server-dir: /www/
+          dangerous-clean-slate: true
           exclude: |
-            **/node_modules/**
             **/.git/**
             **/.github/**
-            **/.next/cache/**
             **/.DS_Store
 
       - name: Deploy public files
