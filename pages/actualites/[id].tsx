@@ -66,7 +66,7 @@ const articles: Record<string, {
 const similarArticles = [
   {
     id: 2,
-    title: "Partenariat avec l\'IHU PRISM",
+    title: "Partenariat avec l'IHU PRISM",
     excerpt: 'Une collaboration prometteuse pour faire avancer la recherche contre le cancer...',
     image: '/images/news/partnership.jpg',
     date: '2024-03-10',
