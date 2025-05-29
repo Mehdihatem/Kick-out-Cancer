@@ -32,16 +32,27 @@ jobs:
           mkdir -p out/css out/js out/images
           
           # Handle CSS files
-          cp -r out/_next/static/css/* out/css/
-          find out -type f -name "*.html" -exec sed -i 's|/_next/static/css/|/css/|g' {} \;
+          if [ -d "out/_next/static/css" ]; then
+            cp -r out/_next/static/css/* out/css/
+            find out -type f -name "*.html" -exec sed -i 's|/_next/static/css/|/css/|g' {} \;
+          fi
           
           # Handle JS files
-          cp -r out/_next/static/chunks/* out/js/
-          find out -type f -name "*.html" -exec sed -i 's|/_next/static/chunks/|/js/|g' {} \;
+          if [ -d "out/_next/static/chunks" ]; then
+            cp -r out/_next/static/chunks/* out/js/
+            find out -type f -name "*.html" -exec sed -i 's|/_next/static/chunks/|/js/|g' {} \;
+          fi
           
-          # Handle images
-          cp -r out/_next/static/media/* out/images/
-          find out -type f -name "*.html" -exec sed -i 's|/_next/static/media/|/images/|g' {} \;
+          # Handle images from various possible locations
+          if [ -d "out/_next/static/media" ]; then
+            cp -r out/_next/static/media/* out/images/
+            find out -type f -name "*.html" -exec sed -i 's|/_next/static/media/|/images/|g' {} \;
+          fi
+          
+          # Also check for images in public directory
+          if [ -d "out/images" ]; then
+            cp -r out/images/* out/images/
+          fi
 
       - name: Deploy to OVH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
