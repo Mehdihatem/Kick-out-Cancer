@@ -10,7 +10,13 @@ const variant: Variants = {
   }
 }
 
-export default function FadeSection({ children, id }: PropsWithChildren<{ id: string }>) {
+interface FadeSectionProps {
+  id: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
+export default function FadeSection({ children, id, className = '' }: FadeSectionProps) {
   return (
     <motion.section
       id={id}
@@ -18,7 +24,7 @@ export default function FadeSection({ children, id }: PropsWithChildren<{ id: st
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
       variants={variant}
-      className="pt-20"
+      className={`pt-20 ${className}`}
     >
       {children}
     </motion.section>

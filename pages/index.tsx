@@ -56,20 +56,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8"
+            className="text-xl md:text-2xl mb-12"
           >
             Ensemble, nous pouvons faire la différence
           </motion.p>
-          <div className="flex justify-center mb-8">
-            <Image
-              src="/images/kick-out-cancer-logo.png"
-              alt="Logo Kick Out Cancer"
-              width={220}
-              height={220}
-              className="mx-auto"
-              priority
-            />
-          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
