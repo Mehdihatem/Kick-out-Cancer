@@ -5,6 +5,7 @@ import FadeSection from '../components/FadeSection'
 import TeamSection from '../components/TeamSection'
 import SupportersSection from '../components/SupportersSection'
 import SEO from '../components/SEO'
+import Countdown from '../components/Countdown'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -17,12 +18,21 @@ export default function Home() {
     <main className="min-h-screen" role="main">
       <SEO
         title="Kick Out Cancer - Ensemble, nous pouvons faire la différence"
-        description="Kick Out Cancer est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d&#39;une même ambition : mettre KO le cancer par le mouvement, l&#39;innovation et la solidarité."
+        description="Kick Out Cancer est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité."
         image="/images/save-the-date.jpg"
         ogType="website"
         twitterCard="summary_large_image"
         keywords={['cancer', 'sport', 'solidarité', 'événement', 'santé', 'combat', 'tournoi']}
       />
+      {/* Compte à rebours dynamique en haut de page */}
+      <section className="bg-white py-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+            Fin des inscriptions pour le prochain tournoi dans…
+          </h2>
+          <Countdown />
+        </div>
+      </section>
       {/* Hero Section */}
       <section 
         id="hero" 
@@ -118,21 +128,21 @@ export default function Home() {
       {/* Pourquoi participer Section (nouvelle section à ajouter ici) */}
       <FadeSection id="pourquoi-participer">
         <div className="container mx-auto py-16">
-          <h2 className="mb-6 text-center text-4xl font-extrabold text-primary">Pourquoi participer&nbsp;?</h2>
+          <h2 className="mb-6 text-center text-4xl font-extrabold text-primary">Pourquoi participer ?</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-10">
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl mb-4" role="img" aria-label="Pour qui">👥</span>
-              <h3 className="text-xl font-bold mb-2">Pour qui&nbsp;?</h3>
-              <p>Ouvert à toutes les équipes&nbsp;: entreprises, amis, familles, clubs de sport…</p>
+              <h3 className="text-xl font-bold mb-2">Pour qui ?</h3>
+              <p>Ouvert à toutes les équipes : entreprises, amis, familles, clubs de sport…</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl mb-4" role="img" aria-label="Combien">💶</span>
-              <h3 className="text-xl font-bold mb-2">Combien&nbsp;?</h3>
+              <h3 className="text-xl font-bold mb-2">Combien ?</h3>
               <p>400€ par équipe (5 à 10 joueurs).<br />Tous les bénéfices sont reversés à la recherche contre le cancer.</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl mb-4" role="img" aria-label="Pourquoi">🤝</span>
-              <h3 className="text-xl font-bold mb-2">Pourquoi&nbsp;?</h3>
+              <h3 className="text-xl font-bold mb-2">Pourquoi ?</h3>
               <p>Pour allier sport, solidarité et engagement en faveur de la recherche.</p>
             </div>
           </div>
@@ -173,9 +183,9 @@ export default function Home() {
               rel="noopener noreferrer"
               size="lg"
               variant="secondary"
-              aria-label="Inscrire mon équipe à l&#39;événement"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              J&#39;inscris mon équipe
+              J'inscris mon équipe
             </Button>
           </div>
         </div>
@@ -214,16 +224,16 @@ export default function Home() {
                 adapté à chaque patient.
               </p>
               <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l&#39;excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et Inserm autour d&#39;une
+                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et Inserm autour d'une
                 approche intégrative et innovante : intelligence artificielle,
-                analyse de l&#39;ADN circulant, épigénétique,
+                analyse de l'ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
               </p>
               <p className="mb-8 text-lg leading-relaxed">
                 Objectif : créer une cartographie digitale de chaque
                 patient, identifier de nouveaux biomarqueurs et accélérer
-                l&#39;accès aux thérapies ciblées et aux
+                l'accès aux thérapies ciblées et aux
                 essais précoces.
               </p>
               <Button
@@ -254,7 +264,7 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed">
                 Associez votre marque à un événement sportif et solidaire à fort
                 impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d&#39;engagement, activation terrain… Ensemble, faisons
+                storytelling d'engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
               <div className="flex flex-wrap gap-4">
@@ -262,9 +272,9 @@ export default function Home() {
                   as="a"
                   href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
                   variant="secondary"
-                  aria-label="Contacter l&#39;équipe pour un partenariat"
+                  aria-label="Contacter l'équipe pour un partenariat"
                 >
-                  Écrire à l&#39;équipe
+                  Écrire à l'équipe
                 </Button>
                 <Button
                   as="a"
@@ -339,7 +349,7 @@ export default function Home() {
             <nav>
               <h4 className="mb-4 font-semibold text-white">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L&#39;association</a></li>
+                <li><a href="#about" className="hover:text-white">L'association</a></li>
                 <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
                 <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
                 <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
