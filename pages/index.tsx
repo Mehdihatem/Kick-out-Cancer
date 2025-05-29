@@ -8,6 +8,7 @@ import SupportersSection from '../components/SupportersSection'
 import SEO from '../components/SEO'
 import Countdown from '../components/Countdown'
 import FAQ from '../components/FAQ'
+import Link from 'next/link'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -258,10 +259,10 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">Navigation</h3>
               <ul className="space-y-2">
-                <li><a href="#about" className="hover:text-primary">Notre ambition</a></li>
-                <li><a href="#event" className="hover:text-primary">Prochain événement</a></li>
-                <li><a href="#don" className="hover:text-primary">Je soutiens</a></li>
-                <li><a href="#team" className="hover:text-primary">Qui sommes-nous</a></li>
+                <li><Link href="#about" className="hover:text-primary">Notre ambition</Link></li>
+                <li><Link href="#event" className="hover:text-primary">Prochain événement</Link></li>
+                <li><Link href="#don" className="hover:text-primary">Je soutiens</Link></li>
+                <li><Link href="#team" className="hover:text-primary">Qui sommes-nous</Link></li>
               </ul>
             </div>
             <div>
@@ -274,8 +275,8 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">Mentions légales</h3>
               <ul className="space-y-2">
-                <li><a href="/mentions-legales" className="hover:text-primary">Mentions légales</a></li>
-                <li><a href="/politique-confidentialite" className="hover:text-primary">Politique de confidentialité</a></li>
+                <li><Link href="/mentions-legales" className="hover:text-primary">Mentions légales</Link></li>
+                <li><Link href="/politique-confidentialite" className="hover:text-primary">Politique de confidentialité</Link></li>
               </ul>
             </div>
           </div>
