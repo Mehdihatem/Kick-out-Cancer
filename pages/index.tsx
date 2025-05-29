@@ -6,6 +6,7 @@ import TeamSection from '../components/TeamSection'
 import SupportersSection from '../components/SupportersSection'
 import SEO from '../components/SEO'
 import Countdown from '../components/Countdown'
+import FAQ from '../components/FAQ'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -321,6 +322,9 @@ export default function Home() {
           </div>
         </div>
       </FadeSection>
+
+      {/* FAQ dynamique */}
+      <FAQ />
 
       {/* QUI SOMMES-NOUS ? */}
       <FadeSection id="team">

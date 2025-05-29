@@ -50,6 +50,7 @@
     --color-gradient-alt: linear-gradient(120deg, #e3487d 0%, #a259c6 100%);
     --color-pink: #e3487d;
     --color-purple: #a259c6;
+    --section-spacing: 6rem;
 }
 
 /* ==========================================================================
@@ -96,8 +97,8 @@ img {
 }
 
 .section {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
@@ -340,14 +341,17 @@ img {
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    color: var(--color-background);
-    box-shadow: var(--box-shadow-md);
+    background: linear-gradient(90deg, #3a4cb3, #e3487d);
+    color: #fff;
+    box-shadow: 0 4px 16px #3a4cb366;
+    border: none;
+    font-size: 1.15rem;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow-lg);
+.btn-primary:hover, .btn-primary:focus {
+    background: #e3487d;
+    color: #fff;
+    box-shadow: 0 6px 24px #e3487d55;
 }
 
 .btn-secondary {
@@ -399,6 +403,12 @@ img {
     
     .btn {
         width: 100%;
+        font-size: 1.05rem;
+        padding: 1rem 1.2rem;
+    }
+    .section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 }
 
@@ -985,11 +995,12 @@ img {
 
 /* Titres et paragraphes plus lisibles */
 .section-title, h1, h2, h3, h4 {
-    color: #222;
-    font-family: var(--font-primary);
+    font-size: 2.5rem;
     font-weight: 800;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
     letter-spacing: -0.5px;
-    margin-bottom: 2.5rem;
+    text-align: left;
 }
 
 h1.hero-title {
@@ -1356,7 +1367,7 @@ body.high-contrast .hero-title {
         gap: 1rem;
     }
     .section-title {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
     .section-light .container > *:not(:first-child) {
         padding: 1.2rem 0.7rem 1rem 0.7rem;
@@ -1515,12 +1526,16 @@ body.high-contrast .hero-title {
     box-shadow: 0 2px 8px #10142a11;
 }
 .btn-primary {
-    background: linear-gradient(90deg, #3a4cb3, #4ecbb1);
+    background: linear-gradient(90deg, #3a4cb3, #e3487d);
     color: #fff;
+    box-shadow: 0 4px 16px #3a4cb366;
+    border: none;
+    font-size: 1.15rem;
 }
 .btn-primary:hover, .btn-primary:focus {
     background: #e3487d;
     color: #fff;
+    box-shadow: 0 6px 24px #e3487d55;
 }
 .btn-secondary {
     background: #fff;
@@ -1735,7 +1750,7 @@ body.high-contrast .hero-title {
         font-size: 2rem;
     }
     .section-title {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
     .inscription-cards, .team-grid, .partners-logos, .team-honor ul {
         flex-direction: column;
