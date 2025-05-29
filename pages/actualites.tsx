@@ -13,8 +13,8 @@ const fadeIn = {
 const articles = [
   {
     id: 1,
-    title: 'Lancement du Tournoi de Gala 2025',
-    excerpt: 'Nous sommes ravis d&apos;annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025...',
+    title: 'Lancement du Tournoi 2025',
+    excerpt: 'Nous sommes ravis d\'annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025...',
     image: '/images/news/tournament-launch.jpg',
     date: '2024-03-15',
     category: 'Événements',
@@ -23,7 +23,7 @@ const articles = [
   },
   {
     id: 2,
-    title: 'Partenariat avec l&apos;IHU PRISM',
+    title: 'Partenariat avec l\'IHU PRISM',
     excerpt: 'Une collaboration prometteuse pour faire avancer la recherche contre le cancer...',
     image: '/images/news/partnership.jpg',
     date: '2024-03-10',
@@ -44,7 +44,7 @@ const articles = [
   {
     id: 4,
     title: 'Nouveaux partenaires',
-    excerpt: 'Nous sommes fiers d&apos;accueillir de nouveaux partenaires dans notre réseau...',
+    excerpt: 'Nous sommes fiers d\'accueillir de nouveaux partenaires dans notre réseau...',
     image: '/images/news/new-partners.jpg',
     date: '2024-03-01',
     category: 'Partenariats',
@@ -173,8 +173,14 @@ export default function News() {
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent"
                 required
               />
-              <Button type="submit" variant="primary">
-                S&apos;inscrire
+              <Button
+                as="a"
+                href="#inscription"
+                variant="primary"
+                size="lg"
+                aria-label="S'inscrire"
+              >
+                S'inscrire
               </Button>
             </form>
           </motion.div>

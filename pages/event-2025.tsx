@@ -20,7 +20,7 @@ const schedule = [
   },
   {
     time: '10:00',
-    title: 'Cérémonie d&apos;ouverture',
+    title: 'Cérémonie d\'ouverture',
     description: 'Discours et présentation des équipes'
   },
   {
@@ -97,13 +97,13 @@ export default function Event() {
             </h2>
             <div className="prose dark:prose-invert max-w-none">
               <p>
-                Le Tournoi de Gala Kick Out Cancer est l&#39;événement phare de notre association. Cette année, nous attendons plus de 20 équipes venues de toute la France pour un tournoi de football caritatif d&#39;envergure.
+                Le Tournoi de Gala Kick Out Cancer est l\'événement phare de notre association. Cette année, nous attendons plus de 20 équipes venues de toute la France pour un tournoi de football caritatif d\'envergure.
               </p>
               <p>
-                Au-delà de la compétition sportive, cet événement est l&#39;occasion de rassembler la communauté étudiante, les entreprises et les associations autour d&#39;une cause commune : la lutte contre le cancer.
+                Au-delà de la compétition sportive, cet événement est l\'occasion de rassembler la communauté étudiante, les entreprises et les associations autour d\'une cause commune : la lutte contre le cancer.
               </p>
               <p>
-                Les fonds collectés seront intégralement reversés à l&#39;IHU PRISM pour financer des projets de recherche innovants.
+                Les fonds collectés seront intégralement reversés à l\'IHU PRISM pour financer des projets de recherche innovants.
               </p>
             </div>
           </motion.div>
@@ -198,14 +198,18 @@ export default function Event() {
             <div className="flex gap-4 justify-center">
               <Link href="/inscription">
                 <Button size="lg" variant="secondary">
-                  S&#39;inscrire maintenant
+                  S\'inscrire maintenant
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline">
-                  Plus d&apos;informations
-                </Button>
-              </Link>
+              <Button
+                as="a"
+                href="#more-info"
+                variant="secondary"
+                size="lg"
+                aria-label="Plus d'informations"
+              >
+                Plus d'informations
+              </Button>
             </div>
           </motion.div>
         </div>

@@ -55,8 +55,8 @@ export default function Donation() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Notre objectif : 50 000€
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Les fonds collectés seront intégralement reversés à l&apos;IHU PRISM pour financer des projets de recherche innovants.
+            <p className="text-lg mb-8">
+              Les fonds collectés seront intégralement reversés à l'IHU PRISM pour financer des projets de recherche innovants.
             </p>
             <ImpactMeter
               currentAmount={25000}
@@ -76,17 +76,17 @@ export default function Donation() {
             </Card>
             <Card>
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-4">Recherche</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Financer des projets de recherche innovants à l&apos;IHU PRISM pour faire avancer la science.
+                <h3 className="text-xl font-bold mb-4">Financer la recherche</h3>
+                <p className="mb-4">
+                  Financer des projets de recherche innovants à l'IHU PRISM pour faire avancer la science.
                 </p>
               </div>
             </Card>
             <Card>
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-4">Impact</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Contribuer à l&apos;amélioration des traitements et à la qualité de vie des patients.
+                <h3 className="text-xl font-bold mb-4">Améliorer les traitements</h3>
+                <p className="mb-4">
+                  Contribuer à l'amélioration des traitements et à la qualité de vie des patients.
                 </p>
               </div>
             </Card>
@@ -130,20 +130,20 @@ export default function Donation() {
             <div className="space-y-6">
               <Card>
                 <h3 className="text-xl font-bold mb-4">Comment mon don sera-t-il utilisé ?</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Les dons sont intégralement reversés à l&apos;IHU PRISM pour financer des projets de recherche innovants dans la lutte contre le cancer.
+                <p className="mb-8">
+                  Les dons sont intégralement reversés à l'IHU PRISM pour financer des projets de recherche innovants dans la lutte contre le cancer.
                 </p>
               </Card>
               <Card>
-                <h3 className="text-xl font-bold mb-4">Puis-je bénéficier d&apos;une réduction fiscale ?</h3>
+                <h3 className="text-xl font-bold mb-4">Puis-je bénéficier d'une réduction fiscale ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Oui, les dons à notre association ouvrent droit à une réduction fiscale de 66% du montant du don, dans la limite de 20% du revenu imposable.
                 </p>
               </Card>
               <Card>
-                <h3 className="text-xl font-bold mb-4">Comment puis-je suivre l&apos;impact de mon don ?</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Nous publions régulièrement des rapports sur l&apos;utilisation des fonds et les avancées des projets de recherche soutenus.
+                <h3 className="text-xl font-bold mb-4">Comment puis-je suivre l'impact de mon don ?</h3>
+                <p className="mb-4">
+                  Nous publions régulièrement des rapports sur l'utilisation des fonds et les avancées des projets de recherche soutenus.
                 </p>
               </Card>
             </div>

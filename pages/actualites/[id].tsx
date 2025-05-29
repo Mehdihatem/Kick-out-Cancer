@@ -28,29 +28,29 @@ const articles: Record<string, {
     id: 1,
     title: 'Lancement du Tournoi de Gala 2025',
     content: `
-      <p>Nous sommes ravis d&apos;annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025, qui se tiendra le 13 septembre 2025 au Stade de CentraleSupélec.</p>
+      <p>Nous sommes ravis d'annoncer le lancement officiel du Tournoi de Gala Kick Out Cancer 2025, qui se tiendra le 13 septembre 2025 au Stade de CentraleSupélec.</p>
       
       <h2>Un événement majeur pour la recherche</h2>
-      <p>Cette édition 2025 s&apos;annonce comme la plus importante de notre histoire, avec un objectif de collecte ambitieux de 50 000€ pour soutenir la recherche contre le cancer.</p>
+      <p>Cette édition 2025 s'annonce comme la plus importante de notre histoire, avec un objectif de collecte ambitieux de 50 000€ pour soutenir la recherche contre le cancer.</p>
       
       <h2>Un programme riche</h2>
       <p>Le tournoi comprendra :</p>
       <ul>
         <li>Des matchs de football à 5</li>
-        <li>Une cérémonie d&apos;ouverture</li>
+        <li>Une cérémonie d'ouverture</li>
         <li>Des animations et stands</li>
         <li>Une remise de prix</li>
       </ul>
       
       <h2>Comment participer ?</h2>
-      <p>Les inscriptions sont ouvertes pour les équipes étudiantes, entreprises et associations. Les frais d&apos;inscription varient selon la catégorie :</p>
+      <p>Les inscriptions sont ouvertes pour les équipes étudiantes, entreprises et associations. Les frais d'inscription varient selon la catégorie :</p>
       <ul>
         <li>Étudiants : 150€ par équipe</li>
         <li>Entreprises : 500€ par équipe</li>
         <li>Associations : 250€ par équipe</li>
       </ul>
       
-      <p>Pour plus d&apos;informations et pour vous inscrire, rendez-vous sur notre page d&apos;inscription.</p>
+      <p>Pour plus d'informations et pour vous inscrire, rendez-vous sur notre page d'inscription.</p>
     `,
     image: '/images/news/tournament-launch.jpg',
     date: '2024-03-15',
@@ -66,7 +66,7 @@ const articles: Record<string, {
 const similarArticles = [
   {
     id: 2,
-    title: 'Partenariat avec l&apos;IHU PRISM',
+    title: 'Partenariat avec l'IHU PRISM',
     excerpt: 'Une collaboration prometteuse pour faire avancer la recherche contre le cancer...',
     image: '/images/news/partnership.jpg',
     date: '2024-03-10',
@@ -190,7 +190,7 @@ export default function Article() {
             >
               {/* Share Section */}
               <Card>
-                <h3 className="text-xl font-bold mb-4">Partager l&apos;article</h3>
+                <h3 className="text-xl font-bold mb-4">Partager l'article</h3>
                 <div className="flex gap-4">
                   <Button variant="secondary" size="sm">
                     Twitter
@@ -262,7 +262,7 @@ export default function Article() {
                 required
               />
               <Button type="submit" variant="primary">
-                S&apos;inscrire
+                S'inscrire
               </Button>
             </form>
           </motion.div>
@@ -275,11 +275,9 @@ export default function Article() {
             {...fadeIn}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold mb-6">
-              Inscrivez-vous à l&apos;événement
-            </h2>
+            <h3 className="text-xl font-bold mb-4">Inscrivez-vous à l'événement</h3>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Inscrivez votre équipe à l&apos;événement
+              Inscrivez votre équipe à l'événement
             </p>
             <Button
               as="a"
@@ -288,9 +286,9 @@ export default function Article() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              aria-label="Inscrire mon équipe à l&apos;événement"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              J&apos;inscris mon équipe
+              J'inscris mon équipe
             </Button>
           </motion.div>
         </div>
