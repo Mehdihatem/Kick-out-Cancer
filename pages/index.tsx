@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Button from '../components/Button'
@@ -105,7 +106,7 @@ export default function Home() {
         <div className="container mx-auto py-16">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-            Kick Out Cancer, c'est bien plus qu'un simple tournoi : c'est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d'un objectif unique : mettre KO le cancer par le mouvement, l'innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l'espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
+            Kick Out Cancer, c&apos;est bien plus qu&apos;un simple tournoi : c&apos;est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d&apos;un objectif unique : mettre KO le cancer par le mouvement, l&apos;innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l&apos;espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
           </p>
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
@@ -227,16 +228,16 @@ export default function Home() {
                 adapté à chaque patient.
               </p>
               <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et Inserm autour d'une
+                PRISM réunit l&apos;excellence de Gustave Roussy, CentraleSupélec,
+                Université Paris-Saclay, Unicancer et Inserm autour d&apos;une
                 approche intégrative et innovante : intelligence artificielle,
-                analyse de l'ADN circulant, épigénétique,
+                analyse de l&apos;ADN circulant, épigénétique,
                 hétérogénéité clonale, biologie spatiale…
               </p>
               <p className="mb-8 text-lg leading-relaxed">
                 Objectif : créer une cartographie digitale de chaque
                 patient, identifier de nouveaux biomarqueurs et accélérer
-                l'accès aux thérapies ciblées et aux
+                l&apos;accès aux thérapies ciblées et aux
                 essais précoces.
               </p>
               <Button
@@ -266,7 +267,7 @@ export default function Home() {
               <p className="mb-6 text-lg leading-relaxed">
                 Associez votre marque à un événement sportif et solidaire à fort
                 impact médiatique : visibilité réseaux sociaux, présence presse,
-                storytelling d'engagement, activation terrain… Ensemble, faisons
+                storytelling d&apos;engagement, activation terrain… Ensemble, faisons
                 bouger les lignes contre le cancer !
               </p>
               <div className="flex flex-wrap gap-4">
@@ -274,9 +275,9 @@ export default function Home() {
                   as="a"
                   href="mailto:contact@kickoutcancer.org?subject=Demande de partenariat pour la prochaine édition Kick Out Cancer"
                   variant="secondary"
-                  aria-label="Contacter l'équipe pour un partenariat"
+                  aria-label="Contacter l&apos;équipe pour un partenariat"
                 >
-                  Écrire à l'équipe
+                  Écrire à l&apos;équipe
                 </Button>
                 <Button
                   as="a"
@@ -353,7 +354,7 @@ export default function Home() {
             <nav>
               <h4 className="mb-4 font-semibold text-white">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white">L'association</a></li>
+                <li><a href="#about" className="hover:text-white">L&apos;association</a></li>
                 <li><a href="#team" className="hover:text-white">Qui sommes-nous</a></li>
                 <li><a href="#event" className="hover:text-white">Prochain évènement</a></li>
                 <li><a href="#partners" className="hover:text-white">Partenaires</a></li>
