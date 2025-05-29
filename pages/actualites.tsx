@@ -163,9 +163,7 @@ export default function News() {
             <h2 className="text-3xl font-bold mb-6">
               Restez informé
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités
-            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{`Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités`}</p>
             <form className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
               <input
                 type="email"
@@ -180,7 +178,7 @@ export default function News() {
                 size="lg"
                 aria-label="S'inscrire"
               >
-                S'inscrire
+                {`S'inscrire`}
               </Button>
             </form>
           </motion.div>

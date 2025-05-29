@@ -251,9 +251,7 @@ export default function Article() {
             <h2 className="text-3xl font-bold mb-6">
               Restez informé
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités
-            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{`Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités`}</p>
             <form className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
               <input
                 type="email"
@@ -261,9 +259,7 @@ export default function Article() {
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent"
                 required
               />
-              <Button type="submit" variant="primary">
-                S'inscrire
-              </Button>
+              <Button type="submit" variant="primary">{`S'inscrire`}</Button>
             </form>
           </motion.div>
         </div>
@@ -275,10 +271,8 @@ export default function Article() {
             {...fadeIn}
             className="max-w-3xl mx-auto text-center"
           >
-            <h3 className="text-xl font-bold mb-4">Inscrivez-vous à l'événement</h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Inscrivez votre équipe à l'événement
-            </p>
+            <h3 className="text-xl font-bold mb-4">{`Inscrivez-vous à l'événement`}</h3>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{`Inscrivez votre équipe à l'événement`}</p>
             <Button
               as="a"
               href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
@@ -287,9 +281,7 @@ export default function Article() {
               variant="secondary"
               size="lg"
               aria-label="Inscrire mon équipe à l'événement"
-            >
-              J'inscris mon équipe
-            </Button>
+            >{`J'inscris mon équipe`}</Button>
           </motion.div>
         </div>
       </section>
