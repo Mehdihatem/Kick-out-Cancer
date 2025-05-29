@@ -39,12 +39,3 @@ jobs:
             **/.git/**
             **/.github/**
             **/.DS_Store
-
-      - name: Deploy public files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ftp.cluster100.hosting.ovh.net
-          username: kickouh
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: /www/ 
