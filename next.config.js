@@ -14,7 +14,7 @@ const nextConfig = {
   compress: true,
   swcMinify: true,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['framer-motion', 'react-icons'],
     scrollRestoration: true,
   },
