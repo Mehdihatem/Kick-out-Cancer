@@ -56,6 +56,16 @@ export default function Home() {
           >
             Ensemble, nous pouvons faire la différence
           </motion.p>
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/images/kick-out-cancer-logo.png"
+              alt="Logo Kick Out Cancer"
+              width={220}
+              height={220}
+              className="mx-auto"
+              priority
+            />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,20 +78,23 @@ export default function Home() {
               rel="noopener noreferrer"
               variant="secondary"
               size="lg"
-              aria-label="Inscrire mon équipe à l&#39;événement"
+              aria-label="Inscrire mon équipe à l'événement"
             >
-              J&#39;inscris mon équipe
+              J'inscris mon équipe
             </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Ajout d'un espace supplémentaire entre Hero et Ambition */}
+      <div className="py-12" />
+
+      {/* About Section (Ambition) */}
       <FadeSection id="about">
         <div className="container mx-auto py-16">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
           <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-            Kick Out Cancer, c&#39;est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d&#39;une même ambition : mettre KO le cancer par le mouvement, l&#39;innovation et la solidarité.
+            Kick Out Cancer, c'est bien plus qu'un simple tournoi : c'est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d'un objectif unique : mettre KO le cancer par le mouvement, l'innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l'espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
           </p>
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
@@ -96,13 +109,50 @@ export default function Home() {
               href="#team"
               className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
             >
-              Découvrir l&#39;équipe
+              Découvrir l'équipe
             </a>
           </div>
         </div>
       </FadeSection>
 
-      {/* Prochain évènement Section */}
+      {/* Pourquoi participer Section (nouvelle section à ajouter ici) */}
+      <FadeSection id="pourquoi-participer">
+        <div className="container mx-auto py-16">
+          <h2 className="mb-6 text-center text-4xl font-extrabold text-primary">Pourquoi participer&nbsp;?</h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
+            <div className="flex flex-col items-center text-center">
+              <span className="text-5xl mb-4" role="img" aria-label="Pour qui">👥</span>
+              <h3 className="text-xl font-bold mb-2">Pour qui&nbsp;?</h3>
+              <p>Ouvert à toutes les équipes&nbsp;: entreprises, amis, familles, clubs de sport…</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <span className="text-5xl mb-4" role="img" aria-label="Combien">💶</span>
+              <h3 className="text-xl font-bold mb-2">Combien&nbsp;?</h3>
+              <p>400€ par équipe (5 à 10 joueurs).<br />Tous les bénéfices sont reversés à la recherche contre le cancer.</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <span className="text-5xl mb-4" role="img" aria-label="Pourquoi">🤝</span>
+              <h3 className="text-xl font-bold mb-2">Pourquoi&nbsp;?</h3>
+              <p>Pour allier sport, solidarité et engagement en faveur de la recherche.</p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="primary"
+              aria-label="Je veux inscrire mon équipe"
+            >
+              Je veux inscrire mon équipe
+            </Button>
+          </div>
+        </div>
+      </FadeSection>
+
+      {/* Prochain évènement Section (Save the date) */}
       <FadeSection id="event">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Prochain évènement</h2>
@@ -272,9 +322,9 @@ export default function Home() {
         <footer className="bg-gray-900 py-12 text-gray-300">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
             <div>
-              <div className="relative h-12 w-48 mb-4">
+              <div className="relative h-20 w-56 mb-4">
                 <Image
-                  src="/images/logo-footer.svg"
+                  src="/images/kick-out-cancer-logo.png"
                   alt="Kick Out Cancer"
                   fill
                   className="object-contain"
