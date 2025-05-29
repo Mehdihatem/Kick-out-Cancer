@@ -34,12 +34,12 @@ export default function Navbar() {
             <ul className="flex items-center gap-8 text-sm font-medium">
               {items.map((item) => (
                 <li key={item.href}>
-                  <a 
+                  <Link 
                     href={item.href} 
                     className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
