@@ -195,9 +195,11 @@ export default function Home() {
       <FadeSection id="partners">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
-          
-          {/* IHU PRISM – Partenaire scientifique */}
-          <div className="mx-auto mb-20 max-w-4xl text-center px-6">
+          {/* Partenaire Principal */}
+          <div className="mx-auto mb-8 max-w-4xl text-center px-6">
+            <div className="mb-2">
+              <span className="inline-block bg-primary text-white text-lg font-bold px-6 py-2 rounded-full shadow">Partenaire Principal : IHU PRISM</span>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -248,14 +250,13 @@ export default function Home() {
               </Button>
             </motion.div>
           </div>
-
-          {/* Devenir partenaire */}
+          {/* En savoir plus / Partenariats (remontée juste après IHU PRISM) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mx-auto grid max-w-5xl items-center gap-12 rounded-lg bg-white p-10 shadow-md md:grid-cols-2"
+            className="mx-auto grid max-w-5xl items-center gap-12 rounded-lg bg-white p-10 shadow-md md:grid-cols-2 mb-16"
           >
             <div>
               <h3 className="mb-4 text-2xl font-bold text-primary">
@@ -288,7 +289,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-
             <div className="relative h-56">
               <Image
                 src="/images/partnership-illustration.svg"
