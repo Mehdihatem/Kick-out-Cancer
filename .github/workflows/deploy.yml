@@ -49,11 +49,6 @@ jobs:
             cp -r out/_next/static/media/* out/images/
             find out -type f -name "*.html" -exec sed -i 's|/_next/static/media/|/images/|g' {} \;
           fi
-          
-          # Also check for images in public directory
-          if [ -d "out/images" ]; then
-            cp -r out/images/* out/images/
-          fi
 
       - name: Deploy to OVH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
