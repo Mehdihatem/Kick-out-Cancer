@@ -4,10 +4,6 @@ import Image from 'next/image'
 import Button from '../components/Button'
 import FadeSection from '../components/FadeSection'
 import TeamSection from '../components/TeamSection'
-import SupportersSection from '../components/SupportersSection'
-import SEO from '../components/SEO'
-import Countdown from '../components/Countdown'
-import FAQ from '../components/FAQ'
 import Link from 'next/link'
 
 const fadeIn = {
@@ -19,15 +15,6 @@ const fadeIn = {
 export default function Home() {
   return (
     <main className="min-h-screen" role="main">
-      <SEO
-        title="Kick Out Cancer - Ensemble, nous pouvons faire la différence"
-        description="Kick Out Cancer est le premier tournoi de sports de combat mixant professionnels de la santé, sportifs et grand public autour d'une même ambition : mettre KO le cancer par le mouvement, l'innovation et la solidarité."
-        image="/images/save-the-date.jpg"
-        ogType="website"
-        twitterCard="summary_large_image"
-        keywords={['cancer', 'sport', 'solidarité', 'événement', 'santé', 'combat', 'tournoi']}
-      />
-
       {/* 1. Hero Section */}
       <section 
         id="hero" 
@@ -100,11 +87,11 @@ export default function Home() {
           <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <Button
               as="a"
-              href="#don"
+              href="#event"
               variant="primary"
-              aria-label="Rejoindre le mouvement Kick Out Cancer"
+              aria-label="Découvrir notre prochain événement"
             >
-              Rejoindre le mouvement
+              Découvrir l'événement
             </Button>
             <a
               href="#team"
@@ -145,146 +132,10 @@ export default function Home() {
         </div>
       </FadeSection>
 
-      {/* 4. Je soutiens la recherche Section */}
-      <FadeSection id="don" className="bg-white py-16">
-        <div className="container mx-auto">
-          <h2 className="mb-6 text-center text-4xl font-extrabold">Je soutiens la recherche</h2>
-          <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed mb-8">
-            Votre don fait la différence. Chaque contribution, même modeste, participe à l'avancée de la recherche contre le cancer. Ensemble, nous pouvons accélérer les découvertes et améliorer les traitements.
-          </p>
-          <div className="flex justify-center">
-            <Button
-              as="a"
-              href="https://www.helloasso.com/associations/kickoutcancer/formulaires/1"
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              variant="primary"
-              aria-label="Faire un don"
-            >
-              Faire un don
-            </Button>
-          </div>
-        </div>
-      </FadeSection>
-
-      {/* 5. IHU PRISM Section */}
-      <FadeSection id="ihu-prism" className="bg-[#eaf6fb] py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto mb-8 max-w-4xl text-center px-6">
-            <div className="mb-2">
-              <span className="inline-block bg-primary text-white text-lg font-bold px-6 py-2 rounded-full shadow">Partenaire Principal : IHU PRISM</span>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="relative w-44 h-44 mx-auto mb-6">
-                <Image
-                  src="/images/ihu-prism-logo.png"
-                  alt="IHU PRISM"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="mb-4 text-2xl font-semibold text-primary">
-                Partenaire scientifique officiel
-              </h3>
-              <p className="mb-4 text-lg leading-relaxed">
-                IHU PRISM est un institut de recherche translationnelle et médicale
-                dédié à la médecine de précision en oncologie.
-                Sa mission : mieux comprendre la biologie de chaque cancer pour
-                réduire la mortalité en identifiant les formes agressives
-                dès le diagnostic et en proposant le traitement le plus
-                adapté à chaque patient.
-              </p>
-              <p className="mb-4 text-lg leading-relaxed">
-                PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec,
-                Université Paris-Saclay, Unicancer et Inserm autour d'une
-                approche intégrative et innovante : intelligence artificielle,
-                analyse de l'ADN circulant, épigénétique,
-                hétérogénéité clonale, biologie spatiale…
-              </p>
-              <p className="mb-8 text-lg leading-relaxed">
-                Objectif : créer une cartographie digitale de chaque
-                patient, identifier de nouveaux biomarqueurs et accélérer
-                l'accès aux thérapies ciblées et aux
-                essais précoces.
-              </p>
-              <Button
-                as="a"
-                href="https://prism.center/about-prism/"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                aria-label="En savoir plus sur IHU PRISM"
-              >
-                En savoir plus sur IHU PRISM
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </FadeSection>
-
-      {/* 6. Nos partenaires Section */}
-      <FadeSection id="partners" className="bg-[#f7f7f7] py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
-          <SupportersSection />
-          <div className="text-center mt-12">
-            <Button
-              as="a"
-              href="/devenir-partenaire"
-              variant="primary"
-              size="lg"
-              aria-label="Devenir partenaire"
-            >
-              Devenir partenaire
-            </Button>
-          </div>
-        </div>
-      </FadeSection>
-
-      {/* 7. Qui sommes-nous Section */}
+      {/* 4. Qui sommes-nous Section */}
       <FadeSection id="team" className="bg-white py-16">
         <TeamSection />
       </FadeSection>
-
-      {/* 8. Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Navigation</h3>
-              <ul className="space-y-2">
-                <li><Link href="#about" className="hover:text-primary">Notre ambition</Link></li>
-                <li><Link href="#event" className="hover:text-primary">Prochain événement</Link></li>
-                <li><Link href="#don" className="hover:text-primary">Je soutiens</Link></li>
-                <li><Link href="#team" className="hover:text-primary">Qui sommes-nous</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li>Email: contact@kickoutcancer.org</li>
-                <li>Téléphone: +33 1 23 45 67 89</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Mentions légales</h3>
-              <ul className="space-y-2">
-                <li><Link href="/mentions-legales" className="hover:text-primary">Mentions légales</Link></li>
-                <li><Link href="/politique-confidentialite" className="hover:text-primary">Politique de confidentialité</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; {new Date().getFullYear()} Kick Out Cancer. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
     </main>
   )
 } 
