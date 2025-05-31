@@ -7,6 +7,9 @@ export default function Navbar() {
     { href: '#hero', label: 'Accueil' },
     { href: '#about', label: 'Notre ambition' },
     { href: '#event', label: 'Prochain évènement' },
+    { href: '#partners', label: 'Partenaires' },
+    { href: '#supporters', label: 'Ils nous soutiennent' },
+    { href: '#don', label: 'Je soutiens la recherche' },
     { href: '#team', label: 'Qui sommes-nous ?' },
   ]
 
