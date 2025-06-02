@@ -29,7 +29,7 @@ export default function Footer() {
             <Image src="/images/ihu-prism-logo.png" alt="IHU PRISM" width={48} height={48} className="bg-white rounded p-1" />
             <Image src="/images/partners/gustave-roussy.png" alt="Gustave Roussy" width={48} height={48} className="bg-white rounded p-1" />
           </div>
-          <span className="text-xs text-gray-400 mt-1">Avec le soutien de l'IHU PRISM et Gustave Roussy</span>
+          <span className="text-xs text-gray-400 mt-1">{`Avec le soutien de l'IHU PRISM et Gustave Roussy`}</span>
         </div>
       </div>
 

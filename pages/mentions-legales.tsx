@@ -22,12 +22,8 @@ export default function LegalNotice() {
 
           <div className="prose dark:prose-invert max-w-none">
             <h2>1. Informations légales</h2>
-            <p>
-              L&#39;association Kick Out Cancer est une association loi 1901, dont le siège social est situé à CentraleSupélec, 3 rue Joliot Curie, 91190 Gif-sur-Yvette.
-            </p>
-            <p>
-              Directeur de la publication : Thomas Martin, Président de l&#39;association
-            </p>
+            <p>{`L'association Kick Out Cancer est une association loi 1901, dont le siège social est situé à CentraleSupélec, 3 rue Joliot Curie, 91190 Gif-sur-Yvette.`}</p>
+            <p>{`Directeur de la publication : Thomas Martin, Président de l'association`}</p>
             <p>
               Contact : contact@kickoutcancer.org
             </p>
@@ -38,9 +34,7 @@ export default function LegalNotice() {
             </p>
 
             <h2>3. Propriété intellectuelle</h2>
-            <p>
-              L&#39;ensemble de ce site relève de la législation française et internationale sur le droit d&#39;auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
-            </p>
+            <p>{`L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.`}</p>
 
             <h2>4. Protection des données personnelles</h2>
             <p>
