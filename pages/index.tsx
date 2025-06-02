@@ -8,6 +8,7 @@ import SupportersSection from '../components/SupportersSection'
 import FAQ from '../components/FAQ'
 import Link from 'next/link'
 import Head from 'next/head'
+import PartnerSection from '../components/PartnerSection'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -192,7 +193,7 @@ export default function Home() {
         <FadeSection id="partners" className="bg-[#f7f7f7] py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
-            <SupportersSection />
+            <PartnerSection />
             <div className="text-center mt-12">
               <Button
                 as="a"
