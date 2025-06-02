@@ -89,7 +89,7 @@ export default function Home() {
                 className="mx-auto"
               />
             </div>
-            <h2 className="mb-6 text-center text-4xl font-extrabold">Notre ambition</h2>
+            <h2 className="text-4xl font-extrabold text-primary mb-6">Notre ambition</h2>
             <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
               Kick Out Cancer, c'est bien plus qu'un simple tournoi : c'est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d'un objectif unique : mettre KO le cancer par le mouvement, l'innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l'espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
             </p>
@@ -115,7 +115,7 @@ export default function Home() {
         {/* 3. Prochain évènement Section */}
         <FadeSection id="event" className="bg-[#f7f7f7] py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12">Prochain évènement</h2>
+            <h2 className="text-4xl font-extrabold text-primary mb-12">Prochain évènement</h2>
             <div className="relative w-full h-[600px] mb-8">
               <Image
                 src="/images/save-the-date.jpg"
@@ -162,7 +162,7 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="mb-4 text-2xl font-semibold text-primary">
+                <h3 className="text-2xl font-semibold text-primary mb-4">
                   Partenaire scientifique officiel
                 </h3>
                 <p className="mb-4 text-lg leading-relaxed">
@@ -192,7 +192,7 @@ export default function Home() {
         {/* 5. Nos partenaires Section */}
         <FadeSection id="partners" className="bg-[#f7f7f7] py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12">Nos partenaires</h2>
+            <h2 className="text-4xl font-extrabold text-primary mb-12">Nos partenaires</h2>
             <PartnerSection />
             <div className="text-center mt-12">
               <Button
@@ -216,7 +216,7 @@ export default function Home() {
         {/* 7. FAQ Section */}
         <FadeSection id="faq" className="bg-[#f7f7f7] py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12">FAQ</h2>
+            <h2 className="text-4xl font-extrabold text-primary mb-12">FAQ</h2>
             <FAQ />
           </div>
         </FadeSection>

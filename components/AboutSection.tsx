@@ -26,15 +26,17 @@ export default function AboutSection() {
             />
           </div>
         </div>
-        <h2 className="mb-6 text-4xl font-extrabold">Notre ambition</h2>
+        <h2 className="mb-6 text-4xl font-extrabold text-primary">Notre ambition</h2>
         <p className="mx-auto max-w-2xl text-lg leading-relaxed mb-4">
-          <strong>Kick Out Cancer, c&rsquo;est bien plus qu&rsquo;un tournoi&nbsp;: c&rsquo;est un mouvement.</strong><br />
-          Notre mission&nbsp;? Réunir sportifs, soignants, patients, chercheurs et entreprises pour <strong>mettre KO le cancer par l&rsquo;action, l&rsquo;innovation et la solidarité</strong>.<br />
-          Chaque match, chaque but, chaque don contribue à <strong>transformer l&rsquo;espoir en progrès concret</strong>. Ensemble, faisons reculer le cancer.
+          <strong>{`Kick Out Cancer, c'est bien plus qu'un tournoi : c'est un mouvement.`}</strong><br />
+          {`Notre mission ? Réunir sportifs, soignants, patients, chercheurs et entreprises pour `}
+          <strong>{`mettre KO le cancer par l'action, l'innovation et la solidarité`}</strong>.<br />
+          {`Chaque match, chaque but, chaque don contribue à `}
+          <strong>{`transformer l'espoir en progrès concret`}</strong>. {`Ensemble, faisons reculer le cancer.`}
         </p>
         <p className="mx-auto max-w-2xl text-lg leading-relaxed mb-4">
-          <strong>Vous voulez en savoir plus&nbsp;?</strong><br />
-          Découvrez la vision du projet en vidéo et rejoignez notre aventure&nbsp;:
+          <strong>{`Vous voulez en savoir plus ?`}</strong><br />
+          {`Découvrez la vision du projet en vidéo et rejoignez notre aventure :`}
         </p>
         <div className="w-full flex justify-center mt-6">
           <div className="w-full max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg">
