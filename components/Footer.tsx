@@ -59,6 +59,9 @@ export default function Footer() {
         <div className="text-xs text-gray-500 text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
           © 2025 Kick Out Cancer – Tous droits réservés.
         </div>
+        <div className="text-sm text-yellow-400 text-center mt-2 font-semibold">
+          Édition inaugurale 2025 – Kick Out Cancer – Tous droits réservés.
+        </div>
       </div>
     </footer>
   )
