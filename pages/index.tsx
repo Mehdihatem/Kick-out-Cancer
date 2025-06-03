@@ -27,7 +27,7 @@ export default function Home() {
         {/* 1. Hero Section */}
       <section 
         id="hero" 
-          className="relative h-screen flex items-center justify-center bg-gradient-to-b from-primary/10 to-white"
+          className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/10 to-white py-20"
         aria-label="Section principale"
       >
         <div className="absolute inset-0 z-0">
