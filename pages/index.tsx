@@ -156,32 +156,35 @@ export default function Home() {
 
         {/* 3. Prochain évènement Section */}
         <FadeSection id="event" className="bg-[#f7f7f7] py-16">
-        <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-extrabold text-primary mb-12">Prochain évènement</h2>
-          <div className="relative w-full h-[600px] mb-8">
-            <Image
-              src="/images/save-the-date.jpg"
-              alt="Save the date - Prochain évènement Kick Out Cancer"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="text-center">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <h2 className="text-4xl font-extrabold text-primary mb-6">Prochain événement</h2>
+            <p className="text-lg mb-8">
+              Rejoignez-nous le <strong>14 juin 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
+              <span className="block mt-2 text-base text-gray-700">Lieu : Five Paris 18, 217 rue Aubervilliers, Paris</span>
+            </p>
+            <div className="relative w-full h-[320px] mb-8 rounded-xl overflow-hidden mx-auto">
+              <Image
+                src="/images/save-the-date.jpg"
+                alt="Save the date - Prochain évènement Kick Out Cancer"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
             <Button
               as="a"
               href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              variant="secondary"
+              variant="primary"
               aria-label="Inscrire mon équipe à l'événement"
             >
               J'inscris mon équipe
             </Button>
+            <p className="mt-2 text-sm text-gray-600">Processus simple, inscription en ligne, aucune commission.</p>
           </div>
-        </div>
-      </FadeSection>
+        </FadeSection>
 
         {/* 4. IHU PRISM Section */}
         <FadeSection id="ihu-prism" className="bg-[#eaf6fb] py-16">
