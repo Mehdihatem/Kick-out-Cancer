@@ -222,7 +222,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center gap-4 flex-wrap">
-              <a
+              <Link
                 href="/contact"
                 className="btn btn-primary inline-flex items-center gap-2"
                 aria-label="Contactez-nous pour devenir partenaire"
@@ -230,7 +230,7 @@ export default function Home() {
               >
                 Contactez-nous pour devenir partenaire
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </a>
+              </Link>
             </div>
           </div>
         </FadeSection>
@@ -240,9 +240,11 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-center">Partenaire scientifique</h2>
             <div className="max-w-3xl mx-auto mb-8 flex items-center gap-8">
-              <img 
+              <Image 
                 src="/assets/logos/ihu-prism.webp" 
                 alt="Logo IHU PRISM" 
+                width={128}
+                height={128}
                 className="w-32 h-auto object-contain flex-shrink-0"
               />
               <div className="text-lg leading-relaxed space-y-4">
@@ -254,19 +256,19 @@ export default function Home() {
             </div>
             <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto">
               <div className="partner-item flex justify-center">
-                <img src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" loading="lazy" className="h-16 object-contain" />
+                <Image src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" width={64} height={64} className="h-16 object-contain" />
               </div>
               <div className="partner-item flex justify-center">
-                <img src="/assets/logos/centralesupelec.webp" alt="Logo CentraleSupélec" loading="lazy" className="h-16 object-contain" />
+                <Image src="/assets/logos/centralesupelec.webp" alt="Logo CentraleSupélec" width={64} height={64} className="h-16 object-contain" />
               </div>
               <div className="partner-item flex justify-center">
-                <img src="/assets/logos/universite-paris-saclay.webp" alt="Logo Université Paris-Saclay" loading="lazy" className="h-16 object-contain" />
+                <Image src="/assets/logos/universite-paris-saclay.webp" alt="Logo Université Paris-Saclay" width={64} height={64} className="h-16 object-contain" />
               </div>
               <div className="partner-item flex justify-center">
-                <img src="/assets/logos/unicancer.webp" alt="Logo Unicancer" loading="lazy" className="h-16 object-contain" />
+                <Image src="/assets/logos/unicancer.webp" alt="Logo Unicancer" width={64} height={64} className="h-16 object-contain" />
               </div>
               <div className="partner-item flex justify-center">
-                <img src="/assets/logos/inserm.webp" alt="Logo Inserm" loading="lazy" className="h-16 object-contain" />
+                <Image src="/assets/logos/inserm.webp" alt="Logo Inserm" width={64} height={64} className="h-16 object-contain" />
               </div>
             </div>
           </div>
@@ -280,7 +282,7 @@ export default function Home() {
             <SupportersSection />
             <p className="partners-count mt-6 font-semibold text-gray-800">3 partenaires déjà engagés.</p>
             <div className="mt-8">
-              <a
+              <Link
                 href="/contact"
                 className="btn btn-primary inline-flex items-center gap-2"
                 aria-label="Contactez-nous pour devenir partenaire"
@@ -288,7 +290,7 @@ export default function Home() {
               >
                 Contactez-nous
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </a>
+              </Link>
             </div>
           </div>
         </FadeSection>

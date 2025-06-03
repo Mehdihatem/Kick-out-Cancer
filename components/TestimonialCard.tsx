@@ -53,11 +53,13 @@ export const VideoTestimonialCard = ({ videoId, thumbnail, author, role, quote }
   const [open, setOpen] = useState(false)
   return (
     <div className="bg-white rounded-xl p-4 shadow-soft flex flex-col items-center">
-      <div className="relative w-full aspect-video max-w-xs mb-3 cursor-pointer group" onClick={() => setOpen(true)} tabIndex={0} aria-label={`Lire le témoignage vidéo de ${author}`}> 
-        <img src={thumbnail} alt={`Vignette vidéo de ${author}`} className="rounded-lg w-full h-auto object-cover" loading="lazy" />
-        <button className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition rounded-lg" aria-label={`Lire la vidéo de ${author}`} tabIndex={-1}>
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#fff" fillOpacity="0.85"/><polygon points="22,18 40,28 22,38" fill="#e63946"/></svg>
-        </button>
+      <div className="relative w-full h-48 mb-4">
+        <Image
+          src={thumbnail}
+          alt={`Miniature de la vidéo de ${author}`}
+          fill
+          className="object-cover rounded-t-lg"
+        />
       </div>
       <h4 className="font-bold text-center">{author}</h4>
       <p className="text-sm text-gray-600 text-center mb-2">{role}</p>
