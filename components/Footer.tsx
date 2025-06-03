@@ -3,16 +3,16 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-12 pb-6 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+    <footer className="bg-black text-white pt-12 pb-6 px-4 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-start md:grid-cols-4">
         {/* Mission */}
-        <div className="md:col-span-2 flex flex-col gap-4">
+        <div className="md:col-span-2 flex flex-col gap-4 items-center md:items-start w-full">
           <Image src="/images/kick-out-cancer-logo.png" alt="Kick Out Cancer logo" width={56} height={56} className="mb-2" />
-          <p className="text-lg font-semibold text-yellow-400">Ensemble, mettons KO le cancer par le sport et la solidarité.</p>
+          <p className="text-lg font-semibold text-yellow-400 text-center md:text-left">Ensemble, mettons KO le cancer par le sport et la solidarité.</p>
         </div>
 
         {/* Menu rapide */}
-        <nav aria-label="Menu rapide" className="flex flex-col gap-2">
+        <nav aria-label="Menu rapide" className="flex flex-col gap-2 items-center md:items-start w-full">
           <span className="text-violet-300 font-bold mb-2">Navigation</span>
           <Link href="#hero" className="hover:text-yellow-400 transition">Accueil</Link>
           <Link href="#about" className="hover:text-yellow-400 transition">À propos</Link>
@@ -23,20 +23,20 @@ export default function Footer() {
         </nav>
 
         {/* Partenaires */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 items-center md:items-start w-full">
           <span className="text-violet-300 font-bold mb-2">Partenaires</span>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
             <Image src="/images/ihu-prism-logo.png" alt="IHU PRISM" width={48} height={48} className="bg-white rounded p-1" />
             <Image src="/images/partners/gustave-roussy.png" alt="Gustave Roussy" width={48} height={48} className="bg-white rounded p-1" />
           </div>
-          <span className="text-xs text-gray-400 mt-1">{`Avec le soutien de l'IHU PRISM et Gustave Roussy`}</span>
+          <span className="text-xs text-gray-400 mt-1 text-center md:text-left">{`Avec le soutien de l'IHU PRISM et Gustave Roussy`}</span>
         </div>
       </div>
 
       {/* Réseaux sociaux & mentions */}
-      <div className="max-w-7xl mx-auto mt-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-gray-800 pt-6">
+      <div className="max-w-7xl mx-auto mt-10 flex flex-col gap-6 border-t border-gray-800 pt-6 md:flex-row md:items-center md:justify-between">
         {/* Réseaux sociaux */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center md:justify-start">
           <a href="https://facebook.com/kickoutcancer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-yellow-400">
             <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
           </a>
@@ -51,7 +51,7 @@ export default function Footer() {
           </a>
         </div>
         {/* Mentions légales et copyright */}
-        <div className="flex flex-col md:flex-row items-center gap-2 text-sm text-gray-400">
+        <div className="flex flex-col items-center gap-2 text-sm text-gray-400 md:flex-row">
           <Link href="/mentions-legales" className="hover:text-yellow-400">Mentions légales</Link>
           <span className="hidden md:inline">|</span>
           <Link href="/politique-confidentialite" className="hover:text-yellow-400">Politique de confidentialité</Link>
