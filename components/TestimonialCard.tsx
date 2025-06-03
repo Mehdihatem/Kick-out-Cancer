@@ -73,7 +73,7 @@ export const VideoTestimonialCard = ({ videoId, thumbnail, author, role, quote }
       </a>
       <h4 className="font-bold text-center">{author}</h4>
       <p className="text-sm text-gray-600 text-center mb-2">{role}</p>
-      <blockquote className="text-gray-700 italic text-center">"{quote}"</blockquote>
+      <blockquote className="text-gray-700 italic text-center">&ldquo;{quote}&rdquo;</blockquote>
     </div>
   )
 }
