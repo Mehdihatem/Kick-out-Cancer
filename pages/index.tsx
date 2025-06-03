@@ -138,9 +138,9 @@ export default function Home() {
             </ul>
             <blockquote className="citation-intention italic bg-gray-50 border-l-4 border-primary px-6 py-4 text-gray-700">
               <span className="block bg-gray-100 border-l-4 border-primary px-4 py-3 rounded-md text-base md:text-lg leading-relaxed max-w-full">
-                « En tant que chercheur à l'IHU PRISM, je suis fier de participer à cette première édition qui crée un lien direct entre la recherche et les sportifs. Ensemble, nous bâtissons une dynamique nouvelle pour faire reculer le cancer. »
+                « En tant que chercheur à <strong>Gustave Roussy</strong>, je suis fier de participer à cette première édition qui crée un lien direct entre la recherche et les sportifs. Ensemble, nous bâtissons une dynamique nouvelle pour faire reculer le cancer. »
               </span>
-              <footer className="mt-2 text-right text-sm text-gray-600">– Loic Poirraudeau, chercheur à Gustave Roussy</footer>
+              <footer className="mt-2 text-right text-sm text-gray-600">– Dr Loïc Poirraudeau, Gustave Roussy</footer>
             </blockquote>
           </div>
         </FadeSection>
@@ -168,7 +168,7 @@ export default function Home() {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h2 className="text-4xl font-extrabold text-primary mb-6">Prochain événement</h2>
             <p className="text-lg mb-8">
-              Rejoignez-nous le <strong>14 juin 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
+              Rejoignez-nous le <strong>13 septembre 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
               <span className="block mt-2 text-base text-gray-700">Lieu : Five Paris 18, 217 rue Aubervilliers, Paris</span>
             </p>
             <div className="relative w-full h-[320px] mb-8 rounded-xl overflow-hidden mx-auto">
@@ -192,7 +192,7 @@ export default function Home() {
             >
               J'inscris mon équipe
             </Button>
-            <p className="mt-2 text-sm text-gray-600">Processus simple, inscription en ligne, aucune commission.</p>
+            <p className="mt-2 text-sm text-gray-600">Processus simple, inscription en ligne</p>
           </div>
         </FadeSection>
 
@@ -200,9 +200,9 @@ export default function Home() {
         <FadeSection id="pack-partenariat" className="bg-white py-16">
           <div className="container mx-auto max-w-4xl text-center">
             <div className="flex justify-center mb-4">
-              <span className="inline-block bg-yellow-400 text-primary text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Partenaire Fondateur 2025</span>
+              <span className="inline-block bg-yellow-400 text-primary text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Partenaire 2025</span>
             </div>
-            <h2 className="text-3xl font-bold mb-4">Vous êtes une entreprise ? Devenez Partenaire Fondateur</h2>
+            <h2 className="text-3xl font-bold mb-4">Vous êtes une entreprise ? Devenez Partenaire</h2>
             <p className="mb-8 text-gray-700">En 2025, rejoignez-nous dès la première édition pour bénéficier d'avantages exclusifs :</p>
             <div className="flex flex-col md:flex-row gap-6 justify-center mb-8">
               <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
@@ -211,13 +211,6 @@ export default function Home() {
                 </span>
                 <h3 className="font-semibold text-lg mb-1">Visibilité Médiatique</h3>
                 <p className="text-sm text-gray-700">Logo sur site, réseaux sociaux et supports imprimés officiels.</p>
-              </div>
-              <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
-                <span className="mb-3">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône Partenariat Scientifique"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M15 19v-2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2" stroke="#e63946" strokeWidth="2"/><path d="M9 17V7a3 3 0 1 1 6 0v10" stroke="#e63946" strokeWidth="2"/><circle cx="12" cy="7" r="1" fill="#e63946"/></svg>
-                </span>
-                <h3 className="font-semibold text-lg mb-1">Partenariat Scientifique</h3>
-                <p className="text-sm text-gray-700">Accès aux rencontres chercheurs/entreprises et branding sur nos publications scientifiques.</p>
               </div>
               <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
                 <span className="mb-3">
@@ -243,87 +236,48 @@ export default function Home() {
           </div>
         </FadeSection>
 
-        {/* 5. Nos partenaires Section (événement) */}
+        {/* 5. Partenaire scientifique Section */}
+        <FadeSection id="partenaire-scientifique" className="bg-[#eaf6fb] py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6 text-center">Partenaire scientifique</h2>
+            <div className="max-w-3xl mx-auto mb-8 text-lg leading-relaxed space-y-4">
+              <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
+              <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
+              <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
+              <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
+            </div>
+            <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto">
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/ihu-prism.webp" alt="Logo IHU PRISM" loading="lazy" className="h-16 object-contain" />
+              </div>
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" loading="lazy" className="h-16 object-contain" />
+              </div>
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/centralesupelec.webp" alt="Logo CentraleSupélec" loading="lazy" className="h-16 object-contain" />
+              </div>
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/universite-paris-saclay.webp" alt="Logo Université Paris-Saclay" loading="lazy" className="h-16 object-contain" />
+              </div>
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/unicancer.webp" alt="Logo Unicancer" loading="lazy" className="h-16 object-contain" />
+              </div>
+              <div className="partner-item flex justify-center">
+                <img src="/assets/logos/inserm.webp" alt="Logo Inserm" loading="lazy" className="h-16 object-contain" />
+              </div>
+            </div>
+          </div>
+        </FadeSection>
+
+        {/* 6. Nos partenaires Section (événement) */}
         <FadeSection id="nos-partenaires" className="bg-[#fafafa] py-16">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Nos partenaires fondateurs</h2>
-            <p className="mb-6 text-gray-700">Merci aux premières entreprises qui nous soutiennent pour faire de cette première édition un succès.</p>
+            <h2 className="text-3xl font-bold mb-4">Nos partenaires</h2>
+            <p className="mb-6 text-gray-700">Merci aux premières entreprises qui nous soutiennent et apportent leurs expertises pour faire de cette première édition un succès.</p>
             <SupportersSection />
-            <p className="partners-count mt-6 font-semibold text-gray-800">3 partenaires déjà engagés en tant que fondateurs.</p>
+            <p className="partners-count mt-6 font-semibold text-gray-800">3 partenaires déjà engagés.</p>
           </div>
         </FadeSection>
-
-        {/* 4. IHU PRISM Section */}
-        <FadeSection id="ihu-prism" className="bg-[#eaf6fb] py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto mb-8 max-w-4xl text-center px-6">
-            <div className="mb-2">
-              <span className="inline-block bg-primary text-white text-lg font-bold px-6 py-2 rounded-full shadow">Partenaire Principal : IHU PRISM</span>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="relative w-44 h-44 mx-auto mb-6">
-                <Image
-                  src="/images/ihu-prism-logo.png"
-                  alt="IHU PRISM"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-                <h3 className="text-2xl font-semibold text-primary mb-4">
-                Partenaire scientifique officiel
-              </h3>
-              <p className="mb-4 text-lg leading-relaxed">
-                  IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.
-              </p>
-              <p className="mb-4 text-lg leading-relaxed">
-                  PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…
-              </p>
-              <p className="mb-8 text-lg leading-relaxed">
-                  Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.
-              </p>
-              <Button
-                as="a"
-                href="https://prism.center/about-prism/"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                aria-label="En savoir plus sur IHU PRISM"
-              >
-                  En savoir plus sur IHU PRISM
-              </Button>
-            </motion.div>
-            </div>
-          </div>
-        </FadeSection>
-
-        {/* 5. Nos partenaires Section */}
-        <FadeSection id="partners" className="bg-[#f7f7f7] py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-extrabold text-primary mb-12">Nos partenaires</h2>
-            <PartnerSection />
-            <div className="text-center mt-12">
-                <Button
-                  as="a"
-                href="/devenir-partenaire"
-                variant="primary"
-                size="lg"
-                aria-label="Devenir partenaire"
-                >
-                Devenir partenaire
-                </Button>
-          </div>
-        </div>
-      </FadeSection>
-
-        {/* 6. Qui sommes-nous Section */}
-        <FadeSection id="team" className="bg-white py-16">
-        <TeamSection />
-      </FadeSection>
 
         {/* 7. FAQ Section (accordéon) */}
         <FadeSection id="faq" className="bg-[#fafafa] py-16">
