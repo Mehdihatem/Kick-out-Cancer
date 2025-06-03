@@ -9,6 +9,7 @@ import FAQ from '../components/FAQ'
 import Link from 'next/link'
 import Head from 'next/head'
 import PartnerSection from '../components/PartnerSection'
+import { VideoTestimonialCard } from '../components/TestimonialCard'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -27,7 +28,7 @@ export default function Home() {
         {/* 1. Hero Section */}
       <section 
         id="hero" 
-          className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/10 to-white py-20"
+          className="relative flex items-center justify-center bg-gradient-to-b from-primary/10 to-white py-20"
         aria-label="Section principale"
       >
         <div className="absolute inset-0 z-0">
@@ -77,40 +78,81 @@ export default function Home() {
         </div>
       </section>
 
-        {/* 2. Notre ambition Section */}
-        <FadeSection id="about" className="bg-white py-16">
-          <div className="container mx-auto">
-            <div className="flex justify-center mb-8">
-              <Image
-                src="/images/kick-out-cancer-logo.png"
-                alt="Logo Kick Out Cancer"
-                width={120}
-                height={120}
-                className="mx-auto"
-              />
-            </div>
-            <h2 className="text-4xl font-extrabold text-primary mb-6">Notre ambition</h2>
-          <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed">
-              Kick Out Cancer, c'est bien plus qu'un simple tournoi : c'est une mission. Notre ambition est de réunir sportifs, soignants, patients, chercheurs et entreprises autour d'un objectif unique : mettre KO le cancer par le mouvement, l'innovation et la solidarité. Chaque match, chaque but, chaque partenaire contribue à transformer l'espoir en action et à faire avancer la recherche. Ensemble, faisons bouger les lignes.
-          </p>
-          <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-            <Button
-              as="a"
-                href="#event"
-              variant="primary"
-                aria-label="Découvrir notre prochain événement"
-            >
-                Découvrir l'événement
-            </Button>
-            <a
-              href="#team"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary hover:bg-primary/10 transition-colors md:ml-0"
-            >
-              Découvrir l'équipe
-            </a>
+      {/* Bandeau inaugural */}
+      <div className="bg-primary text-white text-center font-semibold py-4 inaugural-banner">
+        Édition Inaugurale 2025 – Participez dès maintenant et devenez un pionnier de la lutte contre le cancer via Kick Out Cancer !
+      </div>
+
+      {/* Bloc Objectifs 2025 */}
+      <section id="objectifs-2025" className="flex flex-col md:flex-row justify-around items-center gap-6 bg-gray-100 py-6 my-4 rounded-lg mx-2">
+        <div className="flex items-center gap-3">
+          <span className="inline-block bg-primary/10 p-2 rounded-full">
+            {/* Icône équipe */}
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.31 0-6 1.34-6 3v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1c0-1.66-2.69-3-6-3Z" fill="#3a4cb3"/></svg>
+          </span>
+          <div>
+            <span className="block text-2xl font-bold text-primary">32</span>
+            <span className="block text-sm text-gray-700">équipes visées</span>
           </div>
         </div>
-      </FadeSection>
+        <div className="flex items-center gap-3">
+          <span className="inline-block bg-primary/10 p-2 rounded-full">
+            {/* Icône collecte */}
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M12 17c-3.31 0-6-1.34-6-3V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6c0 1.66-2.69 3-6 3Zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="#3a4cb3"/></svg>
+          </span>
+          <div>
+            <span className="block text-2xl font-bold text-primary">100 000&nbsp;€</span>
+            <span className="block text-sm text-gray-700">collectés pour la recherche</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="inline-block bg-primary/10 p-2 rounded-full">
+            {/* Icône instituts */}
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M7 17V7a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v10" stroke="#3a4cb3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 17v-4" stroke="#3a4cb3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="10" r="1" fill="#3a4cb3"/></svg>
+          </span>
+          <div>
+            <span className="block text-2xl font-bold text-primary">10</span>
+            <span className="block text-sm text-gray-700">instituts associés</span>
+          </div>
+        </div>
+      </section>
+
+        {/* 2. Notre ambition Section */}
+        <FadeSection id="about" className="bg-white py-16">
+          <div className="container mx-auto max-w-3xl">
+            <h2 className="text-4xl font-extrabold text-primary mb-6 text-center">Notre ambition</h2>
+            <p className="text-lg text-center mb-6">
+              Kick Out Cancer, c'est la toute première édition d'un tournoi inédit mêlant sport, solidarité et recherche. En 2025, nous posons la première pierre d'un rendez-vous annuel dont l'objectif est de :
+            </p>
+            <ul className="list-disc list-inside text-lg mb-8 text-gray-800">
+              <li><strong>Mobiliser 32 équipes</strong> passionnées et engagées.</li>
+              <li><strong>Collecter 100 000&nbsp;€</strong> pour financer des projets de recherche innovants.</li>
+              <li><strong>Associer 10 instituts de recherche</strong> pour un impact scientifique maximal.</li>
+            </ul>
+            <blockquote className="citation-intention italic bg-gray-50 border-l-4 border-primary px-6 py-4 text-gray-700">
+              « En tant que chercheur à l'IHU PRISM, je suis fier de participer à cette première édition qui crée un lien direct entre la recherche et les sportifs. Ensemble, nous bâtissons une dynamique nouvelle pour faire reculer le cancer. »
+              <footer className="mt-2 text-right text-sm text-gray-600">– Dr Marie Durand, IHU PRISM</footer>
+            </blockquote>
+          </div>
+        </FadeSection>
+
+        {/* 3. Témoignages vidéo Section */}
+        <FadeSection id="temoignages-video" className="bg-[#fefefe] py-16">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-4">Témoignages vidéo des participants</h2>
+            <p className="text-center text-gray-700 mb-8">Découvrez les premières interviews de nos sportifs, chercheurs et bénévoles : leur engagement, leurs motivations et leurs espoirs pour cette édition 2025.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+              <VideoTestimonialCard
+                videoId="dEItZYM7D3Y"
+                thumbnail="/assets/thumbs/julie-thumb.webp"
+                author="Julie, infirmière bénévole"
+                role="Bénévole Kick Out Cancer"
+                quote="Je participe pour tous ceux qui se battent au quotidien…"
+              />
+              {/* Ajouter d'autres VideoTestimonialCard ici si besoin */}
+            </div>
+          </div>
+        </FadeSection>
 
         {/* 3. Prochain évènement Section */}
         <FadeSection id="event" className="bg-[#f7f7f7] py-16">
