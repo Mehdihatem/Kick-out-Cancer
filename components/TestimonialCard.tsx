@@ -70,11 +70,13 @@ export const VideoTestimonialCard = ({ videoId, thumbnail, author, role, quote }
             <button className="absolute -top-6 -right-6 bg-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow focus:outline-none focus:ring" onClick={() => setOpen(false)} aria-label="Fermer la vidéo" autoFocus>&times;</button>
             <h2 id={`video-modal-title-${videoId}`} className="sr-only">Témoignage vidéo de {author}</h2>
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&si=O3K9lfWv7wFF3f5z`}
               title={`Témoignage vidéo de ${author}`}
               width="100%"
               height="400"
-              allow="autoplay; encrypted-media"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               className="rounded-lg w-full aspect-video"
             />
