@@ -63,9 +63,10 @@ export const VideoTestimonialCard = ({ videoId, thumbnail, author, role, quote }
       <p className="text-sm text-gray-600 text-center mb-2">{role}</p>
       <blockquote className="text-gray-700 italic text-center">“{quote}”</blockquote>
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" role="dialog" aria-modal="true" aria-labelledby={`video-modal-title-${videoId}`}> 
           <div className="relative w-full max-w-2xl mx-4">
-            <button className="absolute -top-6 -right-6 bg-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow" onClick={() => setOpen(false)} aria-label="Fermer la vidéo">&times;</button>
+            <button className="absolute -top-6 -right-6 bg-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow focus:outline-none focus:ring" onClick={() => setOpen(false)} aria-label="Fermer la vidéo" autoFocus>&times;</button>
+            <h2 id={`video-modal-title-${videoId}`} className="sr-only">Témoignage vidéo de {author}</h2>
             <iframe
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
               title={`Témoignage vidéo de ${author}`}

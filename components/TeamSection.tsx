@@ -81,14 +81,14 @@ export default function TeamSection() {
             <div className="relative h-40 w-40 mx-auto mb-4">
               <Image
                 src={m.photo}
-                alt={m.name}
+                alt={`${m.name} – ${m.role}`}
                 fill
                 className="rounded-full object-cover shadow"
                 loading="lazy"
               />
             </div>
-            <h4 className="mb-1 text-xl font-semibold">{m.name}</h4>
-            <p className="text-sm text-gray-700">{m.role}</p>
+            <h4 className="mb-1 text-xl font-bold text-gray-900">{m.name}</h4>
+            <p className="text-sm text-gray-700 italic">{m.role}</p>
           </motion.article>
         ))}
       </div>
@@ -108,14 +108,14 @@ export default function TeamSection() {
             <div className="relative h-32 w-32 mx-auto mb-4">
               <Image
                 src={p.photo}
-                alt={p.name}
+                alt={`${p.name} – ${p.role}`}
                 fill
                 className="rounded-full object-cover shadow"
                 loading="lazy"
               />
             </div>
-            <p className="font-semibold">{p.name}</p>
-            <p className="text-sm text-gray-700">{p.role}</p>
+            <p className="font-bold text-gray-900">{p.name}</p>
+            <p className="text-sm text-gray-700 italic">{p.role}</p>
           </motion.article>
         ))}
       </div>

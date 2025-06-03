@@ -18,6 +18,13 @@ const fadeIn = {
   transition: { duration: 0.5 }
 }
 
+// Déclaration pour éviter l'erreur TS sur window.gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export default function Home() {
   return (
     <>
@@ -85,35 +92,34 @@ export default function Home() {
       </div>
 
       {/* Bloc Objectifs 2025 */}
-      <section id="objectifs-2025" className="flex flex-col md:flex-row justify-around items-center gap-6 bg-gray-100 py-6 my-4 rounded-lg mx-2">
-        <div className="flex items-center gap-3">
-          <span className="inline-block bg-primary/10 p-2 rounded-full">
-            {/* Icône équipe */}
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.31 0-6 1.34-6 3v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1c0-1.66-2.69-3-6-3Z" fill="#3a4cb3"/></svg>
-          </span>
-          <div>
-            <span className="block text-2xl font-bold text-primary">32</span>
-            <span className="block text-sm text-gray-700">équipes visées</span>
-          </div>
+      <section id="objectifs-2025" className="bg-gray-100 py-8 my-4 rounded-lg mx-2">
+        <div className="text-center mb-6">
+          <span className="inline-block bg-primary text-white text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Objectif 2025</span>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="inline-block bg-primary/10 p-2 rounded-full">
-            {/* Icône collecte */}
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M12 17c-3.31 0-6-1.34-6-3V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6c0 1.66-2.69 3-6 3Zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="#3a4cb3"/></svg>
-          </span>
-          <div>
-            <span className="block text-2xl font-bold text-primary">100 000&nbsp;€</span>
-            <span className="block text-sm text-gray-700">collectés pour la recherche</span>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          {/* Équipes */}
+          <div className="flex flex-col items-center bg-white rounded-lg shadow p-6">
+            <span className="mb-2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône football équipes"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M12 7a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm0 8c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4Z" stroke="#e63946" strokeWidth="2"/></svg>
+            </span>
+            <span className="text-3xl font-extrabold text-primary mb-1">32</span>
+            <span className="text-sm text-gray-700">équipes visées</span>
           </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="inline-block bg-primary/10 p-2 rounded-full">
-            {/* Icône instituts */}
-            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#3a4cb3" opacity="0.15"/><path d="M7 17V7a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v10" stroke="#3a4cb3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 17v-4" stroke="#3a4cb3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="10" r="1" fill="#3a4cb3"/></svg>
-          </span>
-          <div>
-            <span className="block text-2xl font-bold text-primary">10</span>
-            <span className="block text-sm text-gray-700">instituts associés</span>
+          {/* Collecte */}
+          <div className="flex flex-col items-center bg-white rounded-lg shadow p-6">
+            <span className="mb-2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône euro collecte"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M16 15.5c-1.5 1-4.5 1-6 0M8 8.5c1.5-1 4.5-1 6 0M12 6v12" stroke="#e63946" strokeWidth="2"/><text x="8" y="22" fontSize="10" fill="#e63946" fontWeight="bold">€</text></svg>
+            </span>
+            <span className="text-3xl font-extrabold text-primary mb-1">100 000&nbsp;€</span>
+            <span className="text-sm text-gray-700">collectés pour la recherche</span>
+          </div>
+          {/* Instituts */}
+          <div className="flex flex-col items-center bg-white rounded-lg shadow p-6">
+            <span className="mb-2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône microscope instituts"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M15 19v-2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2" stroke="#e63946" strokeWidth="2"/><path d="M9 17V7a3 3 0 1 1 6 0v10" stroke="#e63946" strokeWidth="2"/><circle cx="12" cy="7" r="1" fill="#e63946"/></svg>
+            </span>
+            <span className="text-3xl font-extrabold text-primary mb-1">10</span>
+            <span className="text-sm text-gray-700">instituts associés</span>
           </div>
         </div>
       </section>
@@ -131,7 +137,9 @@ export default function Home() {
               <li><strong>Associer 10 instituts de recherche</strong> pour un impact scientifique maximal.</li>
             </ul>
             <blockquote className="citation-intention italic bg-gray-50 border-l-4 border-primary px-6 py-4 text-gray-700">
-              « En tant que chercheur à l'IHU PRISM, je suis fier de participer à cette première édition qui crée un lien direct entre la recherche et les sportifs. Ensemble, nous bâtissons une dynamique nouvelle pour faire reculer le cancer. »
+              <span className="block bg-gray-100 border-l-4 border-primary px-4 py-3 rounded-md text-base md:text-lg leading-relaxed max-w-full">
+                « En tant que chercheur à l'IHU PRISM, je suis fier de participer à cette première édition qui crée un lien direct entre la recherche et les sportifs. Ensemble, nous bâtissons une dynamique nouvelle pour faire reculer le cancer. »
+              </span>
               <footer className="mt-2 text-right text-sm text-gray-600">– Loic Poirraudeau, chercheur à Gustave Roussy</footer>
             </blockquote>
           </div>
@@ -142,13 +150,13 @@ export default function Home() {
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center mb-4">Témoignages vidéo des participants</h2>
             <p className="text-center text-gray-700 mb-8">Découvrez les premières interviews de nos sportifs, chercheurs et bénévoles : leur engagement, leurs motivations et leurs espoirs pour cette édition 2025.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
               <VideoTestimonialCard
                 videoId="dEItZYM7D3Y"
-                thumbnail="/assets/thumbs/julie-thumb.webp"
-                author="Julie, infirmière bénévole"
-                role="Bénévole Kick Out Cancer"
-                quote="Je participe pour tous ceux qui se battent au quotidien…"
+                thumbnail="/assets/thumbs/mehdi-president-thumb.webp"
+                author="Mehdi, Président Kick Out Cancer"
+                role="Président et fondateur de l'association"
+                quote="Nous lançons ce tournoi pour fédérer toutes les énergies contre le cancer. Rejoignez-nous pour cette première édition !"
               />
               {/* Ajouter d'autres VideoTestimonialCard ici si besoin */}
             </div>
@@ -180,6 +188,7 @@ export default function Home() {
               size="lg"
               variant="primary"
               aria-label="Inscrire mon équipe à l'événement"
+              onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Inscription' }); } }}
             >
               J'inscris mon équipe
             </Button>
@@ -190,21 +199,30 @@ export default function Home() {
         {/* 4. Pack Partenariat Section */}
         <FadeSection id="pack-partenariat" className="bg-white py-16">
           <div className="container mx-auto max-w-4xl text-center">
+            <div className="flex justify-center mb-4">
+              <span className="inline-block bg-yellow-400 text-primary text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Partenaire Fondateur 2025</span>
+            </div>
             <h2 className="text-3xl font-bold mb-4">Vous êtes une entreprise ? Devenez Partenaire Fondateur</h2>
             <p className="mb-8 text-gray-700">En 2025, rejoignez-nous dès la première édition pour bénéficier d'avantages exclusifs :</p>
             <div className="flex flex-col md:flex-row gap-6 justify-center mb-8">
               <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
-                <img src="/assets/icons/expo.svg" alt="Icône Visibilité Média" width="40" height="40" loading="lazy" className="mb-3" />
+                <span className="mb-3">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône Visibilité Médiatique"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M6 17l6-6 6 6" stroke="#e63946" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><rect x="9" y="7" width="6" height="4" rx="2" stroke="#e63946" strokeWidth="2"/></svg>
+                </span>
                 <h3 className="font-semibold text-lg mb-1">Visibilité Médiatique</h3>
                 <p className="text-sm text-gray-700">Logo sur site, réseaux sociaux et supports imprimés officiels.</p>
               </div>
               <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
-                <img src="/assets/icons/science.svg" alt="Icône Partenariat Scientifique" width="40" height="40" loading="lazy" className="mb-3" />
+                <span className="mb-3">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône Partenariat Scientifique"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M15 19v-2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2" stroke="#e63946" strokeWidth="2"/><path d="M9 17V7a3 3 0 1 1 6 0v10" stroke="#e63946" strokeWidth="2"/><circle cx="12" cy="7" r="1" fill="#e63946"/></svg>
+                </span>
                 <h3 className="font-semibold text-lg mb-1">Partenariat Scientifique</h3>
                 <p className="text-sm text-gray-700">Accès aux rencontres chercheurs/entreprises et branding sur nos publications scientifiques.</p>
               </div>
               <div className="pack-card flex-1 bg-gray-100 rounded-lg p-6 shadow-soft flex flex-col items-center">
-                <img src="/assets/icons/event.svg" alt="Icône Visibilité Événementielle" width="40" height="40" loading="lazy" className="mb-3" />
+                <span className="mb-3">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône Visibilité Événementielle"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><rect x="7" y="10" width="10" height="7" rx="2" stroke="#e63946" strokeWidth="2"/><path d="M12 7v3" stroke="#e63946" strokeWidth="2" strokeLinecap="round"/><circle cx="12" cy="16" r="1" fill="#e63946"/></svg>
+                </span>
                 <h3 className="font-semibold text-lg mb-1">Visibilité Événementielle</h3>
                 <p className="text-sm text-gray-700">Stand dédié lors du tournoi, mentions régulières dans l'animation de la journée.</p>
               </div>
@@ -216,6 +234,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Voir nos formules détaillées (nouvel onglet)"
+                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Partenariat' }); } }}
               >
                 Voir nos formules
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -362,19 +381,43 @@ export default function Home() {
 // Composant accordéon pour la FAQ
 function AccordionItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false)
+  const [showAll, setShowAll] = useState(false)
+  // Limite d'affichage (environ 220 caractères ou 3-4 lignes)
+  const limit = 220
+  const isLong = answer.length > limit
+  const shortAnswer = isLong ? answer.slice(0, limit) + '…' : answer
+  const answerId = `faq-answer-${question.replace(/\W/g, '')}`
   return (
     <div className="border rounded-lg bg-white shadow-sm">
       <button
         className="w-full flex items-center justify-between px-6 py-4 text-lg font-semibold focus:outline-none focus:ring text-left"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => { setOpen((v) => !v); setShowAll(false); }}
         aria-expanded={open}
+        aria-controls={answerId}
       >
         <span>{question}</span>
         <span className="ml-4 text-xl">{open ? '−' : '+'}</span>
       </button>
       {open && (
-        <div className="px-6 pb-4 text-gray-700 animate-fade-in">
-          {answer}
+        <div
+          id={answerId}
+          className="px-6 pb-4 text-gray-700 animate-fade-in relative"
+        >
+          <span className={isLong && !showAll ? 'block overflow-hidden max-h-24 relative' : ''}>
+            {showAll || !isLong ? answer : shortAnswer}
+            {isLong && !showAll && (
+              <span className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+            )}
+          </span>
+          {isLong && !showAll && (
+            <button
+              className="mt-2 text-primary underline text-sm font-medium focus:outline-none"
+              onClick={() => setShowAll(true)}
+              aria-label="Afficher toute la réponse"
+            >
+              En savoir plus
+            </button>
+          )}
         </div>
       )}
     </div>
