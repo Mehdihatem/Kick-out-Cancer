@@ -171,12 +171,13 @@ export default function Home() {
               Rejoignez-nous le <strong>13 septembre 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
               <span className="block mt-2 text-base text-gray-700">Lieu : Five Paris 18, 217 rue Aubervilliers, Paris</span>
             </p>
-            <div className="relative w-full h-[320px] mb-8 rounded-xl overflow-hidden mx-auto">
+            <div className="relative w-full mb-8 rounded-xl overflow-hidden mx-auto">
               <Image
                 src="/images/save-the-date.jpg"
                 alt="Save the date - Prochain évènement Kick Out Cancer"
-                fill
-                className="object-cover"
+                width={800}
+                height={450}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
@@ -222,14 +223,12 @@ export default function Home() {
             </div>
             <div className="flex justify-center gap-4 flex-wrap">
               <a
-                href="https://ddbmudqn.genspark.space/"
+                href="/contact"
                 className="btn btn-primary inline-flex items-center gap-2"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Voir nos formules détaillées (nouvel onglet)"
-                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Partenariat' }); } }}
+                aria-label="Contactez-nous pour devenir partenaire"
+                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Contact' }); } }}
               >
-                Voir nos formules
+                Contactez-nous pour devenir partenaire
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </a>
             </div>
@@ -240,16 +239,20 @@ export default function Home() {
         <FadeSection id="partenaire-scientifique" className="bg-[#eaf6fb] py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-center">Partenaire scientifique</h2>
-            <div className="max-w-3xl mx-auto mb-8 text-lg leading-relaxed space-y-4">
-              <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
-              <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
-              <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
-              <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
+            <div className="max-w-3xl mx-auto mb-8 flex items-center gap-8">
+              <img 
+                src="/assets/logos/ihu-prism.webp" 
+                alt="Logo IHU PRISM" 
+                className="w-32 h-auto object-contain flex-shrink-0"
+              />
+              <div className="text-lg leading-relaxed space-y-4">
+                <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
+                <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
+                <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
+                <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
+              </div>
             </div>
             <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto">
-              <div className="partner-item flex justify-center">
-                <img src="/assets/logos/ihu-prism.webp" alt="Logo IHU PRISM" loading="lazy" className="h-16 object-contain" />
-              </div>
               <div className="partner-item flex justify-center">
                 <img src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" loading="lazy" className="h-16 object-contain" />
               </div>
@@ -276,6 +279,17 @@ export default function Home() {
             <p className="mb-6 text-gray-700">Merci aux premières entreprises qui nous soutiennent et apportent leurs expertises pour faire de cette première édition un succès.</p>
             <SupportersSection />
             <p className="partners-count mt-6 font-semibold text-gray-800">3 partenaires déjà engagés.</p>
+            <div className="mt-8">
+              <a
+                href="/contact"
+                className="btn btn-primary inline-flex items-center gap-2"
+                aria-label="Contactez-nous pour devenir partenaire"
+                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Contact' }); } }}
+              >
+                Contactez-nous
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
+            </div>
           </div>
         </FadeSection>
 
@@ -318,9 +332,17 @@ export default function Home() {
                   a: "Pour les matériels promotionnels, nous proposons une option flexible et adaptable en fonction de vos besoins et du pack choisi. Sur le stand, vous pouvez distribuer votre propre matériel promotionnel (goodies, flyers, etc.) aux participants. Pour la visibilité digitale, nous pouvons diffuser votre communication (logo, message clé, vidéo) sur les écrans pendant l'événement, sous réserve de validation du contenu."
                 },
                 {
-                  q: "Quelle est la différence entre avoir une équipe et sponsoriser une équipe dans le pack Gold ?",
-                  a: "Dans le pack Gold, vous pouvez constituer et inscrire une équipe au nom de votre entreprise (5 à 10 joueurs), qui participera au tournoi sous vos couleurs. Vous pouvez aussi choisir de sponsoriser une autre équipe (étudiants, association de patients, invités) pour leur permettre de participer grâce à votre soutien. Cette option est complémentaire et solidaire, mais reste facultative."
+                  q: "Comment se déroule la journée du tournoi ?",
+                  a: "La journée se déroule selon le planning suivant :\n\n- 9h00 : Accueil des équipes et inscriptions\n- 10h00 : Phase de matches qualificatifs\n- 12h30 : Animations et pause déjeuner\n- 14h00 : Demi-finales et finales\n- 17h00 : Remise des prix et clôture\n\nDes animations seront proposées tout au long de la journée : stands d'information, tombola, et plus encore !"
                 },
+                {
+                  q: "À quoi vont servir les fonds récoltés ?",
+                  a: "Les fonds collectés servent à deux niveaux :\n\n1. Couvrir les frais d'organisation (location du lieu, logistique, matériel, communication, frais administratifs)\n2. L'intégralité du surplus est ensuite reversée à l'IHU PRISM pour financer la recherche contre le cancer\n\nNous sommes totalement transparents : un bilan financier est publié chaque année sur le site."
+                },
+                {
+                  q: "Est-ce une association caritative ?",
+                  a: "Kick Out Cancer est une association loi 1901 à but non lucratif. Tous les organisateurs sont bénévoles, il n'y a aucune rémunération pour les membres du bureau. Nous fonctionnons en totale transparence : nos comptes sont validés en AG et tout le monde peut consulter le rapport financier sur le site."
+                }
               ].map((item, idx) => (
                 <AccordionItem key={idx} question={item.q} answer={item.a} />
               ))}
