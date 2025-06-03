@@ -39,7 +39,7 @@ export default function Home() {
             fill
             sizes="100vw"
             quality={85}
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
         </div>
