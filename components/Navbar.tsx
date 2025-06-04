@@ -4,13 +4,15 @@ import Image from 'next/image'
 
 export default function Navbar() {
   const items = [
-    { href: '#hero', label: 'Accueil' },
-    { href: '#about', label: 'Notre ambition' },
-    { href: '#event', label: 'Prochain évènement' },
-    { href: '#partners', label: 'Partenaires' },
-    { href: '#supporters', label: 'Ils nous soutiennent' },
-    { href: '#don', label: 'Je soutiens la recherche' },
-    { href: '#team', label: 'Qui sommes-nous ?' },
+    { href: '#accueil', label: 'Accueil' },
+    { href: '#notre-ambition', label: 'Notre ambition' },
+    { href: '#prochain-evenement', label: 'Prochain événement' },
+    { href: '#partenaire-scientifique', label: 'Partenaire scientifique' },
+    { href: '#nos-partenaires-fondateurs', label: 'Nos partenaires fondateurs' },
+    { href: '#nos-partenaires', label: 'Nos partenaires' },
+    { href: '#qui-sommes-nous', label: 'Qui sommes-nous' },
+    { href: '#temoignages-membres-fondateurs', label: 'Témoignages' },
+    { href: '#faq', label: 'FAQ' },
   ]
 
   return (
