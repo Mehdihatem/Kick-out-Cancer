@@ -153,7 +153,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
               <VideoTestimonialCard
                 videoId="dEItZYM7D3Y"
-                thumbnail="/assets/thumbs/mehdi-president-thumb.webp"
+                thumbnail="/images/team/mehdi-president-thumb.webp"
                 author="Mehdi, Président Kick Out Cancer"
                 role="Président et fondateur de l'association"
                 quote="Nous lançons ce tournoi pour fédérer toutes les énergies contre le cancer. Rejoignez-nous pour cette première édition !"

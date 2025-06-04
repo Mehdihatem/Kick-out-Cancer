@@ -25,11 +25,10 @@ export default function Footer() {
         {/* Partenaires */}
         <div className="flex flex-col gap-2 items-center md:items-start w-full">
           <span className="text-violet-300 font-bold mb-2">Partenaires</span>
-          <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
-            <Image src="/images/ihu-prism-logo.png" alt="IHU PRISM" width={48} height={48} className="bg-white rounded p-1" />
-            <Image src="/images/partners/gustave-roussy.png" alt="Gustave Roussy" width={48} height={48} className="bg-white rounded p-1" />
+          <div className="flex items-center gap-2">
+            <Image src="/assets/logos/ihu-prism.webp" alt="IHU PRISM" width={48} height={48} className="bg-white rounded p-1" />
+            <span className="text-xs text-gray-400 mt-1 text-center md:text-left">{`Avec le soutien de l'IHU PRISM et Gustave Roussy`}</span>
           </div>
-          <span className="text-xs text-gray-400 mt-1 text-center md:text-left">{`Avec le soutien de l'IHU PRISM et Gustave Roussy`}</span>
         </div>
       </div>
 

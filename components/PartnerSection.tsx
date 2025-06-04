@@ -3,32 +3,32 @@ import Image from 'next/image'
 const partners = [
   {
     name: 'IHU PRISM',
-    logo: '/images/ihu-prism-logo.png',
+    logo: '/assets/logos/ihu-prism.webp',
     alt: 'IHU PRISM',
   },
   {
     name: 'Gustave Roussy',
-    logo: '/images/partners/gustave-roussy.png',
+    logo: '/assets/logos/gustave-roussy.webp',
     alt: 'Gustave Roussy',
   },
   {
     name: 'CentraleSupélec',
-    logo: '/images/partners/centralesupelec.png',
+    logo: '/assets/logos/centralesupelec.webp',
     alt: 'CentraleSupélec',
   },
   {
     name: 'Université Paris-Saclay',
-    logo: '/images/partners/paris-saclay.png',
+    logo: '/assets/logos/universite-paris-saclay.webp',
     alt: 'Université Paris-Saclay',
   },
   {
     name: 'Unicancer',
-    logo: '/images/partners/unicancer.png',
+    logo: '/assets/logos/unicancer.webp',
     alt: 'Unicancer',
   },
   {
     name: 'Inserm',
-    logo: '/images/partners/inserm.png',
+    logo: '/assets/logos/inserm.webp',
     alt: 'Inserm',
   },
 ]
