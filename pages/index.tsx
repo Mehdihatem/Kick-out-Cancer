@@ -197,6 +197,63 @@ export default function Home() {
           </div>
         </FadeSection>
 
+        {/* Nouvelle section Partenaire scientifique */}
+        <section id="partenaire-scientifique" className="bg-[#f0f8ff] py-12 mt-8">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Partenaire scientifique : IHU PRISM & Gustave Roussy
+          </h2>
+          <div className="max-w-3xl mx-auto leading-relaxed text-lg px-4">
+            <p>
+              Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de Gustave Roussy pour accélérer la recherche et l'innovation en oncologie.
+              L'intégralité des bénéfices générés par Kick Out Cancer sera reversée à leurs projets de recherche (essais cliniques, innovations thérapeutiques, études fondamentales…).
+            </p>
+            <p className="mt-4">
+              L'IHU PRISM (Institut Hospitalo-Universitaire en Recherche Translationnelle et Médicale) est un centre d'expertise dédié à la médecine de précision en cancérologie.
+              Il réunit des équipes de l'université Paris-Saclay, d'Inserm, d'Unicancer et de plusieurs hôpitaux universitaires autour d'une approche intégrative innovante :
+              intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale et biologie spatiale.
+              Sa mission est de mieux comprendre la biologie de chaque cancer afin de réduire la mortalité en identifiant les formes les plus agressives dès le diagnostic
+              et en proposant le traitement le plus adapté à chaque patient.
+            </p>
+            <div className="mt-4">
+              Parmi ses objectifs principaux :
+              <ul className="list-disc ml-8 mt-2">
+                <li>Créer une cartographie digitale personnalisée pour chaque patient,</li>
+                <li>Identifier de nouveaux biomarqueurs prometteurs,</li>
+                <li>Accélérer l'accès aux thérapies ciblées et aux essais précoces.</li>
+              </ul>
+            </div>
+            <p className="mt-4">
+              Venez profiter de notre premier événement pour découvrir en avant-première les prochaines grandes avancées en recherche contre le cancer !
+            </p>
+            <div className="flex flex-wrap justify-center gap-8 mt-8">
+              <div className="text-center">
+                <Image src="/assets/logos/ihu-prism.webp" alt="Logo IHU PRISM" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">IHU PRISM</p>
+              </div>
+              <div className="text-center">
+                <Image src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">Gustave Roussy</p>
+              </div>
+              <div className="text-center">
+                <Image src="/assets/logos/centralesupelec.webp" alt="Logo CentraleSupélec" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">CentraleSupélec</p>
+              </div>
+              <div className="text-center">
+                <Image src="/assets/logos/universite-paris-saclay.webp" alt="Logo Université Paris-Saclay" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">Université Paris-Saclay</p>
+              </div>
+              <div className="text-center">
+                <Image src="/assets/logos/unicancer.webp" alt="Logo Unicancer" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">Unicancer</p>
+              </div>
+              <div className="text-center">
+                <Image src="/assets/logos/inserm.webp" alt="Logo Inserm" width={120} height={60} className="mx-auto" />
+                <p className="text-sm mt-2">Inserm</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 6. Nos partenaires Section */}
         <FadeSection id="nos-partenaires" className="bg-[#fafafa] py-16">
           <div className="container mx-auto max-w-4xl text-center">
@@ -254,49 +311,6 @@ export default function Home() {
                 Contactez-nous pour devenir partenaire
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
-            </div>
-          </div>
-        </FadeSection>
-
-        {/* 5. Partenaire scientifique Section */}
-        <FadeSection id="partenaire-scientifique" className="bg-[#eaf6fb] py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6 text-center">Partenaire scientifique</h2>
-            <div className="max-w-3xl mx-auto">
-              <div className="flex flex-col md:flex-row items-start gap-8">
-                <div className="flex-shrink-0">
-                  <Image 
-                    src="/assets/logos/ihu-prism.webp" 
-                    alt="Logo IHU PRISM" 
-                    width={128}
-                    height={128}
-                    className="w-32 h-auto object-contain"
-                  />
-                </div>
-                <div className="flex-grow text-lg leading-relaxed space-y-4">
-                  <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
-                  <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
-                  <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
-                  <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
-                </div>
-              </div>
-            </div>
-            <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto mt-12">
-              <div className="partner-item flex justify-center">
-                <Image src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" width={64} height={64} className="h-16 object-contain" />
-              </div>
-              <div className="partner-item flex justify-center">
-                <Image src="/assets/logos/centralesupelec.webp" alt="Logo CentraleSupélec" width={64} height={64} className="h-16 object-contain" />
-              </div>
-              <div className="partner-item flex justify-center">
-                <Image src="/assets/logos/universite-paris-saclay.webp" alt="Logo Université Paris-Saclay" width={64} height={64} className="h-16 object-contain" />
-              </div>
-              <div className="partner-item flex justify-center">
-                <Image src="/assets/logos/unicancer.webp" alt="Logo Unicancer" width={64} height={64} className="h-16 object-contain" />
-              </div>
-              <div className="partner-item flex justify-center">
-                <Image src="/assets/logos/inserm.webp" alt="Logo Inserm" width={64} height={64} className="h-16 object-contain" />
-              </div>
             </div>
           </div>
         </FadeSection>
