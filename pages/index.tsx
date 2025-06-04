@@ -161,6 +161,41 @@ export default function Home() {
           </div>
         </FadeSection>
 
+        {/* 3. Prochain évènement Section (déplacée ici) */}
+        <FadeSection id="event" className="bg-[#f7f7f7] py-16">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <h2 className="text-4xl font-extrabold text-primary mb-6">Prochain événement</h2>
+            <p className="text-lg mb-8">
+              Rejoignez-nous le <strong>13 septembre 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
+              <span className="block mt-2 text-base text-gray-700">Lieu : Five Paris 18, 217 rue Aubervilliers, Paris</span>
+            </p>
+          </div>
+          <div className="relative w-full min-h-[300px] max-h-[600px] h-[40vw] bg-black flex items-center justify-center overflow-hidden mb-8">
+            <Image
+              src="/images/save-the-date.jpg"
+              alt="Save the date - Prochain évènement Kick Out Cancer"
+              fill
+              className="object-contain object-center w-full h-full"
+              priority
+            />
+          </div>
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <Button
+              as="a"
+              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="primary"
+              aria-label="Inscrire mon équipe à l'événement"
+              onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Inscription' }); } }}
+            >
+              J'inscris mon équipe
+            </Button>
+            <p className="mt-2 text-sm text-gray-600">Processus simple, inscription en ligne</p>
+          </div>
+        </FadeSection>
+
         {/* Présentation des membres fondateurs et présidents d'honneur */}
         <section id="fondateurs" className="py-20 bg-white">
           <h2 className="mb-6 text-center text-4xl font-extrabold">Membres fondateurs</h2>
@@ -230,40 +265,6 @@ export default function Home() {
               />
               {/* Ajouter d'autres VideoTestimonialCard ici si besoin */}
             </div>
-          </div>
-        </FadeSection>
-
-        {/* 3. Prochain évènement Section */}
-        <FadeSection id="event" className="bg-[#f7f7f7] py-16">
-          <div className="container mx-auto px-4 max-w-3xl text-center">
-            <h2 className="text-4xl font-extrabold text-primary mb-6">Prochain événement</h2>
-            <p className="text-lg mb-8">
-              Rejoignez-nous le <strong>13 septembre 2025</strong> pour la <strong>première édition</strong> du Tournoi Kick Out Cancer : un moment unique où sport et solidarité se rencontrent.<br/>
-              <span className="block mt-2 text-base text-gray-700">Lieu : Five Paris 18, 217 rue Aubervilliers, Paris</span>
-            </p>
-            <div className="relative w-full mb-8 rounded-xl overflow-hidden mx-auto">
-              <Image
-                src="/images/save-the-date.jpg"
-                alt="Save the date - Prochain évènement Kick Out Cancer"
-                width={800}
-                height={450}
-                className="w-full h-auto object-contain"
-                priority
-              />
-            </div>
-            <Button
-              as="a"
-              href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              variant="primary"
-              aria-label="Inscrire mon équipe à l'événement"
-              onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Inscription' }); } }}
-            >
-              J'inscris mon équipe
-            </Button>
-            <p className="mt-2 text-sm text-gray-600">Processus simple, inscription en ligne</p>
           </div>
         </FadeSection>
 
@@ -371,16 +372,25 @@ export default function Home() {
                 <p className="text-sm text-gray-700">Stand dédié lors du tournoi, mentions régulières dans l'animation de la journée.</p>
               </div>
             </div>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <Link
-                href="/contact"
+            <div className="flex justify-center gap-4 flex-wrap mt-6">
+              <a
+                href="mailto:contact@kickoutcancer.fr"
                 className="btn btn-primary inline-flex items-center gap-2"
                 aria-label="Contactez-nous pour devenir partenaire"
-                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Contact' }); } }}
               >
-                Contactez-nous pour devenir partenaire
+                Contactez-nous
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+              </a>
+              <a
+                href="https://ddbmudqn.genspark.space/"
+                className="btn btn-secondary inline-flex items-center gap-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Télécharger le dossier partenaire"
+              >
+                Dossier partenaire
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 16v-8m0 8l-4-4m4 4l4-4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2" stroke="#fff" strokeWidth="2"/></svg>
+              </a>
             </div>
           </div>
         </FadeSection>
