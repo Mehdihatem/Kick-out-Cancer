@@ -256,14 +256,28 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-4">Témoignages vidéo des participants</h2>
             <p className="text-center text-gray-700 mb-8">Découvrez les premières interviews de nos sportifs, chercheurs et bénévoles : leur engagement, leurs motivations et leurs espoirs pour cette édition 2025.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-              <VideoTestimonialCard
-                videoId="dEItZYM7D3Y"
-                thumbnail="/images/team/mehdi-president-thumb.webp"
-                author="Mehdi, Président Kick Out Cancer"
-                role="Président et fondateur de l'association"
-                quote="Nous lançons ce tournoi pour fédérer toutes les énergies contre le cancer. Rejoignez-nous pour cette première édition !"
-              />
-              {/* Ajouter d'autres VideoTestimonialCard ici si besoin */}
+              <div className="bg-white rounded-xl p-4 shadow-soft flex flex-col items-center max-w-xs w-full">
+                <div className="relative w-full aspect-[4/5] mb-4">
+                  <Image
+                    src="/images/temoignage_mehdi.png"
+                    alt="Témoignage de Mehdi, Président Kick Out Cancer"
+                    fill
+                    className="object-cover rounded-t-lg"
+                  />
+                </div>
+                <h4 className="font-bold text-center">Mehdi, Président Kick Out Cancer</h4>
+                <p className="text-sm text-gray-600 text-center mb-2">Président et fondateur de l'association</p>
+                <blockquote className="text-gray-700 italic text-center mb-2">&ldquo;Nous lançons ce tournoi pour fédérer toutes les énergies contre le cancer. Rejoignez-nous pour cette première édition !&rdquo;</blockquote>
+                <a
+                  href="https://youtube.com/shorts/dEItZYM7D3Y?si=P0-greH_z3YKBWzi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline text-sm mt-2"
+                >
+                  Voir la vidéo sur YouTube
+                </a>
+              </div>
+              {/* Ajouter d'autres témoignages ici si besoin */}
             </div>
           </div>
         </FadeSection>
