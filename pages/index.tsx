@@ -88,13 +88,13 @@ export default function Home() {
 
       {/* Bandeau inaugural */}
       <div className="bg-primary text-white text-center font-semibold py-4 inaugural-banner">
-        Édition Inaugurale 2025 – Participez dès maintenant et devenez un pionnier de la lutte contre le cancer via Kick Out Cancer !
+        Édition Inaugurale 2025 – Participez dès maintenant et devenez un acteur engagé de la lutte contre le cancer avec Kick Out Cancer !
       </div>
 
       {/* Bloc Objectifs 2025 */}
       <section id="objectifs-2025" className="bg-gray-100 py-8 my-4 rounded-lg mx-2">
         <div className="text-center mb-6">
-          <span className="inline-block bg-primary text-white text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Objectif 2025</span>
+          <span className="inline-block bg-primary text-white text-xs font-bold rounded-full px-4 py-1 tracking-widest uppercase shadow">Objectifs 2025</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {/* Équipes */}
@@ -103,12 +103,12 @@ export default function Home() {
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône football équipes"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M12 7a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm0 8c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4Z" stroke="#e63946" strokeWidth="2"/></svg>
             </span>
             <span className="text-3xl font-extrabold text-primary mb-1">32</span>
-            <span className="text-sm text-gray-700">équipes visées</span>
+            <span className="text-sm text-gray-700">équipes espérées</span>
           </div>
           {/* Collecte */}
           <div className="flex flex-col items-center bg-white rounded-lg shadow p-6">
             <span className="mb-2">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône euro collecte"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M16 15.5c-1.5 1-4.5 1-6 0M8 8.5c1.5-1 4.5-1 6 0M12 6v12" stroke="#e63946" strokeWidth="2"/><text x="8" y="22" fontSize="10" fill="#e63946" fontWeight="bold">€</text></svg>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône euro collecte"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M12 6v12M8 8.5c1.5-1 4.5-1 6 0M16 15.5c-1.5 1-4.5 1-6 0" stroke="#e63946" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
             <span className="text-3xl font-extrabold text-primary mb-1">100 000&nbsp;€</span>
             <span className="text-sm text-gray-700">collectés pour la recherche</span>
@@ -116,10 +116,10 @@ export default function Home() {
           {/* Instituts */}
           <div className="flex flex-col items-center bg-white rounded-lg shadow p-6">
             <span className="mb-2">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône microscope instituts"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M15 19v-2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2" stroke="#e63946" strokeWidth="2"/><path d="M9 17V7a3 3 0 1 1 6 0v10" stroke="#e63946" strokeWidth="2"/><circle cx="12" cy="7" r="1" fill="#e63946"/></svg>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-label="Icône entreprise"><circle cx="12" cy="12" r="12" fill="#e63946" opacity="0.12"/><path d="M3 21h18M3 7v14M21 7v14M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M6 21V7M18 21V7" stroke="#e63946" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
             <span className="text-3xl font-extrabold text-primary mb-1">10</span>
-            <span className="text-sm text-gray-700">instituts associés</span>
+            <span className="text-sm text-gray-700">entreprises associées</span>
           </div>
         </div>
       </section>
@@ -197,6 +197,29 @@ export default function Home() {
           </div>
         </FadeSection>
 
+        {/* 6. Nos partenaires Section */}
+        <FadeSection id="nos-partenaires" className="bg-[#fafafa] py-16">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-3xl font-bold mb-4">Nos partenaires fondateurs</h2>
+            <p className="mb-6 text-gray-700">Merci aux premières entreprises qui nous soutiennent et apportent leurs expertises pour faire de cette première édition un succès.</p>
+            <div className="mb-8">
+              <SupportersSection />
+            </div>
+            <p className="partners-count font-semibold text-gray-800 mb-8">3 partenaires déjà engagés</p>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <Link
+                href="/contact"
+                className="btn btn-primary inline-flex items-center gap-2"
+                aria-label="Contactez-nous pour devenir partenaire"
+                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Contact' }); } }}
+              >
+                Contactez-nous pour devenir partenaire
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
+            </div>
+          </div>
+        </FadeSection>
+
         {/* 4. Pack Partenariat Section */}
         <FadeSection id="pack-partenariat" className="bg-white py-16">
           <div className="container mx-auto max-w-4xl text-center">
@@ -239,22 +262,26 @@ export default function Home() {
         <FadeSection id="partenaire-scientifique" className="bg-[#eaf6fb] py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-center">Partenaire scientifique</h2>
-            <div className="max-w-3xl mx-auto mb-8 flex items-center gap-8">
-              <Image 
-                src="/assets/logos/ihu-prism.webp" 
-                alt="Logo IHU PRISM" 
-                width={128}
-                height={128}
-                className="w-32 h-auto object-contain flex-shrink-0"
-              />
-              <div className="text-lg leading-relaxed space-y-4">
-                <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
-                <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
-                <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
-                <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
+            <div className="max-w-3xl mx-auto">
+              <div className="flex flex-col md:flex-row items-start gap-8">
+                <div className="flex-shrink-0">
+                  <Image 
+                    src="/assets/logos/ihu-prism.webp" 
+                    alt="Logo IHU PRISM" 
+                    width={128}
+                    height={128}
+                    className="w-32 h-auto object-contain"
+                  />
+                </div>
+                <div className="flex-grow text-lg leading-relaxed space-y-4">
+                  <p>Kick Out Cancer s'appuie sur l'excellence de l'IHU PRISM et de ses partenaires pour accélérer la recherche et l'innovation contre le cancer. L'ensemble des dons et bénéfices seront reversés à l'IHU PRISM.</p>
+                  <p>IHU PRISM est un institut de recherche translationnelle et médicale dédié à la médecine de précision en oncologie. Sa mission : mieux comprendre la biologie de chaque cancer pour réduire la mortalité en identifiant les formes agressives dès le diagnostic et en proposant le traitement le plus adapté à chaque patient.</p>
+                  <p>PRISM réunit l'excellence de Gustave Roussy, CentraleSupélec, Université Paris-Saclay, Unicancer et Inserm autour d'une approche intégrative et innovante : intelligence artificielle, analyse de l'ADN circulant, épigénétique, hétérogénéité clonale, biologie spatiale…</p>
+                  <p>Objectif : créer une cartographie digitale de chaque patient, identifier de nouveaux biomarqueurs et accélérer l'accès aux thérapies ciblées et aux essais précoces.</p>
+                </div>
               </div>
             </div>
-            <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto">
+            <div className="partners-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center max-w-4xl mx-auto mt-12">
               <div className="partner-item flex justify-center">
                 <Image src="/assets/logos/gustave-roussy.webp" alt="Logo Gustave Roussy" width={64} height={64} className="h-16 object-contain" />
               </div>
@@ -270,27 +297,6 @@ export default function Home() {
               <div className="partner-item flex justify-center">
                 <Image src="/assets/logos/inserm.webp" alt="Logo Inserm" width={64} height={64} className="h-16 object-contain" />
               </div>
-            </div>
-          </div>
-        </FadeSection>
-
-        {/* 6. Nos partenaires Section (événement) */}
-        <FadeSection id="nos-partenaires" className="bg-[#fafafa] py-16">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Nos partenaires</h2>
-            <p className="mb-6 text-gray-700">Merci aux premières entreprises qui nous soutiennent et apportent leurs expertises pour faire de cette première édition un succès.</p>
-            <SupportersSection />
-            <p className="partners-count mt-6 font-semibold text-gray-800">3 partenaires déjà engagés.</p>
-            <div className="mt-8">
-              <Link
-                href="/contact"
-                className="btn btn-primary inline-flex items-center gap-2"
-                aria-label="Contactez-nous pour devenir partenaire"
-                onClick={() => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event', 'click', { event_category: 'CTA', event_label: 'Contact' }); } }}
-              >
-                Contactez-nous
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 19h14v-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
             </div>
           </div>
         </FadeSection>

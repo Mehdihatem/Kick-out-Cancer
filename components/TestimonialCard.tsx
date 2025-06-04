@@ -50,52 +50,24 @@ interface VideoTestimonialCardProps {
 }
 
 export const VideoTestimonialCard = ({ videoId, thumbnail, author, role, quote }: VideoTestimonialCardProps) => {
-  const [open, setOpen] = useState(false)
   return (
     <div className="bg-white rounded-xl p-4 shadow-soft flex flex-col items-center">
-      <div className="relative w-full h-48 mb-4 cursor-pointer group" onClick={() => setOpen(true)}>
-        <Image
-          src={thumbnail}
-          alt={`Miniature de la vidéo de ${author}`}
-          fill
-          className="object-cover rounded-t-lg"
+      <div className="relative w-full aspect-video mb-4">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+          title={`Témoignage vidéo de ${author}`}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="rounded-lg w-full h-full"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition rounded-t-lg">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-            <circle cx="28" cy="28" r="28" fill="#fff" fillOpacity="0.85"/>
-            <polygon points="22,18 40,28 22,38" fill="#e63946"/>
-          </svg>
-        </div>
       </div>
       <h4 className="font-bold text-center">{author}</h4>
       <p className="text-sm text-gray-600 text-center mb-2">{role}</p>
       <blockquote className="text-gray-700 italic text-center">&ldquo;{quote}&rdquo;</blockquote>
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" role="dialog" aria-modal="true" aria-labelledby={`video-modal-title-${videoId}`}> 
-          <div className="relative w-full max-w-2xl mx-4">
-            <button 
-              className="absolute -top-6 -right-6 bg-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow focus:outline-none focus:ring" 
-              onClick={() => setOpen(false)} 
-              aria-label="Fermer la vidéo" 
-              autoFocus
-            >
-              &times;
-            </button>
-            <h2 id={`video-modal-title-${videoId}`} className="sr-only">Témoignage vidéo de {author}</h2>
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-              title={`Témoignage vidéo de ${author}`}
-              width="100%"
-              height="400"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg w-full aspect-video"
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }
