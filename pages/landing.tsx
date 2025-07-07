@@ -33,6 +33,7 @@ const partners = [
   { name: 'Université Paris-Saclay', logo: '/assets/logos/universite-paris-saclay.webp' },
   { name: 'Unicancer', logo: '/assets/logos/unicancer.webp' },
   { name: 'Inserm', logo: '/assets/logos/inserm.webp' },
+  { name: 'Gilead', logo: '/images/gilead-logo.png' },
 ];
 
 export default function Landing() {
