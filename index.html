@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kick Out Cancer - Ensemble contre le cancer | Événement caritatif</title>
+    <title>Kick Out Cancer - Ensemble contre le cancer | Tournoi caritatif 2025</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Rejoignez Kick Out Cancer, l'événement caritatif qui unit la communauté pour lutter contre le cancer. Participez à notre course, soutenez la recherche et faites la différence.">
-    <meta name="keywords" content="cancer, événement caritatif, course, recherche, IHU PRISM, Marseille, solidarité, don">
+    <meta name="description" content="Rejoignez Kick Out Cancer, le tournoi caritatif qui unit la communauté pour lutter contre le cancer. Inscrivez votre équipe et soutenez la recherche.">
+    <meta name="keywords" content="cancer, tournoi caritatif, football, recherche, IHU PRISM, solidarité, don, équipe">
     <meta name="author" content="Kick Out Cancer">
     <meta name="robots" content="index, follow">
     
@@ -15,28 +15,31 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kickoutcancer.fr/">
     <meta property="og:title" content="Kick Out Cancer - Ensemble contre le cancer">
-    <meta property="og:description" content="Rejoignez notre événement caritatif pour soutenir la recherche contre le cancer. Ensemble, nous pouvons faire la différence.">
-    <meta property="og:image" content="https://kickoutcancer.fr/assets/hero-bg.jpg">
+    <meta property="og:description" content="Rejoignez notre tournoi caritatif pour soutenir la recherche contre le cancer. Inscrivez votre équipe !">
+    <meta property="og:image" content="https://kickoutcancer.fr/assets/hero-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kickoutcancer.fr/">
     <meta property="twitter:title" content="Kick Out Cancer - Ensemble contre le cancer">
-    <meta property="twitter:description" content="Rejoignez notre événement caritatif pour soutenir la recherche contre le cancer.">
-    <meta property="twitter:image" content="https://kickoutcancer.fr/assets/hero-bg.jpg">
+    <meta property="twitter:description" content="Rejoignez notre tournoi caritatif pour soutenir la recherche contre le cancer.">
+    <meta property="twitter:image" content="https://kickoutcancer.fr/assets/hero-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Montserrat+Alternates:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.ico.png">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation Sticky -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="assets/logo-kick-out-cancer.png" alt="Kick Out Cancer" class="logo">
@@ -44,9 +47,14 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#ambition" class="nav-link">Notre ambition</a>
+                <a href="#evenement" class="nav-link">Événement</a>
                 <a href="#partenaires" class="nav-link">Partenaires</a>
-                <a href="#a-propos" class="nav-link">À propos</a>
+                <a href="#recherche" class="nav-link">Recherche</a>
                 <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary small">J'inscris mon équipe</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -56,266 +64,300 @@
         </div>
     </nav>
 
-    <!-- Section Hero/Bannière principale -->
+    <!-- Section Hero avec vidéo -->
     <section id="accueil" class="hero">
         <div class="hero-background">
+            <video class="hero-video" src="assets/about-video.mp4" autoplay loop muted playsinline></video>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Kick Out Cancer</h1>
+                <h1 class="hero-title">
+                    <span class="title-line">Kick Out</span>
+                    <span class="title-line highlight">Cancer</span>
+                </h1>
                 <p class="hero-subtitle">Ensemble, mettons KO le cancer par le sport et la solidarité</p>
                 <p class="hero-description">
                     Rejoignez-nous pour la première édition de notre tournoi caritatif. 
-                    Un événement unique qui allie passion du sport et engagement pour la recherche contre le cancer.
+                    Un événement unique qui allie passion du sport et engagement pour la recherche.
                 </p>
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">32</span>
+                    <div class="stat-item" data-target="32">
+                        <span class="stat-number" data-count="0">0</span>
                         <span class="stat-label">Équipes</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50 000€</span>
+                    <div class="stat-item" data-target="100000">
+                        <span class="stat-number" data-count="0">0€</span>
                         <span class="stat-label">Objectif</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10</span>
+                    <div class="stat-item" data-target="10">
+                        <span class="stat-number" data-count="0">0</span>
                         <span class="stat-label">Partenaires</span>
                     </div>
                 </div>
-                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary">Participe au tournoi solidaire</a>
+                <div class="hero-cta">
+                    <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary large">
+                        <span>J'inscris mon équipe</span>
+                        <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#recherche" class="cta-button secondary large">
+                        <span>Découvre la recherche</span>
+                        <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="hero-image">
-                <video class="hero-img" src="assets/about-video.mp4" autoplay loop muted playsinline></video>
-            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- Section Partenaire scientifique principal - IHU PRISM -->
-    <section id="partenaire-scientifique" class="scientific-partner">
+    <!-- Section Notre Ambition -->
+    <section id="ambition" class="ambition">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Notre partenaire scientifique</h2>
-                <p class="section-subtitle">L'IHU PRISM, institut d'excellence pour la recherche contre le cancer</p>
+                <h2 class="section-title">Notre ambition</h2>
+                <p class="section-subtitle">Unir la communauté sportive pour faire avancer la recherche contre le cancer</p>
             </div>
-            <div class="scientific-partner-content">
-                <div class="scientific-partner-logo">
-                    <img src="assets/partners/ihu-prism.png" alt="IHU PRISM" class="main-partner-logo">
+            <div class="ambition-grid">
+                <div class="ambition-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ambition-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambition-title">32 équipes</h3>
+                    <p class="ambition-desc">Rassembler 32 équipes de passionnés pour un tournoi solidaire</p>
                 </div>
-                <div class="scientific-partner-text">
-                    <p class="scientific-partner-desc">
-                        Kick out cancer est fier de soutenir officiellement le projet PRISM, qui est un institut hospitalo-universitaire 
-                        d'excellence qui rassemble des chercheurs, médecins et ingénieurs issus de structures de référence 
-                        (Gustave Roussy, Inserm, CentraleSupélec, Université Paris-Saclay…). Sa mission : inventer une médecine plus 
-                        personnalisée, en s'appuyant sur l'intelligence artificielle et les sciences des données pour mieux comprendre 
-                        les cancers et améliorer les traitements.
-                    </p>
-                    <p class="scientific-partner-impact">
-                        <strong>En soutenant Kick Out Cancer, vous contribuez directement à la recherche de demain portée par l'IHU PRISM.</strong>
-                    </p>
+                <div class="ambition-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ambition-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambition-title">100 000€</h3>
+                    <p class="ambition-desc">Atteindre 100 000€ pour financer des projets de recherche innovants</p>
+                </div>
+                <div class="ambition-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ambition-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambition-title">Impact réel</h3>
+                    <p class="ambition-desc">Chaque don contribue directement à la recherche de demain</p>
                 </div>
             </div>
-            
-            <div class="founding-institutions">
-                <h3 class="institutions-title">Les institutions fondatrices de l'IHU PRISM</h3>
-                <div class="institutions-grid">
-                    <div class="institution-item">
-                        <img src="assets/partners/gustave-roussy.png" alt="Gustave Roussy" class="institution-logo">
-                        <span class="institution-name">Gustave Roussy</span>
+        </div>
+    </section>
+
+    <!-- Section Prochain Événement -->
+    <section id="evenement" class="event">
+        <div class="container">
+            <div class="event-content">
+                <div class="event-info" data-aos="fade-right">
+                    <h2 class="section-title">Prochain événement</h2>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <div class="date-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="date-info">
+                                <span class="date-label">Date</span>
+                                <span class="date-value">15 Juin 2025</span>
+                            </div>
+                        </div>
+                        <div class="event-location">
+                            <div class="location-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-label">Lieu</span>
+                                <span class="location-value">Complexe Sportif de Paris</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="institution-item">
-                        <img src="assets/partners/inserm.png" alt="Inserm" class="institution-logo">
-                        <span class="institution-name">Inserm</span>
+                    <div class="event-cta">
+                        <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary">
+                            <span>Inscrire mon équipe</span>
+                            <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="institution-item">
-                        <img src="assets/partners/centralesupelec.png" alt="CentraleSupélec" class="institution-logo">
-                        <span class="institution-name">CentraleSupélec</span>
-                    </div>
-                    <div class="institution-item">
-                        <img src="assets/partners/universite-paris-saclay.png" alt="Université Paris-Saclay" class="institution-logo">
-                        <span class="institution-name">Université Paris-Saclay</span>
-                    </div>
-                    <div class="institution-item">
-                        <img src="assets/partners/unicancer.png" alt="Unicancer" class="institution-logo">
-                        <span class="institution-name">Unicancer</span>
+                </div>
+                <div class="event-map" data-aos="fade-left">
+                    <div class="map-container">
+                        <div class="map-pin">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="map-placeholder">
+                            <span>Complexe Sportif de Paris</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Partenaires opérationnels et financiers -->
-    <section id="partenaires-operationnels" class="operational-partners">
+    <!-- Section Partenaires avec carrousel -->
+    <section id="partenaires" class="partners">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Nos partenaires</h2>
-                <p class="section-subtitle">
-                    Nos partenaires opérationnels et financiers qui nous accompagnent dans l'organisation de l'événement.
-                </p>
+                <p class="section-subtitle">Ils nous accompagnent dans cette aventure solidaire</p>
             </div>
-            <div class="operational-partners-grid">
-                <!-- Partenaire Silver -->
-                <div class="operational-partner-card silver">
-                    <img src="assets/partners/gilead.png" alt="Gilead" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">Gilead</h3>
-                    <p class="operational-partner-desc">Partenaire Silver</p>
-                </div>
-                
-                <!-- Partenaires logistiques -->
-                <div class="operational-partner-card">
-                    <img src="assets/partners/stetoo.png" alt="Stetoo" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">Stetoo</h3>
-                    <p class="operational-partner-desc">Partenaire logistique</p>
-                </div>
-                <div class="operational-partner-card">
-                    <img src="assets/partners/elwood-vitamines.png" alt="Elwood Vitamines" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">Elwood Vitamines</h3>
-                    <p class="operational-partner-desc">Partenaire logistique</p>
-                </div>
-                <div class="operational-partner-card">
-                    <img src="assets/partners/digilityx.png" alt="Digilityx" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">Digilityx</h3>
-                    <p class="operational-partner-desc">Partenaire logistique</p>
-                </div>
-                
-                <!-- Partenaire académique -->
-                <div class="operational-partner-card academic">
-                    <img src="assets/partners/aerio.png" alt="AERIO" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">AERIO</h3>
-                    <p class="operational-partner-desc">Partenaire académique</p>
-                </div>
-                
-                <!-- Soutien événementiel -->
-                <div class="operational-partner-card">
-                    <img src="assets/partners/gustave-roussy.png" alt="Gustave Roussy" class="operational-partner-logo">
-                    <h3 class="operational-partner-name">Gustave Roussy</h3>
-                    <p class="operational-partner-desc">Soutien événementiel</p>
+            <div class="partners-carousel">
+                <div class="partners-track">
+                    <div class="partner-item">
+                        <img src="assets/partners/ihu-prism.png" alt="IHU PRISM" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>IHU PRISM</h4>
+                            <p>Partenaire scientifique</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/gilead.png" alt="Gilead" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Gilead</h4>
+                            <p>Partenaire Silver</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/stetoo.png" alt="Stetoo" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Stetoo</h4>
+                            <p>Partenaire logistique</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/elwood-vitamines.png" alt="Elwood Vitamines" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Elwood Vitamines</h4>
+                            <p>Partenaire logistique</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/digilityx.png" alt="Digilityx" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Digilityx</h4>
+                            <p>Partenaire logistique</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/aerio.png" alt="AERIO" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>AERIO</h4>
+                            <p>Partenaire académique</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/gustave-roussy.png" alt="Gustave Roussy" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Gustave Roussy</h4>
+                            <p>Soutien événementiel</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/inserm.png" alt="Inserm" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Inserm</h4>
+                            <p>Institution fondatrice</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/centralesupelec.png" alt="CentraleSupélec" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>CentraleSupélec</h4>
+                            <p>Institution fondatrice</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/universite-paris-saclay.png" alt="Université Paris-Saclay" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Université Paris-Saclay</h4>
+                            <p>Institution fondatrice</p>
+                        </div>
+                    </div>
+                    <div class="partner-item">
+                        <img src="assets/partners/unicancer.png" alt="Unicancer" class="partner-logo">
+                        <div class="partner-info">
+                            <h4>Unicancer</h4>
+                            <p>Institution fondatrice</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Appels à action -->
-    <section class="cta-section">
+    <!-- Section Recherche avec timeline -->
+    <section id="recherche" class="research">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Comment s'engager ?</h2>
-                <p class="section-subtitle">Plusieurs façons de soutenir notre cause</p>
+                <h2 class="section-title">La recherche</h2>
+                <p class="section-subtitle">Découvrez comment votre don contribue à la recherche contre le cancer</p>
             </div>
-            <div class="cta-grid">
-                <div class="cta-card">
-                    <div class="cta-icon">🏢</div>
-                    <h3 class="cta-title">Devenir Partenaire</h3>
-                    <p class="cta-desc">
-                        Soutenez notre cause en tant qu'entreprise partenaire et bénéficiez d'une visibilité exceptionnelle.
-                    </p>
-                    <a href="https://ddbmudqn.genspark.space/" target="_blank" class="cta-button secondary">Dossier partenariat</a>
-                </div>
-                <div class="cta-card">
-                    <div class="cta-icon">💝</div>
-                    <h3 class="cta-title">Faire un Don</h3>
-                    <p class="cta-desc">
-                        Chaque euro compte ! Votre don finance directement la recherche contre le cancer.
-                        <br><small>Don défiscalisable</small>
-                    </p>
-                    <a href="https://www.helloasso.com/associations/kickoutcancer/collectes/kick-out-cancer-ensemble-kickons-le-cancer" target="_blank" class="cta-button secondary">Faire un don</a>
-                </div>
-                <div class="cta-card">
-                    <div class="cta-icon">👥</div>
-                    <h3 class="cta-title">Devenir Bénévole</h3>
-                    <p class="cta-desc">
-                        Rejoignez notre équipe de bénévoles et participez à l'organisation de l'événement.
-                    </p>
-                    <a href="mailto:contact@kickoutcancer.fr" class="cta-button secondary">Nous rejoindre</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section À propos -->
-    <section id="a-propos" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="section-header">
-                        <h2 class="section-title">À propos de l'association</h2>
-                        <p class="section-subtitle">Kick Out Cancer</p>
+            <div class="research-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
                     </div>
-                    <p class="about-desc">
-                        Kick Out Cancer est une association loi 1901 créée en 2025 par des professionnels de santé 
-                        et des chercheurs passionnés de sport. Notre mission est de mobiliser la société civile 
-                        autour de la lutte contre le cancer à travers des événements sportifs caritatifs.
-                    </p>
-                    <p class="about-desc">
-                        Notre première édition aura lieu le <strong>13 septembre 2025</strong> au Five Paris 18, 
-                        217 rue Aubervilliers, Paris. Un tournoi de football unique qui réunira 32 équipes 
-                        pour collecter 100 000€ au profit de la recherche contre le cancer.
-                    </p>
-                    <p class="about-desc">
-                        <strong>100 % des dons seront reversés à notre partenaire scientifique, l'IHU PRISM.</strong>
-                    </p>
-                    <div class="about-stats">
-                        <div class="about-stat">
-                            <span class="about-stat-number">100%</span>
-                            <span class="about-stat-label">Bénévoles</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="about-stat-number">0€</span>
-                            <span class="about-stat-label">Frais d'inscription</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="about-stat-number">100%</span>
-                            <span class="about-stat-label">Transparence</span>
-                        </div>
+                    <div class="timeline-content">
+                        <h3>Votre don</h3>
+                        <p>Chaque contribution finance directement des projets de recherche innovants</p>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="assets/hero-image.jpg" alt="Équipe Kick Out Cancer" class="about-img">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>IHU PRISM</h3>
+                        <p>L'institut d'excellence utilise l'IA pour personnaliser les traitements</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Résultats concrets</h3>
+                        <p>Des avancées réelles pour améliorer la vie des patients</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Section Inscription -->
-    <section id="inscription" class="inscription">
-        <div class="container">
-            <div class="inscription-content">
-                <div class="section-header">
-                    <h2 class="section-title">Inscrivez votre équipe</h2>
-                    <p class="section-subtitle">Rejoignez-nous pour la première édition de Kick Out Cancer</p>
-                </div>
-                <p class="inscription-desc">
-                    Équipes de 5 à 10 joueurs. Tournoi de football 5 vs 5 caritatif.
-                </p>
-                <div class="inscription-fees">
-                    <span class="fees-icon">💸</span>
-                    <span class="fees-text">400 € par équipe (5 à 10 joueurs), reversés intégralement à la recherche.</span>
-                </div>
-                <div class="inscription-details">
-                    <div class="detail-item">
-                        <span class="detail-icon">📅</span>
-                        <span class="detail-text">13 septembre 2025</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-icon">📍</span>
-                        <span class="detail-text">Five Paris 18, 217 rue Aubervilliers, Paris</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-icon">⚽</span>
-                        <span class="detail-text">Tournoi de football 5 vs 5</span>
-                    </div>
-                </div>
-                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" 
-                   target="_blank" 
-                   class="cta-button primary large">
-                    Inscrire mon équipe
+            <div class="research-cta">
+                <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary large">
+                    <span>Je soutiens la recherche</span>
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -324,36 +366,65 @@
                         <span class="footer-logo-text">Kick Out Cancer</span>
                     </div>
                     <p class="footer-desc">
-                        Association loi 1901 dédiée à la lutte contre le cancer à travers le sport et la solidarité.
+                        Ensemble, mettons KO le cancer par le sport et la solidarité. 
+                        Rejoignez-nous dans cette aventure caritative.
                     </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.5 13.26 3.5 11.5s.698-3.395 1.626-4.191c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.796 1.626 2.431 1.626 4.191s-.698 3.395-1.626 4.191c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.928-.796-1.626-2.431-1.626-4.191s.698-3.395 1.626-4.191c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.796 1.626 2.431 1.626 4.191s-.698 3.395-1.626 4.191z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Liens rapides</h3>
+                    <a href="#accueil" class="footer-link">Accueil</a>
+                    <a href="#ambition" class="footer-link">Notre ambition</a>
+                    <a href="#evenement" class="footer-link">Événement</a>
+                    <a href="#partenaires" class="footer-link">Partenaires</a>
+                    <a href="#recherche" class="footer-link">Recherche</a>
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-title">Contact</h3>
                     <div class="footer-contact">
-                        <p>📧 contact@kickoutcancer.fr</p>
-                        <p>📱 Suivez-nous sur les réseaux sociaux</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">LinkedIn</a>
+                        <p>Email: contact@kickoutcancer.fr</p>
+                        <p>Téléphone: +33 1 23 45 67 89</p>
+                        <p>Adresse: Paris, France</p>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3 class="footer-title">Liens utiles</h3>
-                    <a href="#" class="footer-link">Mentions légales</a>
-                    <a href="#" class="footer-link">Politique de confidentialité</a>
-                    <a href="#" class="footer-link">Statuts de l'association</a>
+                    <h3 class="footer-title">Soutenez-nous</h3>
+                    <a href="https://www.helloasso.com/associations/kickoutcancer/evenements/inscrire-ton-equipe-1" target="_blank" class="cta-button primary small">
+                        <span>Faire un don</span>
+                        <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Kick Out Cancer. Tous droits réservés.</p>
-                <p class="footer-association">Association loi 1901 - SIRET : [Numéro SIRET]</p>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Kick Out Cancer. Tous droits réservés.</p>
+                </div>
+                <div class="footer-association">
+                    <p>Association à but non lucratif</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html> 
