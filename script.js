@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== ANIMATIONS AU SCROLL =====
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.partner-card, .reason-card, .cta-card, .about-content, .inscription-content');
+    const elements = document.querySelectorAll('.partner-card, .cta-card, .about-content, .inscription-content');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -161,7 +161,7 @@ function animateCounters() {
 
 // ===== EFFET HOVER SUR LES CARDS =====
 function addHoverEffects() {
-    const cards = document.querySelectorAll('.partner-card, .reason-card, .cta-card');
+    const cards = document.querySelectorAll('.partner-card, .cta-card');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
