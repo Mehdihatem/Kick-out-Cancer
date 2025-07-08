@@ -2,6 +2,36 @@
 
 Site web moderne et responsive pour l'association Kick Out Cancer, créé avec HTML, CSS et JavaScript vanilla.
 
+## 🎨 Améliorations Design Récentes
+
+### Palette de Couleurs Optimisée
+- **Rouge (#dc2626)** : Pour l'urgence de la cause
+- **Orange (#ea580c)** : Pour l'action et l'engagement
+- **Vert (#16a34a)** : Pour l'espoir et les résultats positifs
+- **Contraste amélioré** pour une meilleure accessibilité
+
+### Typographie Impactante
+- **Headers plus grands** avec hiérarchie visuelle claire
+- **Gradients** sur les titres principaux
+- **Ombres textuelles** pour l'impact
+- **Espacement optimisé** pour la lisibilité
+
+## 📈 Optimisations Techniques
+
+### SEO Avancé
+- **Meta descriptions** pour chaque section
+- **Open Graph** pour les réseaux sociaux
+- **Twitter Cards** optimisées
+- **Mots-clés** ciblés et structurés
+- **Alt texts** descriptifs sur toutes les images
+
+### Performance
+- **Lazy loading** des images partenaires
+- **Préchargement** des ressources critiques
+- **Cache intelligent** avec configuration dédiée
+- **Compression d'images** recommandée
+- **Debounce** sur les événements de scroll
+
 ## 📁 Structure du Projet
 
 ```
@@ -9,6 +39,7 @@ kick-out-cancer-website/
 ├── index.html              # Page principale
 ├── style.css              # Styles CSS
 ├── script.js              # JavaScript interactif
+├── cache-config.js        # Configuration cache et performances
 ├── README.md              # Ce fichier
 ├── assets/                # Dossier des ressources
 │   ├── logo-kick-out-cancer.png
@@ -119,10 +150,12 @@ Dans `style.css`, modifiez les variables CSS dans `:root` :
 - Effet parallax sur le hero
 
 ### ✅ Performance
-- Images optimisées
-- CSS et JS minifiés (optionnel)
-- Lazy loading des images
-- Debounce sur les événements scroll
+- **Images optimisées** avec compression recommandée
+- **Lazy loading** des images partenaires
+- **Préchargement** des ressources critiques
+- **Cache intelligent** avec configuration dédiée
+- **Debounce** sur les événements scroll
+- **Compression CSS/JS** recommandée pour la production
 
 ### ✅ Accessibilité
 - Navigation au clavier

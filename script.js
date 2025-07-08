@@ -183,7 +183,7 @@ function lazyLoadImages() {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 img.src = img.dataset.src;
-                img.classList.remove('lazy');
+                img.classList.add('loaded');
                 imageObserver.unobserve(img);
             }
         });
@@ -192,6 +192,41 @@ function lazyLoadImages() {
     images.forEach(img => {
         imageObserver.observe(img);
     });
+}
+
+// ===== OPTIMISATION DES PERFORMANCES =====
+function optimizePerformance() {
+    // Préchargement des ressources critiques
+    const preloadLinks = [
+        { rel: 'preload', href: 'assets/hero-bg.jpg', as: 'image' },
+        { rel: 'preload', href: 'assets/logo-kick-out-cancer.png', as: 'image' }
+    ];
+
+    preloadLinks.forEach(link => {
+        const linkElement = document.createElement('link');
+        Object.assign(linkElement, link);
+        document.head.appendChild(linkElement);
+    });
+
+    // Cache des images partenaires
+    const partnerImages = [
+        'assets/partners/ihu-prism.png',
+        'assets/partners/gustave-roussy.png',
+        'assets/partners/inserm.png',
+        'assets/partners/gilead.png',
+        'assets/partners/stetoo.png',
+        'assets/partners/elwood-vitamines.png',
+        'assets/partners/digilityx.png',
+        'assets/partners/aerio.png'
+    ];
+
+    // Préchargement en arrière-plan
+    setTimeout(() => {
+        partnerImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, 2000);
 }
 
 // ===== VALIDATION DES FORMULAIRES =====
@@ -308,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     validateForms();
     typeWriterEffect();
     addScrollToTop();
+    optimizePerformance();
     
     // Optimiser les événements de scroll
     const debouncedScroll = debounce(() => {
