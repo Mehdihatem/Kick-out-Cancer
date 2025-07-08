@@ -295,11 +295,15 @@ body {
 }
 
 /* ===== SECTIONS ===== */
-.partners, .why-participate, .cta-section, .about, .inscription {
+.scientific-partner, .operational-partners, .why-participate, .cta-section, .about, .inscription {
     padding: 5rem 0;
 }
 
-.partners {
+.scientific-partner {
+    background: var(--white);
+}
+
+.operational-partners {
     background: var(--gray-50);
 }
 
@@ -320,7 +324,125 @@ body {
     background: var(--white);
 }
 
-/* ===== PARTENAIRES ===== */
+/* ===== PARTENAIRE SCIENTIFIQUE PRINCIPAL ===== */
+.scientific-partner-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.scientific-partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-partner-logo {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.scientific-partner-text {
+    color: var(--text-dark);
+}
+
+.scientific-partner-desc {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.scientific-partner-impact {
+    font-size: 1.125rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.founding-institutions {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.institutions-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.institutions-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.institution-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.institution-logo {
+    width: 80px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.institution-name {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* ===== PARTENAIRES OPÉRATIONNELS ===== */
+.operational-partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.operational-partner-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.operational-partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.operational-partner-logo {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.operational-partner-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.operational-partner-desc {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* ===== PARTENAIRES (ancien style conservé pour compatibilité) ===== */
 .partners-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -524,6 +646,27 @@ body {
     color: var(--text-dark);
 }
 
+.inscription-fees {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+}
+
+.fees-icon {
+    font-size: 1.5rem;
+}
+
+.fees-text {
+    font-size: 1.125rem;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--text-dark);
@@ -612,6 +755,13 @@ body {
 .footer-copyright {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-association {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -664,7 +814,23 @@ body {
         font-size: 2rem;
     }
 
+    .scientific-partner-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .main-partner-logo {
+        width: 150px;
+        height: 75px;
+    }
+
+    .institutions-grid {
+        gap: 1rem;
+    }
+
     .partners-grid,
+    .operational-partners-grid,
     .reasons-grid,
     .cta-grid {
         grid-template-columns: 1fr;
