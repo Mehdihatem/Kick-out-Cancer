@@ -46,19 +46,19 @@ img, video {
     --indigo-light: #3B82F6;
     
     /* Couleurs de texte */
-    --text-dark: #0f172a;
-    --text-light: #475569;
-    --text-muted: #64748b;
+    --text-dark: #1a1a1a;
+    --text-light: #374151;
+    --text-muted: #6b7280;
     --text-white: #ffffff;
     
     /* Couleurs de fond */
     --white: #ffffff;
-    --gray-50: #f8fafc;
-    --gray-100: #f1f5f9;
-    --gray-200: #e2e8f0;
-    --gray-300: #cbd5e1;
-    --gray-800: #1e293b;
-    --gray-900: #0f172a;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
     --black: #000000;
     
     /* Ombres modernes */
@@ -744,6 +744,211 @@ img, video {
     opacity: 0.8;
 }
 
+/* ===== SECTION QUI SOMMES-NOUS ===== */
+.about {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+    margin-top: var(--spacing-3xl);
+}
+
+.about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-desc {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-values {
+    margin-top: var(--spacing-xl);
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--turquoise), var(--magenta));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.value-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.value-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.value-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===== SECTION IHU PRISM ===== */
+.scientific-partner {
+    padding: var(--spacing-4xl) 0;
+    background: var(--white);
+}
+
+.scientific-partner-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.scientific-partner-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.main-partner-logo {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.scientific-partner-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.scientific-partner-desc {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.scientific-partner-impact {
+    background: linear-gradient(135deg, var(--turquoise), var(--magenta));
+    color: var(--text-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.scientific-partner-impact h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.founding-institutions {
+    text-align: center;
+    margin-top: var(--spacing-3xl);
+}
+
+.institutions-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.institutions-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.institutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.institution-item {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--gray-200);
+}
+
+.institution-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.institution-logo {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto var(--spacing-md);
+}
+
+.institution-name {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.institution-desc {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
 /* ===== SECTION RECHERCHE ===== */
 .research {
     padding: var(--spacing-4xl) 0;
@@ -1046,6 +1251,25 @@ img, video {
 
     .ambition-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .scientific-partner-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .main-partner-logo {
+        width: 200px;
+    }
+
+    .institutions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-lg);
     }
 
     .footer-content {
