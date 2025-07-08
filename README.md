@@ -175,3 +175,7 @@ Association loi 1901.
 ---
 
 **Note :** Ce site est conçu pour être simple à maintenir et modifier. Tous les textes et images peuvent être changés directement dans les fichiers HTML et CSS sans recompilation. 
+
+<div class="about-image">
+    <video class="about-img" src="assets/about-video.mp4" autoplay loop muted playsinline></video>
+</div> 
