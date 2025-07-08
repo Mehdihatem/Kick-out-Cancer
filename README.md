@@ -37,18 +37,28 @@ Vous devez ajouter les images suivantes dans le dossier `assets/` :
 
 #### Images principales :
 - `logo-kick-out-cancer.png` - Logo de l'association (40x40px recommandé)
-- `hero-image.jpg` - Image principale de la bannière
-- `about-image.jpg` - Image de la section "À propos"
-- `hero-bg.jpg` - Image de fond pour la section hero
+- `hero-image.jpg` - Image de la section "À propos" (équipe ou staff)
+- `hero-bg.jpg` - Image de fond pour la section hero (optionnel)
 - `favicon.ico` - Icône du site
 
+#### Vidéos :
+- `about-video.mp4` - Vidéo du logo animé pour le header (format MP4 recommandé)
+
 #### Logos des partenaires (dans `assets/partners/`) :
-- `ihu-prism.png`
+**Institutions fondatrices de l'IHU PRISM :**
+- `ihu-prism.png` - Logo principal (grand format)
 - `gustave-roussy.png`
 - `inserm.png`
 - `unicancer.png`
 - `centralesupelec.png`
 - `universite-paris-saclay.png`
+
+**Partenaires opérationnels :**
+- `gilead.png` - Partenaire Silver
+- `stetoo.png` - Partenaire logistique
+- `elwood-vitamines.png` - Partenaire logistique
+- `digilityx.png` - Partenaire logistique
+- `aerio.png` - Partenaire académique
 
 **Format recommandé :** PNG avec fond transparent, taille 120x60px
 
